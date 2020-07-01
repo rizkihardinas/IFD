@@ -23,10 +23,10 @@ TRUNCATE TABLE `ci_sessions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_advance_salaries`
+-- Table structure for table `ifd_advance_salaries`
 --
 
-CREATE TABLE `xin_advance_salaries` (
+CREATE TABLE `ifd_advance_salaries` (
   `advance_salary_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -42,17 +42,17 @@ CREATE TABLE `xin_advance_salaries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_advance_salaries`
+-- Truncate table before insert `ifd_advance_salaries`
 --
 
-TRUNCATE TABLE `xin_advance_salaries`;
+TRUNCATE TABLE `ifd_advance_salaries`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_announcements`
+-- Table structure for table `ifd_announcements`
 --
 
-CREATE TABLE `xin_announcements` (
+CREATE TABLE `ifd_announcements` (
   `announcement_id` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
   `start_date` varchar(200) NOT NULL,
@@ -69,17 +69,17 @@ CREATE TABLE `xin_announcements` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_announcements`
+-- Truncate table before insert `ifd_announcements`
 --
 
-TRUNCATE TABLE `xin_announcements`;
+TRUNCATE TABLE `ifd_announcements`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_assets`
+-- Table structure for table `ifd_assets`
 --
 
-CREATE TABLE `xin_assets` (
+CREATE TABLE `ifd_assets` (
   `assets_id` int(111) NOT NULL,
   `assets_category_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
@@ -98,17 +98,17 @@ CREATE TABLE `xin_assets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_assets`
+-- Truncate table before insert `ifd_assets`
 --
 
-TRUNCATE TABLE `xin_assets`;
+TRUNCATE TABLE `ifd_assets`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_assets_categories`
+-- Table structure for table `ifd_assets_categories`
 --
 
-CREATE TABLE `xin_assets_categories` (
+CREATE TABLE `ifd_assets_categories` (
   `assets_category_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `category_name` varchar(255) NOT NULL,
@@ -116,24 +116,24 @@ CREATE TABLE `xin_assets_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_assets_categories`
+-- Truncate table before insert `ifd_assets_categories`
 --
 
-TRUNCATE TABLE `xin_assets_categories`;
+TRUNCATE TABLE `ifd_assets_categories`;
 --
--- Dumping data for table `xin_assets_categories`
+-- Dumping data for table `ifd_assets_categories`
 --
 
-INSERT INTO `xin_assets_categories` (`assets_category_id`, `company_id`, `category_name`, `created_at`) VALUES
+INSERT INTO `ifd_assets_categories` (`assets_category_id`, `company_id`, `category_name`, `created_at`) VALUES
 (1, 1, 'Laptop', '05-04-2018 03:03:31');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_attendance_time`
+-- Table structure for table `ifd_attendance_time`
 --
 
-CREATE TABLE `xin_attendance_time` (
+CREATE TABLE `ifd_attendance_time` (
   `time_attendance_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `attendance_date` varchar(255) NOT NULL,
@@ -155,24 +155,24 @@ CREATE TABLE `xin_attendance_time` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_attendance_time`
+-- Truncate table before insert `ifd_attendance_time`
 --
 
-TRUNCATE TABLE `xin_attendance_time`;
+TRUNCATE TABLE `ifd_attendance_time`;
 --
--- Dumping data for table `xin_attendance_time`
+-- Dumping data for table `ifd_attendance_time`
 --
 
-INSERT INTO `xin_attendance_time` (`time_attendance_id`, `employee_id`, `attendance_date`, `clock_in`, `clock_in_ip_address`, `clock_out`, `clock_out_ip_address`, `clock_in_out`, `clock_in_latitude`, `clock_in_longitude`, `clock_out_latitude`, `clock_out_longitude`, `time_late`, `early_leaving`, `overtime`, `total_work`, `total_rest`, `attendance_status`) VALUES
+INSERT INTO `ifd_attendance_time` (`time_attendance_id`, `employee_id`, `attendance_date`, `clock_in`, `clock_in_ip_address`, `clock_out`, `clock_out_ip_address`, `clock_in_out`, `clock_in_latitude`, `clock_in_longitude`, `clock_out_latitude`, `clock_out_longitude`, `time_late`, `early_leaving`, `overtime`, `total_work`, `total_rest`, `attendance_status`) VALUES
 (1, 5, '2019-04-17', '2019-04-17 10:36:38', '::1', '2019-04-17 10:37:36', '::1', '0', '31.450726399999997', '74.2940672', '31.450726399999997', '74.2940672', '2019-04-17 10:36:38', '2019-04-17 10:37:36', '2019-04-17 10:37:36', '0:0', '', 'Present');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_attendance_time_request`
+-- Table structure for table `ifd_attendance_time_request`
 --
 
-CREATE TABLE `xin_attendance_time_request` (
+CREATE TABLE `ifd_attendance_time_request` (
   `time_request_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -190,17 +190,17 @@ CREATE TABLE `xin_attendance_time_request` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_attendance_time_request`
+-- Truncate table before insert `ifd_attendance_time_request`
 --
 
-TRUNCATE TABLE `xin_attendance_time_request`;
+TRUNCATE TABLE `ifd_attendance_time_request`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_awards`
+-- Table structure for table `ifd_awards`
 --
 
-CREATE TABLE `xin_awards` (
+CREATE TABLE `ifd_awards` (
   `award_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(200) NOT NULL,
@@ -215,17 +215,17 @@ CREATE TABLE `xin_awards` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_awards`
+-- Truncate table before insert `ifd_awards`
 --
 
-TRUNCATE TABLE `xin_awards`;
+TRUNCATE TABLE `ifd_awards`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_award_type`
+-- Table structure for table `ifd_award_type`
 --
 
-CREATE TABLE `xin_award_type` (
+CREATE TABLE `ifd_award_type` (
   `award_type_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `award_type` varchar(200) NOT NULL,
@@ -233,24 +233,24 @@ CREATE TABLE `xin_award_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_award_type`
+-- Truncate table before insert `ifd_award_type`
 --
 
-TRUNCATE TABLE `xin_award_type`;
+TRUNCATE TABLE `ifd_award_type`;
 --
--- Dumping data for table `xin_award_type`
+-- Dumping data for table `ifd_award_type`
 --
 
-INSERT INTO `xin_award_type` (`award_type_id`, `company_id`, `award_type`, `created_at`) VALUES
+INSERT INTO `ifd_award_type` (`award_type_id`, `company_id`, `award_type`, `created_at`) VALUES
 (1, 1, 'Performer of the Year', '22-03-2018 01:33:57');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_chat_messages`
+-- Table structure for table `ifd_chat_messages`
 --
 
-CREATE TABLE `xin_chat_messages` (
+CREATE TABLE `ifd_chat_messages` (
   `message_id` int(11) UNSIGNED NOT NULL,
   `from_id` varchar(40) NOT NULL DEFAULT '',
   `to_id` varchar(50) NOT NULL DEFAULT '',
@@ -265,17 +265,17 @@ CREATE TABLE `xin_chat_messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_chat_messages`
+-- Truncate table before insert `ifd_chat_messages`
 --
 
-TRUNCATE TABLE `xin_chat_messages`;
+TRUNCATE TABLE `ifd_chat_messages`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_clients`
+-- Table structure for table `ifd_clients`
 --
 
-CREATE TABLE `xin_clients` (
+CREATE TABLE `ifd_clients` (
   `client_id` int(111) NOT NULL,
   `type` varchar(100) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -303,24 +303,24 @@ CREATE TABLE `xin_clients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_clients`
+-- Truncate table before insert `ifd_clients`
 --
 
-TRUNCATE TABLE `xin_clients`;
+TRUNCATE TABLE `ifd_clients`;
 --
--- Dumping data for table `xin_clients`
+-- Dumping data for table `ifd_clients`
 --
 
-INSERT INTO `xin_clients` (`client_id`, `type`, `name`, `email`, `client_username`, `client_password`, `client_profile`, `contact_number`, `company_name`, `is_changed`, `gender`, `website_url`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `is_active`, `last_logout_date`, `last_login_date`, `last_login_ip`, `is_logged_in`, `created_at`) VALUES
+INSERT INTO `ifd_clients` (`client_id`, `type`, `name`, `email`, `client_username`, `client_password`, `client_profile`, `contact_number`, `company_name`, `is_changed`, `gender`, `website_url`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `is_active`, `last_logout_date`, `last_login_date`, `last_login_ip`, `is_logged_in`, `created_at`) VALUES
 (1, '', 'Shaleena', 'client1@hrsale.com', '', '$2y$12$wGATpsG6S/IAIwobUZMeDeYyxpirjXVaVLo79ta2PLlRJjBNIsfFa', '', '123456789', 'Shale Inc.', 0, '', '', 'Address Line 1', 'Address Line 2', 'City', 'State', '11461', 190, 1, '', '20-03-2019 22:05:05', '::1', 1, '2019-03-20 22:05:02');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_companies`
+-- Table structure for table `ifd_companies`
 --
 
-CREATE TABLE `xin_companies` (
+CREATE TABLE `ifd_companies` (
   `company_id` int(111) NOT NULL,
   `type_id` int(111) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -347,24 +347,24 @@ CREATE TABLE `xin_companies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_companies`
+-- Truncate table before insert `ifd_companies`
 --
 
-TRUNCATE TABLE `xin_companies`;
+TRUNCATE TABLE `ifd_companies`;
 --
--- Dumping data for table `xin_companies`
+-- Dumping data for table `ifd_companies`
 --
 
-INSERT INTO `xin_companies` (`company_id`, `type_id`, `name`, `trading_name`, `username`, `password`, `registration_no`, `government_tax`, `email`, `logo`, `contact_number`, `website_url`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `is_active`, `default_currency`, `default_timezone`, `added_by`, `created_at`) VALUES
+INSERT INTO `ifd_companies` (`company_id`, `type_id`, `name`, `trading_name`, `username`, `password`, `registration_no`, `government_tax`, `email`, `logo`, `contact_number`, `website_url`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `is_active`, `default_currency`, `default_timezone`, `added_by`, `created_at`) VALUES
 (1, 1, 'HRSALE', 'Test', 'test123', '', '', '', 'mainoffice@hrsale.com', 'logo_1526958729.png', '0123456789', 'hrsale.com', 'Test', 'Test2', 'Riyadh', 'Riyadh', '11461', 190, 0, 'USD - $', 'Asia/Riyadh', 1, '22-05-2018');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_company_documents`
+-- Table structure for table `ifd_company_documents`
 --
 
-CREATE TABLE `xin_company_documents` (
+CREATE TABLE `ifd_company_documents` (
   `document_id` int(11) NOT NULL,
   `document_type_id` int(11) NOT NULL,
   `license_name` varchar(255) NOT NULL,
@@ -378,17 +378,17 @@ CREATE TABLE `xin_company_documents` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_company_documents`
+-- Truncate table before insert `ifd_company_documents`
 --
 
-TRUNCATE TABLE `xin_company_documents`;
+TRUNCATE TABLE `ifd_company_documents`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_company_info`
+-- Table structure for table `ifd_company_info`
 --
 
-CREATE TABLE `xin_company_info` (
+CREATE TABLE `ifd_company_info` (
   `company_info_id` int(111) NOT NULL,
   `logo` varchar(255) NOT NULL,
   `logo_second` varchar(255) NOT NULL,
@@ -412,24 +412,24 @@ CREATE TABLE `xin_company_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_company_info`
+-- Truncate table before insert `ifd_company_info`
 --
 
-TRUNCATE TABLE `xin_company_info`;
+TRUNCATE TABLE `ifd_company_info`;
 --
--- Dumping data for table `xin_company_info`
+-- Dumping data for table `ifd_company_info`
 --
 
-INSERT INTO `xin_company_info` (`company_info_id`, `logo`, `logo_second`, `sign_in_logo`, `favicon`, `website_url`, `starting_year`, `company_name`, `company_email`, `company_contact`, `contact_person`, `email`, `phone`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `updated_at`) VALUES
+INSERT INTO `ifd_company_info` (`company_info_id`, `logo`, `logo_second`, `sign_in_logo`, `favicon`, `website_url`, `starting_year`, `company_name`, `company_email`, `company_contact`, `contact_person`, `email`, `phone`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `updated_at`) VALUES
 (1, 'logo_1520722747.png', 'logo2_1520609223.png', 'signin_logo_1520612279.png', 'favicon_1520722747.png', '', '', 'HRSALE', '', '', 'Thomas Fleming', 'info@hrsale.com', '123456789', 'Address Line 1', 'Address Line 2', 'City', 'State', '11461', 190, '2017-05-20 12:05:53');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_company_policy`
+-- Table structure for table `ifd_company_policy`
 --
 
-CREATE TABLE `xin_company_policy` (
+CREATE TABLE `ifd_company_policy` (
   `policy_id` int(111) NOT NULL,
   `company_id` int(111) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -440,39 +440,39 @@ CREATE TABLE `xin_company_policy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_company_policy`
+-- Truncate table before insert `ifd_company_policy`
 --
 
-TRUNCATE TABLE `xin_company_policy`;
+TRUNCATE TABLE `ifd_company_policy`;
 --
--- Dumping data for table `xin_company_policy`
+-- Dumping data for table `ifd_company_policy`
 --
 
-INSERT INTO `xin_company_policy` (`policy_id`, `company_id`, `title`, `description`, `attachment`, `added_by`, `created_at`) VALUES
+INSERT INTO `ifd_company_policy` (`policy_id`, `company_id`, `title`, `description`, `attachment`, `added_by`, `created_at`) VALUES
 (1, 1, 'Smoke-Free Work', '&lt;p&gt;Smoke-Free Work Environment Policy Close&lt;/p&gt;', NULL, 1, '28-02-2018');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_company_type`
+-- Table structure for table `ifd_company_type`
 --
 
-CREATE TABLE `xin_company_type` (
+CREATE TABLE `ifd_company_type` (
   `type_id` int(111) NOT NULL,
   `name` varchar(255) NOT NULL,
   `created_at` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_company_type`
+-- Truncate table before insert `ifd_company_type`
 --
 
-TRUNCATE TABLE `xin_company_type`;
+TRUNCATE TABLE `ifd_company_type`;
 --
--- Dumping data for table `xin_company_type`
+-- Dumping data for table `ifd_company_type`
 --
 
-INSERT INTO `xin_company_type` (`type_id`, `name`, `created_at`) VALUES
+INSERT INTO `ifd_company_type` (`type_id`, `name`, `created_at`) VALUES
 (1, 'Corporation', ''),
 (2, 'Exempt Organization', ''),
 (3, 'Partnership', ''),
@@ -482,10 +482,10 @@ INSERT INTO `xin_company_type` (`type_id`, `name`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_contract_type`
+-- Table structure for table `ifd_contract_type`
 --
 
-CREATE TABLE `xin_contract_type` (
+CREATE TABLE `ifd_contract_type` (
   `contract_type_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -493,24 +493,24 @@ CREATE TABLE `xin_contract_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_contract_type`
+-- Truncate table before insert `ifd_contract_type`
 --
 
-TRUNCATE TABLE `xin_contract_type`;
+TRUNCATE TABLE `ifd_contract_type`;
 --
--- Dumping data for table `xin_contract_type`
+-- Dumping data for table `ifd_contract_type`
 --
 
-INSERT INTO `xin_contract_type` (`contract_type_id`, `company_id`, `name`, `created_at`) VALUES
+INSERT INTO `ifd_contract_type` (`contract_type_id`, `company_id`, `name`, `created_at`) VALUES
 (1, 1, 'Permanent', '05-04-2018 06:10:32');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_countries`
+-- Table structure for table `ifd_countries`
 --
 
-CREATE TABLE `xin_countries` (
+CREATE TABLE `ifd_countries` (
   `country_id` int(11) NOT NULL,
   `country_code` varchar(255) NOT NULL,
   `country_name` varchar(255) NOT NULL,
@@ -518,15 +518,15 @@ CREATE TABLE `xin_countries` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_countries`
+-- Truncate table before insert `ifd_countries`
 --
 
-TRUNCATE TABLE `xin_countries`;
+TRUNCATE TABLE `ifd_countries`;
 --
--- Dumping data for table `xin_countries`
+-- Dumping data for table `ifd_countries`
 --
 
-INSERT INTO `xin_countries` (`country_id`, `country_code`, `country_name`, `country_flag`) VALUES
+INSERT INTO `ifd_countries` (`country_id`, `country_code`, `country_name`, `country_flag`) VALUES
 (1, '+93', 'Afghanistan', 'flag_1500831780.gif'),
 (2, '+355', 'Albania', 'flag_1500831815.gif'),
 (3, 'DZ', 'Algeria', ''),
@@ -776,10 +776,10 @@ INSERT INTO `xin_countries` (`country_id`, `country_code`, `country_name`, `coun
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_currencies`
+-- Table structure for table `ifd_currencies`
 --
 
-CREATE TABLE `xin_currencies` (
+CREATE TABLE `ifd_currencies` (
   `currency_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -788,24 +788,24 @@ CREATE TABLE `xin_currencies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_currencies`
+-- Truncate table before insert `ifd_currencies`
 --
 
-TRUNCATE TABLE `xin_currencies`;
+TRUNCATE TABLE `ifd_currencies`;
 --
--- Dumping data for table `xin_currencies`
+-- Dumping data for table `ifd_currencies`
 --
 
-INSERT INTO `xin_currencies` (`currency_id`, `company_id`, `name`, `code`, `symbol`) VALUES
+INSERT INTO `ifd_currencies` (`currency_id`, `company_id`, `name`, `code`, `symbol`) VALUES
 (1, 1, 'Dollars', 'USD', '$');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_currency_converter`
+-- Table structure for table `ifd_currency_converter`
 --
 
-CREATE TABLE `xin_currency_converter` (
+CREATE TABLE `ifd_currency_converter` (
   `currency_converter_id` int(11) NOT NULL,
   `usd_currency` varchar(11) NOT NULL DEFAULT '1',
   `to_currency_title` varchar(200) NOT NULL,
@@ -814,41 +814,41 @@ CREATE TABLE `xin_currency_converter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_currency_converter`
+-- Truncate table before insert `ifd_currency_converter`
 --
 
-TRUNCATE TABLE `xin_currency_converter`;
+TRUNCATE TABLE `ifd_currency_converter`;
 --
--- Dumping data for table `xin_currency_converter`
+-- Dumping data for table `ifd_currency_converter`
 --
 
-INSERT INTO `xin_currency_converter` (`currency_converter_id`, `usd_currency`, `to_currency_title`, `to_currency_rate`, `created_at`) VALUES
+INSERT INTO `ifd_currency_converter` (`currency_converter_id`, `usd_currency`, `to_currency_title`, `to_currency_rate`, `created_at`) VALUES
 (1, '1', 'MYR', '4.11', '17-08-2018 03:29:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_database_backup`
+-- Table structure for table `ifd_database_backup`
 --
 
-CREATE TABLE `xin_database_backup` (
+CREATE TABLE `ifd_database_backup` (
   `backup_id` int(111) NOT NULL,
   `backup_file` varchar(255) NOT NULL,
   `created_at` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_database_backup`
+-- Truncate table before insert `ifd_database_backup`
 --
 
-TRUNCATE TABLE `xin_database_backup`;
+TRUNCATE TABLE `ifd_database_backup`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_departments`
+-- Table structure for table `ifd_departments`
 --
 
-CREATE TABLE `xin_departments` (
+CREATE TABLE `ifd_departments` (
   `department_id` int(11) NOT NULL,
   `department_name` varchar(200) NOT NULL,
   `company_id` int(11) NOT NULL,
@@ -860,25 +860,25 @@ CREATE TABLE `xin_departments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_departments`
+-- Truncate table before insert `ifd_departments`
 --
 
-TRUNCATE TABLE `xin_departments`;
+TRUNCATE TABLE `ifd_departments`;
 --
--- Dumping data for table `xin_departments`
+-- Dumping data for table `ifd_departments`
 --
 
-INSERT INTO `xin_departments` (`department_id`, `department_name`, `company_id`, `location_id`, `employee_id`, `added_by`, `created_at`, `status`) VALUES
+INSERT INTO `ifd_departments` (`department_id`, `department_name`, `company_id`, `location_id`, `employee_id`, `added_by`, `created_at`, `status`) VALUES
 (1, 'MD Office', 1, 1, 5, 0, '06-03-2018', 1),
 (2, 'Accounts and  Finances', 1, 1, 5, 1, '17-03-2018', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_designations`
+-- Table structure for table `ifd_designations`
 --
 
-CREATE TABLE `xin_designations` (
+CREATE TABLE `ifd_designations` (
   `designation_id` int(11) NOT NULL,
   `top_designation_id` int(11) NOT NULL DEFAULT 0,
   `department_id` int(200) NOT NULL,
@@ -892,25 +892,25 @@ CREATE TABLE `xin_designations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_designations`
+-- Truncate table before insert `ifd_designations`
 --
 
-TRUNCATE TABLE `xin_designations`;
+TRUNCATE TABLE `ifd_designations`;
 --
--- Dumping data for table `xin_designations`
+-- Dumping data for table `ifd_designations`
 --
 
-INSERT INTO `xin_designations` (`designation_id`, `top_designation_id`, `department_id`, `sub_department_id`, `company_id`, `designation_name`, `description`, `added_by`, `created_at`, `status`) VALUES
+INSERT INTO `ifd_designations` (`designation_id`, `top_designation_id`, `department_id`, `sub_department_id`, `company_id`, `designation_name`, `description`, `added_by`, `created_at`, `status`) VALUES
 (9, 0, 1, 8, 1, 'Software Developer', '', 1, '06-03-2018', 1),
 (10, 0, 2, 10, 1, 'Finance', '', 1, '18-03-2018', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_document_type`
+-- Table structure for table `ifd_document_type`
 --
 
-CREATE TABLE `xin_document_type` (
+CREATE TABLE `ifd_document_type` (
   `document_type_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `document_type` varchar(255) NOT NULL,
@@ -918,24 +918,24 @@ CREATE TABLE `xin_document_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_document_type`
+-- Truncate table before insert `ifd_document_type`
 --
 
-TRUNCATE TABLE `xin_document_type`;
+TRUNCATE TABLE `ifd_document_type`;
 --
--- Dumping data for table `xin_document_type`
+-- Dumping data for table `ifd_document_type`
 --
 
-INSERT INTO `xin_document_type` (`document_type_id`, `company_id`, `document_type`, `created_at`) VALUES
+INSERT INTO `ifd_document_type` (`document_type_id`, `company_id`, `document_type`, `created_at`) VALUES
 (1, 1, 'Driving License', '09-05-2018 12:34:55');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_email_configuration`
+-- Table structure for table `ifd_email_configuration`
 --
 
-CREATE TABLE `xin_email_configuration` (
+CREATE TABLE `ifd_email_configuration` (
   `email_config_id` int(11) NOT NULL,
   `email_type` enum('phpmail','smtp','codeigniter') COLLATE utf8_unicode_ci NOT NULL,
   `smtp_host` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -946,24 +946,24 @@ CREATE TABLE `xin_email_configuration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Truncate table before insert `xin_email_configuration`
+-- Truncate table before insert `ifd_email_configuration`
 --
 
-TRUNCATE TABLE `xin_email_configuration`;
+TRUNCATE TABLE `ifd_email_configuration`;
 --
--- Dumping data for table `xin_email_configuration`
+-- Dumping data for table `ifd_email_configuration`
 --
 
-INSERT INTO `xin_email_configuration` (`email_config_id`, `email_type`, `smtp_host`, `smtp_username`, `smtp_password`, `smtp_port`, `smtp_secure`) VALUES
+INSERT INTO `ifd_email_configuration` (`email_config_id`, `email_type`, `smtp_host`, `smtp_username`, `smtp_password`, `smtp_port`, `smtp_secure`) VALUES
 (1, 'phpmail', 'smtp.gmail.com', 'demo@gmail.com', '123456', 587, 'tls');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_email_template`
+-- Table structure for table `ifd_email_template`
 --
 
-CREATE TABLE `xin_email_template` (
+CREATE TABLE `ifd_email_template` (
   `template_id` int(111) NOT NULL,
   `template_code` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -973,15 +973,15 @@ CREATE TABLE `xin_email_template` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_email_template`
+-- Truncate table before insert `ifd_email_template`
 --
 
-TRUNCATE TABLE `xin_email_template`;
+TRUNCATE TABLE `ifd_email_template`;
 --
--- Dumping data for table `xin_email_template`
+-- Dumping data for table `ifd_email_template`
 --
 
-INSERT INTO `xin_email_template` (`template_id`, `template_code`, `name`, `subject`, `message`, `status`) VALUES
+INSERT INTO `ifd_email_template` (`template_id`, `template_code`, `name`, `subject`, `message`, `status`) VALUES
 (2, 'code1', 'Forgot Password', 'Forgot Password', '                            <p><span xss=\"removed\">Hello,</span></p><p><span xss=\"removed\">There was recently a request for password for your {var site_name} account.</span></p><p><span xss=\"removed\">If this was a mistake, just ignore this email and nothing will happen.</span></p><p><span xss=\"removed\">To reset your password, visit the following link <a href=\"{var reset_url}admin/reset_password?change=true&email={var email}\">Reset Password</a></span></p><p><span xss=\"removed\">Regards,</span></p><p><span xss=\"removed\">The {var site_name} Team</span></p>', 1),
 (3, 'code2', 'New Project', 'New Project', '                                <p>Hi {var employee_name},</p><p>New project has been assigned to you.</p><p>Project Name: {var project_name}</p><p>Project Start Date: <span>{var project_start_date}</span></p><p><br><span>You can view the project by logging in to the portal using the link below.</span></p><p><span>{var site_url}admin/</span></p><p><span>Regards</span><br></p><p>The {var site_name} Team</p>', 1),
 (5, 'code3', 'Leave Request ', 'A Leave Request from you', '            <p>Dear Admin,</p><p>{var employee_name} wants a leave from you.</p><p>You can view this leave request by logging in to the portal using the link below.</p><p>{var site_url}admin/<br><br>Regards,</p><p>The {var site_name} Team</p>', 1),
@@ -998,10 +998,10 @@ INSERT INTO `xin_email_template` (`template_id`, `template_code`, `name`, `subje
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employees`
+-- Table structure for table `ifd_employees`
 --
 
-CREATE TABLE `xin_employees` (
+CREATE TABLE `ifd_employees` (
   `user_id` int(11) NOT NULL,
   `employee_id` varchar(200) NOT NULL,
   `office_shift_id` int(111) NOT NULL,
@@ -1077,25 +1077,25 @@ CREATE TABLE `xin_employees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employees`
+-- Truncate table before insert `ifd_employees`
 --
 
-TRUNCATE TABLE `xin_employees`;
+TRUNCATE TABLE `ifd_employees`;
 --
--- Dumping data for table `xin_employees`
+-- Dumping data for table `ifd_employees`
 --
 
-INSERT INTO `xin_employees` (`user_id`, `employee_id`, `office_shift_id`, `reports_to`, `first_name`, `last_name`, `username`, `email`, `pincode`, `password`, `date_of_birth`, `gender`, `e_status`, `user_role_id`, `department_id`, `sub_department_id`, `designation_id`, `company_id`, `location_id`, `view_companies_id`, `salary_template`, `hourly_grade_id`, `monthly_grade_id`, `date_of_joining`, `date_of_leaving`, `marital_status`, `salary`, `wages_type`, `basic_salary`, `daily_wages`, `salary_ssempee`, `salary_ssempeer`, `salary_income_tax`, `salary_overtime`, `salary_commission`, `salary_claims`, `salary_paid_leave`, `salary_director_fees`, `salary_bonus`, `salary_advance_paid`, `address`, `state`, `city`, `zipcode`, `profile_picture`, `profile_background`, `resume`, `skype_id`, `contact_no`, `facebook_link`, `twitter_link`, `blogger_link`, `linkdedin_link`, `google_plus_link`, `instagram_link`, `pinterest_link`, `youtube_link`, `is_active`, `last_login_date`, `last_logout_date`, `last_login_ip`, `is_logged_in`, `online_status`, `fixed_header`, `compact_sidebar`, `boxed_wrapper`, `leave_categories`, `ethnicity_type`, `blood_group`, `nationality_id`, `citizenship_id`, `created_at`) VALUES
+INSERT INTO `ifd_employees` (`user_id`, `employee_id`, `office_shift_id`, `reports_to`, `first_name`, `last_name`, `username`, `email`, `pincode`, `password`, `date_of_birth`, `gender`, `e_status`, `user_role_id`, `department_id`, `sub_department_id`, `designation_id`, `company_id`, `location_id`, `view_companies_id`, `salary_template`, `hourly_grade_id`, `monthly_grade_id`, `date_of_joining`, `date_of_leaving`, `marital_status`, `salary`, `wages_type`, `basic_salary`, `daily_wages`, `salary_ssempee`, `salary_ssempeer`, `salary_income_tax`, `salary_overtime`, `salary_commission`, `salary_claims`, `salary_paid_leave`, `salary_director_fees`, `salary_bonus`, `salary_advance_paid`, `address`, `state`, `city`, `zipcode`, `profile_picture`, `profile_background`, `resume`, `skype_id`, `contact_no`, `facebook_link`, `twitter_link`, `blogger_link`, `linkdedin_link`, `google_plus_link`, `instagram_link`, `pinterest_link`, `youtube_link`, `is_active`, `last_login_date`, `last_logout_date`, `last_login_ip`, `is_logged_in`, `online_status`, `fixed_header`, `compact_sidebar`, `boxed_wrapper`, `leave_categories`, `ethnicity_type`, `blood_group`, `nationality_id`, `citizenship_id`, `created_at`) VALUES
 (1, 'fionagrace', 1, 0, 'Fiona', 'Grace', 'fionagrace', 'fionagrace@gmail.com', 0, '$2y$12$shA/jAqdaiuod7JBJSXryOmvmy50gBY8VmvMmu9gVDSQ1ODNa/d6e', '2018-03-28', 'Male', 0, 1, 2, 0, 10, 1, 1, '0', 'monthly', 0, 0, '2018-02-01', '', 'Single', '', 1, '1000', '0', '8', '17', '10', '0', '1', '2', '3', '0', '0', '0', 'Test Address', '', '', '', 'profile_1546421723.png', 'profile_background_1519924152.jpg', '', '', '12345678900', '', '', '', '', '', '', '', '', 1, '28-07-2019 01:58:28', '09-08-2019 08:25:59', '::1', 0, 1, 'fixed_layout_hrsale', '', '', '0,1,2', 0, NULL, 0, 0, '2018-02-28 05:30:44'),
 (5, 'jsmith12', 1, 0, 'Jhon', 'Smith', 'jhonsmith', 'jsmt12@hrsale.com', 0, '$2y$12$zjBiQwIQG7vmgGeq935iqOCDiQVREZgA3VsN44YderDI5YoXKkWdi', '2018-03-31', 'Male', 0, 2, 2, 10, 10, 1, 0, '', 'monthly', 0, 0, '2018-03-02', '', 'Single', '', 1, '1000', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'jsmt12', '', '', '', '', '', '', '', '1232', '', '', '', '', '', '', '', '', 1, '17-04-2019 08:42:32', '26-03-2019 07:31:01', '::1', 1, 1, '', '', '', '0,1,2', 0, NULL, 0, 0, '2018-03-18 01:10:04');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_bankaccount`
+-- Table structure for table `ifd_employee_bankaccount`
 --
 
-CREATE TABLE `xin_employee_bankaccount` (
+CREATE TABLE `ifd_employee_bankaccount` (
   `bankaccount_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `is_primary` int(11) NOT NULL,
@@ -1108,17 +1108,17 @@ CREATE TABLE `xin_employee_bankaccount` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_bankaccount`
+-- Truncate table before insert `ifd_employee_bankaccount`
 --
 
-TRUNCATE TABLE `xin_employee_bankaccount`;
+TRUNCATE TABLE `ifd_employee_bankaccount`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_complaints`
+-- Table structure for table `ifd_employee_complaints`
 --
 
-CREATE TABLE `xin_employee_complaints` (
+CREATE TABLE `ifd_employee_complaints` (
   `complaint_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `complaint_from` int(111) NOT NULL,
@@ -1132,17 +1132,17 @@ CREATE TABLE `xin_employee_complaints` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_complaints`
+-- Truncate table before insert `ifd_employee_complaints`
 --
 
-TRUNCATE TABLE `xin_employee_complaints`;
+TRUNCATE TABLE `ifd_employee_complaints`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_contacts`
+-- Table structure for table `ifd_employee_contacts`
 --
 
-CREATE TABLE `xin_employee_contacts` (
+CREATE TABLE `ifd_employee_contacts` (
   `contact_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `relation` varchar(255) NOT NULL,
@@ -1165,17 +1165,17 @@ CREATE TABLE `xin_employee_contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_contacts`
+-- Truncate table before insert `ifd_employee_contacts`
 --
 
-TRUNCATE TABLE `xin_employee_contacts`;
+TRUNCATE TABLE `ifd_employee_contacts`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_contract`
+-- Table structure for table `ifd_employee_contract`
 --
 
-CREATE TABLE `xin_employee_contract` (
+CREATE TABLE `ifd_employee_contract` (
   `contract_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `contract_type_id` int(111) NOT NULL,
@@ -1188,17 +1188,17 @@ CREATE TABLE `xin_employee_contract` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_contract`
+-- Truncate table before insert `ifd_employee_contract`
 --
 
-TRUNCATE TABLE `xin_employee_contract`;
+TRUNCATE TABLE `ifd_employee_contract`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_documents`
+-- Table structure for table `ifd_employee_documents`
 --
 
-CREATE TABLE `xin_employee_documents` (
+CREATE TABLE `ifd_employee_documents` (
   `document_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `document_type_id` int(111) NOT NULL,
@@ -1212,17 +1212,17 @@ CREATE TABLE `xin_employee_documents` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_documents`
+-- Truncate table before insert `ifd_employee_documents`
 --
 
-TRUNCATE TABLE `xin_employee_documents`;
+TRUNCATE TABLE `ifd_employee_documents`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_exit`
+-- Table structure for table `ifd_employee_exit`
 --
 
-CREATE TABLE `xin_employee_exit` (
+CREATE TABLE `ifd_employee_exit` (
   `exit_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -1236,17 +1236,17 @@ CREATE TABLE `xin_employee_exit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_exit`
+-- Truncate table before insert `ifd_employee_exit`
 --
 
-TRUNCATE TABLE `xin_employee_exit`;
+TRUNCATE TABLE `ifd_employee_exit`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_exit_type`
+-- Table structure for table `ifd_employee_exit_type`
 --
 
-CREATE TABLE `xin_employee_exit_type` (
+CREATE TABLE `ifd_employee_exit_type` (
   `exit_type_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -1254,24 +1254,24 @@ CREATE TABLE `xin_employee_exit_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_exit_type`
+-- Truncate table before insert `ifd_employee_exit_type`
 --
 
-TRUNCATE TABLE `xin_employee_exit_type`;
+TRUNCATE TABLE `ifd_employee_exit_type`;
 --
--- Dumping data for table `xin_employee_exit_type`
+-- Dumping data for table `ifd_employee_exit_type`
 --
 
-INSERT INTO `xin_employee_exit_type` (`exit_type_id`, `company_id`, `type`, `created_at`) VALUES
+INSERT INTO `ifd_employee_exit_type` (`exit_type_id`, `company_id`, `type`, `created_at`) VALUES
 (1, 1, 'Test', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_immigration`
+-- Table structure for table `ifd_employee_immigration`
 --
 
-CREATE TABLE `xin_employee_immigration` (
+CREATE TABLE `ifd_employee_immigration` (
   `immigration_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `document_type_id` int(111) NOT NULL,
@@ -1286,17 +1286,17 @@ CREATE TABLE `xin_employee_immigration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_immigration`
+-- Truncate table before insert `ifd_employee_immigration`
 --
 
-TRUNCATE TABLE `xin_employee_immigration`;
+TRUNCATE TABLE `ifd_employee_immigration`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_leave`
+-- Table structure for table `ifd_employee_leave`
 --
 
-CREATE TABLE `xin_employee_leave` (
+CREATE TABLE `ifd_employee_leave` (
   `leave_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `contract_id` int(111) NOT NULL,
@@ -1306,17 +1306,17 @@ CREATE TABLE `xin_employee_leave` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_leave`
+-- Truncate table before insert `ifd_employee_leave`
 --
 
-TRUNCATE TABLE `xin_employee_leave`;
+TRUNCATE TABLE `ifd_employee_leave`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_location`
+-- Table structure for table `ifd_employee_location`
 --
 
-CREATE TABLE `xin_employee_location` (
+CREATE TABLE `ifd_employee_location` (
   `office_location_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `location_id` int(111) NOT NULL,
@@ -1326,17 +1326,17 @@ CREATE TABLE `xin_employee_location` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_location`
+-- Truncate table before insert `ifd_employee_location`
 --
 
-TRUNCATE TABLE `xin_employee_location`;
+TRUNCATE TABLE `ifd_employee_location`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_promotions`
+-- Table structure for table `ifd_employee_promotions`
 --
 
-CREATE TABLE `xin_employee_promotions` (
+CREATE TABLE `ifd_employee_promotions` (
   `promotion_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -1348,17 +1348,17 @@ CREATE TABLE `xin_employee_promotions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_promotions`
+-- Truncate table before insert `ifd_employee_promotions`
 --
 
-TRUNCATE TABLE `xin_employee_promotions`;
+TRUNCATE TABLE `ifd_employee_promotions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_qualification`
+-- Table structure for table `ifd_employee_qualification`
 --
 
-CREATE TABLE `xin_employee_qualification` (
+CREATE TABLE `ifd_employee_qualification` (
   `qualification_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -1372,17 +1372,17 @@ CREATE TABLE `xin_employee_qualification` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_qualification`
+-- Truncate table before insert `ifd_employee_qualification`
 --
 
-TRUNCATE TABLE `xin_employee_qualification`;
+TRUNCATE TABLE `ifd_employee_qualification`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_resignations`
+-- Table structure for table `ifd_employee_resignations`
 --
 
-CREATE TABLE `xin_employee_resignations` (
+CREATE TABLE `ifd_employee_resignations` (
   `resignation_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `designation_id` int(11) NOT NULL,
@@ -1396,17 +1396,17 @@ CREATE TABLE `xin_employee_resignations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_resignations`
+-- Truncate table before insert `ifd_employee_resignations`
 --
 
-TRUNCATE TABLE `xin_employee_resignations`;
+TRUNCATE TABLE `ifd_employee_resignations`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_security_level`
+-- Table structure for table `ifd_employee_security_level`
 --
 
-CREATE TABLE `xin_employee_security_level` (
+CREATE TABLE `ifd_employee_security_level` (
   `security_level_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `security_type` int(11) NOT NULL,
@@ -1416,17 +1416,17 @@ CREATE TABLE `xin_employee_security_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_employee_security_level`
+-- Truncate table before insert `ifd_employee_security_level`
 --
 
-TRUNCATE TABLE `xin_employee_security_level`;
+TRUNCATE TABLE `ifd_employee_security_level`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_shift`
+-- Table structure for table `ifd_employee_shift`
 --
 
-CREATE TABLE `xin_employee_shift` (
+CREATE TABLE `ifd_employee_shift` (
   `emp_shift_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `shift_id` int(111) NOT NULL,
@@ -1436,17 +1436,17 @@ CREATE TABLE `xin_employee_shift` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_shift`
+-- Truncate table before insert `ifd_employee_shift`
 --
 
-TRUNCATE TABLE `xin_employee_shift`;
+TRUNCATE TABLE `ifd_employee_shift`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_terminations`
+-- Table structure for table `ifd_employee_terminations`
 --
 
-CREATE TABLE `xin_employee_terminations` (
+CREATE TABLE `ifd_employee_terminations` (
   `termination_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -1461,17 +1461,17 @@ CREATE TABLE `xin_employee_terminations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_terminations`
+-- Truncate table before insert `ifd_employee_terminations`
 --
 
-TRUNCATE TABLE `xin_employee_terminations`;
+TRUNCATE TABLE `ifd_employee_terminations`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_transfer`
+-- Table structure for table `ifd_employee_transfer`
 --
 
-CREATE TABLE `xin_employee_transfer` (
+CREATE TABLE `ifd_employee_transfer` (
   `transfer_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -1485,17 +1485,17 @@ CREATE TABLE `xin_employee_transfer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_transfer`
+-- Truncate table before insert `ifd_employee_transfer`
 --
 
-TRUNCATE TABLE `xin_employee_transfer`;
+TRUNCATE TABLE `ifd_employee_transfer`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_travels`
+-- Table structure for table `ifd_employee_travels`
 --
 
-CREATE TABLE `xin_employee_travels` (
+CREATE TABLE `ifd_employee_travels` (
   `travel_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -1514,17 +1514,17 @@ CREATE TABLE `xin_employee_travels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_travels`
+-- Truncate table before insert `ifd_employee_travels`
 --
 
-TRUNCATE TABLE `xin_employee_travels`;
+TRUNCATE TABLE `ifd_employee_travels`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_warnings`
+-- Table structure for table `ifd_employee_warnings`
 --
 
-CREATE TABLE `xin_employee_warnings` (
+CREATE TABLE `ifd_employee_warnings` (
   `warning_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `warning_to` int(111) NOT NULL,
@@ -1539,17 +1539,17 @@ CREATE TABLE `xin_employee_warnings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_warnings`
+-- Truncate table before insert `ifd_employee_warnings`
 --
 
-TRUNCATE TABLE `xin_employee_warnings`;
+TRUNCATE TABLE `ifd_employee_warnings`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_employee_work_experience`
+-- Table structure for table `ifd_employee_work_experience`
 --
 
-CREATE TABLE `xin_employee_work_experience` (
+CREATE TABLE `ifd_employee_work_experience` (
   `work_experience_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `company_name` varchar(255) NOT NULL,
@@ -1561,34 +1561,34 @@ CREATE TABLE `xin_employee_work_experience` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_employee_work_experience`
+-- Truncate table before insert `ifd_employee_work_experience`
 --
 
-TRUNCATE TABLE `xin_employee_work_experience`;
+TRUNCATE TABLE `ifd_employee_work_experience`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_ethnicity_type`
+-- Table structure for table `ifd_ethnicity_type`
 --
 
-CREATE TABLE `xin_ethnicity_type` (
+CREATE TABLE `ifd_ethnicity_type` (
   `ethnicity_type_id` int(11) NOT NULL,
   `type` varchar(200) NOT NULL,
   `created_at` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_ethnicity_type`
+-- Truncate table before insert `ifd_ethnicity_type`
 --
 
-TRUNCATE TABLE `xin_ethnicity_type`;
+TRUNCATE TABLE `ifd_ethnicity_type`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_events`
+-- Table structure for table `ifd_events`
 --
 
-CREATE TABLE `xin_events` (
+CREATE TABLE `ifd_events` (
   `event_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` varchar(255) DEFAULT NULL,
@@ -1601,17 +1601,17 @@ CREATE TABLE `xin_events` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_events`
+-- Truncate table before insert `ifd_events`
 --
 
-TRUNCATE TABLE `xin_events`;
+TRUNCATE TABLE `ifd_events`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_expenses`
+-- Table structure for table `ifd_expenses`
 --
 
-CREATE TABLE `xin_expenses` (
+CREATE TABLE `ifd_expenses` (
   `expense_id` int(11) NOT NULL,
   `employee_id` int(200) NOT NULL,
   `company_id` int(11) NOT NULL,
@@ -1626,17 +1626,17 @@ CREATE TABLE `xin_expenses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_expenses`
+-- Truncate table before insert `ifd_expenses`
 --
 
-TRUNCATE TABLE `xin_expenses`;
+TRUNCATE TABLE `ifd_expenses`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_expense_type`
+-- Table structure for table `ifd_expense_type`
 --
 
-CREATE TABLE `xin_expense_type` (
+CREATE TABLE `ifd_expense_type` (
   `expense_type_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
@@ -1645,25 +1645,25 @@ CREATE TABLE `xin_expense_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_expense_type`
+-- Truncate table before insert `ifd_expense_type`
 --
 
-TRUNCATE TABLE `xin_expense_type`;
+TRUNCATE TABLE `ifd_expense_type`;
 --
--- Dumping data for table `xin_expense_type`
+-- Dumping data for table `ifd_expense_type`
 --
 
-INSERT INTO `xin_expense_type` (`expense_type_id`, `company_id`, `name`, `status`, `created_at`) VALUES
+INSERT INTO `ifd_expense_type` (`expense_type_id`, `company_id`, `name`, `status`, `created_at`) VALUES
 (1, 1, 'Supplies', 1, '22-03-2018 01:17:42'),
 (2, 1, 'Utility', 1, '22-03-2018 01:17:48');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_file_manager`
+-- Table structure for table `ifd_file_manager`
 --
 
-CREATE TABLE `xin_file_manager` (
+CREATE TABLE `ifd_file_manager` (
   `file_id` int(111) NOT NULL,
   `user_id` int(111) NOT NULL,
   `department_id` int(111) NOT NULL,
@@ -1674,17 +1674,17 @@ CREATE TABLE `xin_file_manager` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_file_manager`
+-- Truncate table before insert `ifd_file_manager`
 --
 
-TRUNCATE TABLE `xin_file_manager`;
+TRUNCATE TABLE `ifd_file_manager`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_file_manager_settings`
+-- Table structure for table `ifd_file_manager_settings`
 --
 
-CREATE TABLE `xin_file_manager_settings` (
+CREATE TABLE `ifd_file_manager_settings` (
   `setting_id` int(111) NOT NULL,
   `allowed_extensions` mediumtext NOT NULL,
   `maximum_file_size` varchar(255) NOT NULL,
@@ -1693,24 +1693,24 @@ CREATE TABLE `xin_file_manager_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_file_manager_settings`
+-- Truncate table before insert `ifd_file_manager_settings`
 --
 
-TRUNCATE TABLE `xin_file_manager_settings`;
+TRUNCATE TABLE `ifd_file_manager_settings`;
 --
--- Dumping data for table `xin_file_manager_settings`
+-- Dumping data for table `ifd_file_manager_settings`
 --
 
-INSERT INTO `xin_file_manager_settings` (`setting_id`, `allowed_extensions`, `maximum_file_size`, `is_enable_all_files`, `updated_at`) VALUES
+INSERT INTO `ifd_file_manager_settings` (`setting_id`, `allowed_extensions`, `maximum_file_size`, `is_enable_all_files`, `updated_at`) VALUES
 (1, 'gif,png,pdf,txt,doc,docx', '10', '', '2019-09-30 03:13:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_bankcash`
+-- Table structure for table `ifd_finance_bankcash`
 --
 
-CREATE TABLE `xin_finance_bankcash` (
+CREATE TABLE `ifd_finance_bankcash` (
   `bankcash_id` int(111) NOT NULL,
   `account_name` varchar(255) NOT NULL,
   `account_balance` varchar(255) NOT NULL,
@@ -1722,24 +1722,24 @@ CREATE TABLE `xin_finance_bankcash` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_bankcash`
+-- Truncate table before insert `ifd_finance_bankcash`
 --
 
-TRUNCATE TABLE `xin_finance_bankcash`;
+TRUNCATE TABLE `ifd_finance_bankcash`;
 --
--- Dumping data for table `xin_finance_bankcash`
+-- Dumping data for table `ifd_finance_bankcash`
 --
 
-INSERT INTO `xin_finance_bankcash` (`bankcash_id`, `account_name`, `account_balance`, `account_opening_balance`, `account_number`, `branch_code`, `bank_branch`, `created_at`) VALUES
+INSERT INTO `ifd_finance_bankcash` (`bankcash_id`, `account_name`, `account_balance`, `account_opening_balance`, `account_number`, `branch_code`, `bank_branch`, `created_at`) VALUES
 (1, 'AlRajhi Bank', '10000000', '10000000', '123456789', '00966', 'Riyadh Branch', '23-06-2020 01:23:16');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_deposit`
+-- Table structure for table `ifd_finance_deposit`
 --
 
-CREATE TABLE `xin_finance_deposit` (
+CREATE TABLE `ifd_finance_deposit` (
   `deposit_id` int(111) NOT NULL,
   `account_type_id` int(111) NOT NULL,
   `amount` varchar(255) NOT NULL,
@@ -1754,17 +1754,17 @@ CREATE TABLE `xin_finance_deposit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_deposit`
+-- Truncate table before insert `ifd_finance_deposit`
 --
 
-TRUNCATE TABLE `xin_finance_deposit`;
+TRUNCATE TABLE `ifd_finance_deposit`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_expense`
+-- Table structure for table `ifd_finance_expense`
 --
 
-CREATE TABLE `xin_finance_expense` (
+CREATE TABLE `ifd_finance_expense` (
   `expense_id` int(111) NOT NULL,
   `account_type_id` int(111) NOT NULL,
   `amount` varchar(255) NOT NULL,
@@ -1779,17 +1779,17 @@ CREATE TABLE `xin_finance_expense` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_expense`
+-- Truncate table before insert `ifd_finance_expense`
 --
 
-TRUNCATE TABLE `xin_finance_expense`;
+TRUNCATE TABLE `ifd_finance_expense`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_payees`
+-- Table structure for table `ifd_finance_payees`
 --
 
-CREATE TABLE `xin_finance_payees` (
+CREATE TABLE `ifd_finance_payees` (
   `payee_id` int(11) NOT NULL,
   `payee_name` varchar(255) NOT NULL,
   `contact_number` varchar(255) NOT NULL,
@@ -1797,17 +1797,17 @@ CREATE TABLE `xin_finance_payees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_payees`
+-- Truncate table before insert `ifd_finance_payees`
 --
 
-TRUNCATE TABLE `xin_finance_payees`;
+TRUNCATE TABLE `ifd_finance_payees`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_payers`
+-- Table structure for table `ifd_finance_payers`
 --
 
-CREATE TABLE `xin_finance_payers` (
+CREATE TABLE `ifd_finance_payers` (
   `payer_id` int(11) NOT NULL,
   `payer_name` varchar(255) NOT NULL,
   `contact_number` varchar(255) NOT NULL,
@@ -1815,17 +1815,17 @@ CREATE TABLE `xin_finance_payers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_payers`
+-- Truncate table before insert `ifd_finance_payers`
 --
 
-TRUNCATE TABLE `xin_finance_payers`;
+TRUNCATE TABLE `ifd_finance_payers`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_transaction`
+-- Table structure for table `ifd_finance_transaction`
 --
 
-CREATE TABLE `xin_finance_transaction` (
+CREATE TABLE `ifd_finance_transaction` (
   `transaction_id` int(11) NOT NULL,
   `account_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
@@ -1847,17 +1847,17 @@ CREATE TABLE `xin_finance_transaction` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_finance_transaction`
+-- Truncate table before insert `ifd_finance_transaction`
 --
 
-TRUNCATE TABLE `xin_finance_transaction`;
+TRUNCATE TABLE `ifd_finance_transaction`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_transactions`
+-- Table structure for table `ifd_finance_transactions`
 --
 
-CREATE TABLE `xin_finance_transactions` (
+CREATE TABLE `ifd_finance_transactions` (
   `transaction_id` int(111) NOT NULL,
   `account_type_id` int(111) NOT NULL,
   `deposit_id` int(111) NOT NULL,
@@ -1872,17 +1872,17 @@ CREATE TABLE `xin_finance_transactions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_transactions`
+-- Truncate table before insert `ifd_finance_transactions`
 --
 
-TRUNCATE TABLE `xin_finance_transactions`;
+TRUNCATE TABLE `ifd_finance_transactions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_finance_transfer`
+-- Table structure for table `ifd_finance_transfer`
 --
 
-CREATE TABLE `xin_finance_transfer` (
+CREATE TABLE `ifd_finance_transfer` (
   `transfer_id` int(111) NOT NULL,
   `from_account_id` int(111) NOT NULL,
   `to_account_id` int(111) NOT NULL,
@@ -1895,17 +1895,17 @@ CREATE TABLE `xin_finance_transfer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_finance_transfer`
+-- Truncate table before insert `ifd_finance_transfer`
 --
 
-TRUNCATE TABLE `xin_finance_transfer`;
+TRUNCATE TABLE `ifd_finance_transfer`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_goal_tracking`
+-- Table structure for table `ifd_goal_tracking`
 --
 
-CREATE TABLE `xin_goal_tracking` (
+CREATE TABLE `ifd_goal_tracking` (
   `tracking_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `tracking_type_id` int(200) NOT NULL,
@@ -1920,17 +1920,17 @@ CREATE TABLE `xin_goal_tracking` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_goal_tracking`
+-- Truncate table before insert `ifd_goal_tracking`
 --
 
-TRUNCATE TABLE `xin_goal_tracking`;
+TRUNCATE TABLE `ifd_goal_tracking`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_goal_tracking_type`
+-- Table structure for table `ifd_goal_tracking_type`
 --
 
-CREATE TABLE `xin_goal_tracking_type` (
+CREATE TABLE `ifd_goal_tracking_type` (
   `tracking_type_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type_name` varchar(255) NOT NULL,
@@ -1938,25 +1938,25 @@ CREATE TABLE `xin_goal_tracking_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_goal_tracking_type`
+-- Truncate table before insert `ifd_goal_tracking_type`
 --
 
-TRUNCATE TABLE `xin_goal_tracking_type`;
+TRUNCATE TABLE `ifd_goal_tracking_type`;
 --
--- Dumping data for table `xin_goal_tracking_type`
+-- Dumping data for table `ifd_goal_tracking_type`
 --
 
-INSERT INTO `xin_goal_tracking_type` (`tracking_type_id`, `company_id`, `type_name`, `created_at`) VALUES
+INSERT INTO `ifd_goal_tracking_type` (`tracking_type_id`, `company_id`, `type_name`, `created_at`) VALUES
 (1, 1, 'Invoice Goal', '31-08-2018 01:29:44'),
 (4, 1, 'Event Goal', '31-08-2018 01:29:47');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_holidays`
+-- Table structure for table `ifd_holidays`
 --
 
-CREATE TABLE `xin_holidays` (
+CREATE TABLE `ifd_holidays` (
   `holiday_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `event_name` varchar(200) NOT NULL,
@@ -1968,17 +1968,17 @@ CREATE TABLE `xin_holidays` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_holidays`
+-- Truncate table before insert `ifd_holidays`
 --
 
-TRUNCATE TABLE `xin_holidays`;
+TRUNCATE TABLE `ifd_holidays`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hourly_templates`
+-- Table structure for table `ifd_hourly_templates`
 --
 
-CREATE TABLE `xin_hourly_templates` (
+CREATE TABLE `ifd_hourly_templates` (
   `hourly_rate_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `hourly_grade` varchar(255) NOT NULL,
@@ -1988,17 +1988,17 @@ CREATE TABLE `xin_hourly_templates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_hourly_templates`
+-- Truncate table before insert `ifd_hourly_templates`
 --
 
-TRUNCATE TABLE `xin_hourly_templates`;
+TRUNCATE TABLE `ifd_hourly_templates`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_invoices`
+-- Table structure for table `ifd_hrsale_invoices`
 --
 
-CREATE TABLE `xin_hrsale_invoices` (
+CREATE TABLE `ifd_hrsale_invoices` (
   `invoice_id` int(111) NOT NULL,
   `invoice_number` varchar(255) NOT NULL,
   `client_id` int(11) NOT NULL,
@@ -2029,17 +2029,17 @@ CREATE TABLE `xin_hrsale_invoices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_hrsale_invoices`
+-- Truncate table before insert `ifd_hrsale_invoices`
 --
 
-TRUNCATE TABLE `xin_hrsale_invoices`;
+TRUNCATE TABLE `ifd_hrsale_invoices`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_invoices_items`
+-- Table structure for table `ifd_hrsale_invoices_items`
 --
 
-CREATE TABLE `xin_hrsale_invoices_items` (
+CREATE TABLE `ifd_hrsale_invoices_items` (
   `invoice_item_id` int(111) NOT NULL,
   `invoice_id` int(111) NOT NULL,
   `project_id` int(111) NOT NULL,
@@ -2059,17 +2059,17 @@ CREATE TABLE `xin_hrsale_invoices_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_hrsale_invoices_items`
+-- Truncate table before insert `ifd_hrsale_invoices_items`
 --
 
-TRUNCATE TABLE `xin_hrsale_invoices_items`;
+TRUNCATE TABLE `ifd_hrsale_invoices_items`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_module_attributes`
+-- Table structure for table `ifd_hrsale_module_attributes`
 --
 
-CREATE TABLE `xin_hrsale_module_attributes` (
+CREATE TABLE `ifd_hrsale_module_attributes` (
   `custom_field_id` int(11) NOT NULL,
   `module_id` int(11) NOT NULL,
   `attribute` varchar(255) NOT NULL,
@@ -2081,34 +2081,34 @@ CREATE TABLE `xin_hrsale_module_attributes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_hrsale_module_attributes`
+-- Truncate table before insert `ifd_hrsale_module_attributes`
 --
 
-TRUNCATE TABLE `xin_hrsale_module_attributes`;
+TRUNCATE TABLE `ifd_hrsale_module_attributes`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_module_attributes_select_value`
+-- Table structure for table `ifd_hrsale_module_attributes_select_value`
 --
 
-CREATE TABLE `xin_hrsale_module_attributes_select_value` (
+CREATE TABLE `ifd_hrsale_module_attributes_select_value` (
   `attributes_select_value_id` int(11) NOT NULL,
   `custom_field_id` int(11) NOT NULL,
   `select_label` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_hrsale_module_attributes_select_value`
+-- Truncate table before insert `ifd_hrsale_module_attributes_select_value`
 --
 
-TRUNCATE TABLE `xin_hrsale_module_attributes_select_value`;
+TRUNCATE TABLE `ifd_hrsale_module_attributes_select_value`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_module_attributes_values`
+-- Table structure for table `ifd_hrsale_module_attributes_values`
 --
 
-CREATE TABLE `xin_hrsale_module_attributes_values` (
+CREATE TABLE `ifd_hrsale_module_attributes_values` (
   `attributes_value_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `module_attributes_id` int(11) NOT NULL,
@@ -2117,17 +2117,17 @@ CREATE TABLE `xin_hrsale_module_attributes_values` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_hrsale_module_attributes_values`
+-- Truncate table before insert `ifd_hrsale_module_attributes_values`
 --
 
-TRUNCATE TABLE `xin_hrsale_module_attributes_values`;
+TRUNCATE TABLE `ifd_hrsale_module_attributes_values`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_notificaions`
+-- Table structure for table `ifd_hrsale_notificaions`
 --
 
-CREATE TABLE `xin_hrsale_notificaions` (
+CREATE TABLE `ifd_hrsale_notificaions` (
   `notificaion_id` int(11) NOT NULL,
   `module_name` varchar(255) NOT NULL,
   `module_id` int(11) NOT NULL,
@@ -2137,17 +2137,17 @@ CREATE TABLE `xin_hrsale_notificaions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Truncate table before insert `xin_hrsale_notificaions`
+-- Truncate table before insert `ifd_hrsale_notificaions`
 --
 
-TRUNCATE TABLE `xin_hrsale_notificaions`;
+TRUNCATE TABLE `ifd_hrsale_notificaions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_quotes`
+-- Table structure for table `ifd_hrsale_quotes`
 --
 
-CREATE TABLE `xin_hrsale_quotes` (
+CREATE TABLE `ifd_hrsale_quotes` (
   `quote_id` int(111) NOT NULL,
   `quote_number` varchar(255) NOT NULL,
   `project_id` int(11) NOT NULL,
@@ -2182,17 +2182,17 @@ CREATE TABLE `xin_hrsale_quotes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_hrsale_quotes`
+-- Truncate table before insert `ifd_hrsale_quotes`
 --
 
-TRUNCATE TABLE `xin_hrsale_quotes`;
+TRUNCATE TABLE `ifd_hrsale_quotes`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_hrsale_quotes_items`
+-- Table structure for table `ifd_hrsale_quotes_items`
 --
 
-CREATE TABLE `xin_hrsale_quotes_items` (
+CREATE TABLE `ifd_hrsale_quotes_items` (
   `quote_item_id` int(111) NOT NULL,
   `quote_id` int(111) NOT NULL,
   `project_id` int(11) NOT NULL,
@@ -2214,17 +2214,17 @@ CREATE TABLE `xin_hrsale_quotes_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_hrsale_quotes_items`
+-- Truncate table before insert `ifd_hrsale_quotes_items`
 --
 
-TRUNCATE TABLE `xin_hrsale_quotes_items`;
+TRUNCATE TABLE `ifd_hrsale_quotes_items`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_income_categories`
+-- Table structure for table `ifd_income_categories`
 --
 
-CREATE TABLE `xin_income_categories` (
+CREATE TABLE `ifd_income_categories` (
   `category_id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
@@ -2232,15 +2232,15 @@ CREATE TABLE `xin_income_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_income_categories`
+-- Truncate table before insert `ifd_income_categories`
 --
 
-TRUNCATE TABLE `xin_income_categories`;
+TRUNCATE TABLE `ifd_income_categories`;
 --
--- Dumping data for table `xin_income_categories`
+-- Dumping data for table `ifd_income_categories`
 --
 
-INSERT INTO `xin_income_categories` (`category_id`, `name`, `status`, `created_at`) VALUES
+INSERT INTO `ifd_income_categories` (`category_id`, `name`, `status`, `created_at`) VALUES
 (1, 'Envato', 1, '25-03-2018 09:36:20'),
 (2, 'Salary', 1, '25-03-2018 09:36:28'),
 (3, 'Other Income', 1, '25-03-2018 09:36:32'),
@@ -2251,10 +2251,10 @@ INSERT INTO `xin_income_categories` (`category_id`, `name`, `status`, `created_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_jobs`
+-- Table structure for table `ifd_jobs`
 --
 
-CREATE TABLE `xin_jobs` (
+CREATE TABLE `ifd_jobs` (
   `job_id` int(11) NOT NULL,
   `employer_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -2277,17 +2277,17 @@ CREATE TABLE `xin_jobs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_jobs`
+-- Truncate table before insert `ifd_jobs`
 --
 
-TRUNCATE TABLE `xin_jobs`;
+TRUNCATE TABLE `ifd_jobs`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_job_applications`
+-- Table structure for table `ifd_job_applications`
 --
 
-CREATE TABLE `xin_job_applications` (
+CREATE TABLE `ifd_job_applications` (
   `application_id` int(111) NOT NULL,
   `job_id` int(111) NOT NULL,
   `full_name` varchar(255) NOT NULL,
@@ -2301,17 +2301,17 @@ CREATE TABLE `xin_job_applications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_job_applications`
+-- Truncate table before insert `ifd_job_applications`
 --
 
-TRUNCATE TABLE `xin_job_applications`;
+TRUNCATE TABLE `ifd_job_applications`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_job_categories`
+-- Table structure for table `ifd_job_categories`
 --
 
-CREATE TABLE `xin_job_categories` (
+CREATE TABLE `ifd_job_categories` (
   `category_id` int(11) NOT NULL,
   `category_name` varchar(255) NOT NULL,
   `category_url` varchar(255) NOT NULL,
@@ -2319,15 +2319,15 @@ CREATE TABLE `xin_job_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_job_categories`
+-- Truncate table before insert `ifd_job_categories`
 --
 
-TRUNCATE TABLE `xin_job_categories`;
+TRUNCATE TABLE `ifd_job_categories`;
 --
--- Dumping data for table `xin_job_categories`
+-- Dumping data for table `ifd_job_categories`
 --
 
-INSERT INTO `xin_job_categories` (`category_id`, `category_name`, `category_url`, `created_at`) VALUES
+INSERT INTO `ifd_job_categories` (`category_id`, `category_name`, `category_url`, `created_at`) VALUES
 (1, 'PHP', 'q7VJh5xWwr56ycN0mAou4266iOY8l1BbMd6H2D3rkFnjU9LgC', '2018-04-15'),
 (2, 'Android', 'q7VJh5xWwr56ycN0m34Aou4266iOY8l1BbMd6H2D3rkFnjU9LgC', '2018-04-15'),
 (3, 'WordPress', 'q2327VJh5xWwr56ycN0mAou4266iOY8l1BbMd6H2D3rkFnjU9LgC', '2018-04-15'),
@@ -2381,10 +2381,10 @@ INSERT INTO `xin_job_categories` (`category_id`, `category_name`, `category_url`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_job_interviews`
+-- Table structure for table `ifd_job_interviews`
 --
 
-CREATE TABLE `xin_job_interviews` (
+CREATE TABLE `ifd_job_interviews` (
   `job_interview_id` int(111) NOT NULL,
   `job_id` int(111) NOT NULL,
   `interviewers_id` varchar(255) NOT NULL,
@@ -2398,17 +2398,17 @@ CREATE TABLE `xin_job_interviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_job_interviews`
+-- Truncate table before insert `ifd_job_interviews`
 --
 
-TRUNCATE TABLE `xin_job_interviews`;
+TRUNCATE TABLE `ifd_job_interviews`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_job_pages`
+-- Table structure for table `ifd_job_pages`
 --
 
-CREATE TABLE `xin_job_pages` (
+CREATE TABLE `ifd_job_pages` (
   `page_id` int(11) NOT NULL,
   `page_title` varchar(255) NOT NULL,
   `page_url` varchar(255) NOT NULL,
@@ -2417,15 +2417,15 @@ CREATE TABLE `xin_job_pages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_job_pages`
+-- Truncate table before insert `ifd_job_pages`
 --
 
-TRUNCATE TABLE `xin_job_pages`;
+TRUNCATE TABLE `ifd_job_pages`;
 --
--- Dumping data for table `xin_job_pages`
+-- Dumping data for table `ifd_job_pages`
 --
 
-INSERT INTO `xin_job_pages` (`page_id`, `page_title`, `page_url`, `page_details`, `created_at`) VALUES
+INSERT INTO `ifd_job_pages` (`page_id`, `page_title`, `page_url`, `page_details`, `created_at`) VALUES
 (1, 'About Us', 'xl9wkRy7tqOehBo6YCDjFG2JTucpKI4gMNsn8Zdf', 'About Ussss', '2018-04-15'),
 (2, 'Communications', '5uk4EUc3V9FYTbBQz7PWgKM6qCajfAipvhOJnZHl', 'Communications', '2018-04-15'),
 (3, 'Lending Licenses', '5r6OCsUoHQFiRwI17W0eT38jbvpxEGuLhzgmt9lZ', 'Lending Licenses', '2018-04-15'),
@@ -2438,10 +2438,10 @@ INSERT INTO `xin_job_pages` (`page_id`, `page_title`, `page_url`, `page_details`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_job_type`
+-- Table structure for table `ifd_job_type`
 --
 
-CREATE TABLE `xin_job_type` (
+CREATE TABLE `ifd_job_type` (
   `job_type_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -2450,15 +2450,15 @@ CREATE TABLE `xin_job_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_job_type`
+-- Truncate table before insert `ifd_job_type`
 --
 
-TRUNCATE TABLE `xin_job_type`;
+TRUNCATE TABLE `ifd_job_type`;
 --
--- Dumping data for table `xin_job_type`
+-- Dumping data for table `ifd_job_type`
 --
 
-INSERT INTO `xin_job_type` (`job_type_id`, `company_id`, `type`, `type_url`, `created_at`) VALUES
+INSERT INTO `ifd_job_type` (`job_type_id`, `company_id`, `type`, `type_url`, `created_at`) VALUES
 (1, 1, 'Full Time', 'full-time', '22-03-2018 02:18:48'),
 (2, 1, 'Part Time', 'part-time', '16-04-2018 06:29:45'),
 (3, 1, 'Internship', 'internship', '16-04-2018 06:30:06'),
@@ -2467,10 +2467,10 @@ INSERT INTO `xin_job_type` (`job_type_id`, `company_id`, `type`, `type_url`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_kpi_incidental`
+-- Table structure for table `ifd_kpi_incidental`
 --
 
-CREATE TABLE `xin_kpi_incidental` (
+CREATE TABLE `ifd_kpi_incidental` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `incidental_kpi` text NOT NULL,
@@ -2485,17 +2485,17 @@ CREATE TABLE `xin_kpi_incidental` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_kpi_incidental`
+-- Truncate table before insert `ifd_kpi_incidental`
 --
 
-TRUNCATE TABLE `xin_kpi_incidental`;
+TRUNCATE TABLE `ifd_kpi_incidental`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_kpi_maingoals`
+-- Table structure for table `ifd_kpi_maingoals`
 --
 
-CREATE TABLE `xin_kpi_maingoals` (
+CREATE TABLE `ifd_kpi_maingoals` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `main_kpi` varchar(255) NOT NULL,
@@ -2512,17 +2512,17 @@ CREATE TABLE `xin_kpi_maingoals` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_kpi_maingoals`
+-- Truncate table before insert `ifd_kpi_maingoals`
 --
 
-TRUNCATE TABLE `xin_kpi_maingoals`;
+TRUNCATE TABLE `ifd_kpi_maingoals`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_kpi_variable`
+-- Table structure for table `ifd_kpi_variable`
 --
 
-CREATE TABLE `xin_kpi_variable` (
+CREATE TABLE `ifd_kpi_variable` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `variable_kpi` varchar(200) NOT NULL,
@@ -2538,17 +2538,17 @@ CREATE TABLE `xin_kpi_variable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_kpi_variable`
+-- Truncate table before insert `ifd_kpi_variable`
 --
 
-TRUNCATE TABLE `xin_kpi_variable`;
+TRUNCATE TABLE `ifd_kpi_variable`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_languages`
+-- Table structure for table `ifd_languages`
 --
 
-CREATE TABLE `xin_languages` (
+CREATE TABLE `ifd_languages` (
   `language_id` int(111) NOT NULL,
   `language_name` varchar(255) NOT NULL,
   `language_code` varchar(255) NOT NULL,
@@ -2558,15 +2558,15 @@ CREATE TABLE `xin_languages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_languages`
+-- Truncate table before insert `ifd_languages`
 --
 
-TRUNCATE TABLE `xin_languages`;
+TRUNCATE TABLE `ifd_languages`;
 --
--- Dumping data for table `xin_languages`
+-- Dumping data for table `ifd_languages`
 --
 
-INSERT INTO `xin_languages` (`language_id`, `language_name`, `language_code`, `language_flag`, `is_active`, `created_at`) VALUES
+INSERT INTO `ifd_languages` (`language_id`, `language_name`, `language_code`, `language_flag`, `is_active`, `created_at`) VALUES
 (1, 'English', 'english', 'language_flag_1520564355.gif', 1, ''),
 (4, 'Portuguese', 'portuguese', 'language_flag_1526420518.gif', 1, '16-05-2018 12:41:57'),
 (5, 'Vietnamese', 'vietnamese', 'language_flag_1526728529.gif', 1, '19-05-2018 02:15:28'),
@@ -2588,10 +2588,10 @@ INSERT INTO `xin_languages` (`language_id`, `language_name`, `language_code`, `l
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_leads`
+-- Table structure for table `ifd_leads`
 --
 
-CREATE TABLE `xin_leads` (
+CREATE TABLE `ifd_leads` (
   `client_id` int(111) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -2618,17 +2618,17 @@ CREATE TABLE `xin_leads` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_leads`
+-- Truncate table before insert `ifd_leads`
 --
 
-TRUNCATE TABLE `xin_leads`;
+TRUNCATE TABLE `ifd_leads`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_leads_followup`
+-- Table structure for table `ifd_leads_followup`
 --
 
-CREATE TABLE `xin_leads_followup` (
+CREATE TABLE `ifd_leads_followup` (
   `leads_followup_id` int(11) NOT NULL,
   `lead_id` int(11) NOT NULL,
   `next_followup` varchar(255) NOT NULL,
@@ -2636,17 +2636,17 @@ CREATE TABLE `xin_leads_followup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Truncate table before insert `xin_leads_followup`
+-- Truncate table before insert `ifd_leads_followup`
 --
 
-TRUNCATE TABLE `xin_leads_followup`;
+TRUNCATE TABLE `ifd_leads_followup`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_leave_applications`
+-- Table structure for table `ifd_leave_applications`
 --
 
-CREATE TABLE `xin_leave_applications` (
+CREATE TABLE `ifd_leave_applications` (
   `leave_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(222) NOT NULL,
@@ -2665,17 +2665,17 @@ CREATE TABLE `xin_leave_applications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_leave_applications`
+-- Truncate table before insert `ifd_leave_applications`
 --
 
-TRUNCATE TABLE `xin_leave_applications`;
+TRUNCATE TABLE `ifd_leave_applications`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_leave_type`
+-- Table structure for table `ifd_leave_type`
 --
 
-CREATE TABLE `xin_leave_type` (
+CREATE TABLE `ifd_leave_type` (
   `leave_type_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type_name` varchar(200) NOT NULL,
@@ -2685,25 +2685,25 @@ CREATE TABLE `xin_leave_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_leave_type`
+-- Truncate table before insert `ifd_leave_type`
 --
 
-TRUNCATE TABLE `xin_leave_type`;
+TRUNCATE TABLE `ifd_leave_type`;
 --
--- Dumping data for table `xin_leave_type`
+-- Dumping data for table `ifd_leave_type`
 --
 
-INSERT INTO `xin_leave_type` (`leave_type_id`, `company_id`, `type_name`, `days_per_year`, `status`, `created_at`) VALUES
+INSERT INTO `ifd_leave_type` (`leave_type_id`, `company_id`, `type_name`, `days_per_year`, `status`, `created_at`) VALUES
 (1, 1, 'Casual Leave', '3', 1, '19-03-2018 07:52:20'),
 (2, 1, 'Medical', '2', 1, '19-03-2018 07:52:30');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_make_payment`
+-- Table structure for table `ifd_make_payment`
 --
 
-CREATE TABLE `xin_make_payment` (
+CREATE TABLE `ifd_make_payment` (
   `make_payment_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
   `department_id` int(111) NOT NULL,
@@ -2737,17 +2737,17 @@ CREATE TABLE `xin_make_payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_make_payment`
+-- Truncate table before insert `ifd_make_payment`
 --
 
-TRUNCATE TABLE `xin_make_payment`;
+TRUNCATE TABLE `ifd_make_payment`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_meetings`
+-- Table structure for table `ifd_meetings`
 --
 
-CREATE TABLE `xin_meetings` (
+CREATE TABLE `ifd_meetings` (
   `meeting_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` varchar(255) DEFAULT NULL,
@@ -2761,17 +2761,17 @@ CREATE TABLE `xin_meetings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_meetings`
+-- Truncate table before insert `ifd_meetings`
 --
 
-TRUNCATE TABLE `xin_meetings`;
+TRUNCATE TABLE `ifd_meetings`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_office_location`
+-- Table structure for table `ifd_office_location`
 --
 
-CREATE TABLE `xin_office_location` (
+CREATE TABLE `ifd_office_location` (
   `location_id` int(11) NOT NULL,
   `company_id` int(111) NOT NULL,
   `location_head` int(111) NOT NULL,
@@ -2792,24 +2792,24 @@ CREATE TABLE `xin_office_location` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_office_location`
+-- Truncate table before insert `ifd_office_location`
 --
 
-TRUNCATE TABLE `xin_office_location`;
+TRUNCATE TABLE `ifd_office_location`;
 --
--- Dumping data for table `xin_office_location`
+-- Dumping data for table `ifd_office_location`
 --
 
-INSERT INTO `xin_office_location` (`location_id`, `company_id`, `location_head`, `location_manager`, `location_name`, `email`, `phone`, `fax`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `added_by`, `created_at`, `status`) VALUES
+INSERT INTO `ifd_office_location` (`location_id`, `company_id`, `location_head`, `location_manager`, `location_name`, `email`, `phone`, `fax`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `added_by`, `created_at`, `status`) VALUES
 (1, 1, 5, 0, 'Riyadh Branch', 'mainoffice@hrsale.com', '1234567890', '1234567890', 'Address Line 1', 'Address Line 2', 'City', 'State', '12345', 190, 1, '28-02-2018', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_office_shift`
+-- Table structure for table `ifd_office_shift`
 --
 
-CREATE TABLE `xin_office_shift` (
+CREATE TABLE `ifd_office_shift` (
   `office_shift_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `shift_name` varchar(255) NOT NULL,
@@ -2832,24 +2832,24 @@ CREATE TABLE `xin_office_shift` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_office_shift`
+-- Truncate table before insert `ifd_office_shift`
 --
 
-TRUNCATE TABLE `xin_office_shift`;
+TRUNCATE TABLE `ifd_office_shift`;
 --
--- Dumping data for table `xin_office_shift`
+-- Dumping data for table `ifd_office_shift`
 --
 
-INSERT INTO `xin_office_shift` (`office_shift_id`, `company_id`, `shift_name`, `default_shift`, `monday_in_time`, `monday_out_time`, `tuesday_in_time`, `tuesday_out_time`, `wednesday_in_time`, `wednesday_out_time`, `thursday_in_time`, `thursday_out_time`, `friday_in_time`, `friday_out_time`, `saturday_in_time`, `saturday_out_time`, `sunday_in_time`, `sunday_out_time`, `created_at`) VALUES
+INSERT INTO `ifd_office_shift` (`office_shift_id`, `company_id`, `shift_name`, `default_shift`, `monday_in_time`, `monday_out_time`, `tuesday_in_time`, `tuesday_out_time`, `wednesday_in_time`, `wednesday_out_time`, `thursday_in_time`, `thursday_out_time`, `friday_in_time`, `friday_out_time`, `saturday_in_time`, `saturday_out_time`, `sunday_in_time`, `sunday_out_time`, `created_at`) VALUES
 (1, 1, 'Morning Shift', 1, '08:00', '18:00', '03:00', '18:00', '08:00', '18:00', '08:00', '18:00', '08:00', '18:00', '', '', '', '', '2018-02-28');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_payment_method`
+-- Table structure for table `ifd_payment_method`
 --
 
-CREATE TABLE `xin_payment_method` (
+CREATE TABLE `ifd_payment_method` (
   `payment_method_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `method_name` varchar(255) NOT NULL,
@@ -2859,15 +2859,15 @@ CREATE TABLE `xin_payment_method` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_payment_method`
+-- Truncate table before insert `ifd_payment_method`
 --
 
-TRUNCATE TABLE `xin_payment_method`;
+TRUNCATE TABLE `ifd_payment_method`;
 --
--- Dumping data for table `xin_payment_method`
+-- Dumping data for table `ifd_payment_method`
 --
 
-INSERT INTO `xin_payment_method` (`payment_method_id`, `company_id`, `method_name`, `payment_percentage`, `account_number`, `created_at`) VALUES
+INSERT INTO `ifd_payment_method` (`payment_method_id`, `company_id`, `method_name`, `payment_percentage`, `account_number`, `created_at`) VALUES
 (1, 1, 'Cash', '30', '', '23-04-2018 05:13:52'),
 (2, 1, 'Paypal', '40', '1', '12-08-2018 02:18:50'),
 (3, 1, 'Bank', '30', '1231232', '12-08-2018 02:18:57');
@@ -2875,10 +2875,10 @@ INSERT INTO `xin_payment_method` (`payment_method_id`, `company_id`, `method_nam
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_payroll_custom_fields`
+-- Table structure for table `ifd_payroll_custom_fields`
 --
 
-CREATE TABLE `xin_payroll_custom_fields` (
+CREATE TABLE `ifd_payroll_custom_fields` (
   `payroll_custom_id` int(11) NOT NULL,
   `allow_custom_1` varchar(255) NOT NULL,
   `is_active_allow_1` int(11) NOT NULL,
@@ -2903,17 +2903,17 @@ CREATE TABLE `xin_payroll_custom_fields` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_payroll_custom_fields`
+-- Truncate table before insert `ifd_payroll_custom_fields`
 --
 
-TRUNCATE TABLE `xin_payroll_custom_fields`;
+TRUNCATE TABLE `ifd_payroll_custom_fields`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_performance_appraisal`
+-- Table structure for table `ifd_performance_appraisal`
 --
 
-CREATE TABLE `xin_performance_appraisal` (
+CREATE TABLE `ifd_performance_appraisal` (
   `performance_appraisal_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -2938,17 +2938,17 @@ CREATE TABLE `xin_performance_appraisal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_performance_appraisal`
+-- Truncate table before insert `ifd_performance_appraisal`
 --
 
-TRUNCATE TABLE `xin_performance_appraisal`;
+TRUNCATE TABLE `ifd_performance_appraisal`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_performance_appraisal_options`
+-- Table structure for table `ifd_performance_appraisal_options`
 --
 
-CREATE TABLE `xin_performance_appraisal_options` (
+CREATE TABLE `ifd_performance_appraisal_options` (
   `performance_appraisal_options_id` int(11) NOT NULL,
   `appraisal_id` int(11) NOT NULL,
   `appraisal_type` varchar(200) NOT NULL,
@@ -2957,17 +2957,17 @@ CREATE TABLE `xin_performance_appraisal_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_performance_appraisal_options`
+-- Truncate table before insert `ifd_performance_appraisal_options`
 --
 
-TRUNCATE TABLE `xin_performance_appraisal_options`;
+TRUNCATE TABLE `ifd_performance_appraisal_options`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_performance_indicator`
+-- Table structure for table `ifd_performance_indicator`
 --
 
-CREATE TABLE `xin_performance_indicator` (
+CREATE TABLE `ifd_performance_indicator` (
   `performance_indicator_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `designation_id` int(111) NOT NULL,
@@ -2990,17 +2990,17 @@ CREATE TABLE `xin_performance_indicator` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_performance_indicator`
+-- Truncate table before insert `ifd_performance_indicator`
 --
 
-TRUNCATE TABLE `xin_performance_indicator`;
+TRUNCATE TABLE `ifd_performance_indicator`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_performance_indicator_options`
+-- Table structure for table `ifd_performance_indicator_options`
 --
 
-CREATE TABLE `xin_performance_indicator_options` (
+CREATE TABLE `ifd_performance_indicator_options` (
   `performance_indicator_options_id` int(11) NOT NULL,
   `indicator_id` int(11) NOT NULL,
   `indicator_type` varchar(200) NOT NULL,
@@ -3009,17 +3009,17 @@ CREATE TABLE `xin_performance_indicator_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_performance_indicator_options`
+-- Truncate table before insert `ifd_performance_indicator_options`
 --
 
-TRUNCATE TABLE `xin_performance_indicator_options`;
+TRUNCATE TABLE `ifd_performance_indicator_options`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_projects`
+-- Table structure for table `ifd_projects`
 --
 
-CREATE TABLE `xin_projects` (
+CREATE TABLE `ifd_projects` (
   `project_id` int(111) NOT NULL,
   `title` varchar(255) NOT NULL,
   `client_id` int(100) NOT NULL,
@@ -3043,17 +3043,17 @@ CREATE TABLE `xin_projects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_projects`
+-- Truncate table before insert `ifd_projects`
 --
 
-TRUNCATE TABLE `xin_projects`;
+TRUNCATE TABLE `ifd_projects`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_projects_attachment`
+-- Table structure for table `ifd_projects_attachment`
 --
 
-CREATE TABLE `xin_projects_attachment` (
+CREATE TABLE `ifd_projects_attachment` (
   `project_attachment_id` int(11) NOT NULL,
   `project_id` int(200) NOT NULL,
   `upload_by` int(255) NOT NULL,
@@ -3064,17 +3064,17 @@ CREATE TABLE `xin_projects_attachment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_projects_attachment`
+-- Truncate table before insert `ifd_projects_attachment`
 --
 
-TRUNCATE TABLE `xin_projects_attachment`;
+TRUNCATE TABLE `ifd_projects_attachment`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_projects_bugs`
+-- Table structure for table `ifd_projects_bugs`
 --
 
-CREATE TABLE `xin_projects_bugs` (
+CREATE TABLE `ifd_projects_bugs` (
   `bug_id` int(11) NOT NULL,
   `project_id` int(111) NOT NULL,
   `user_id` int(200) NOT NULL,
@@ -3085,17 +3085,17 @@ CREATE TABLE `xin_projects_bugs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_projects_bugs`
+-- Truncate table before insert `ifd_projects_bugs`
 --
 
-TRUNCATE TABLE `xin_projects_bugs`;
+TRUNCATE TABLE `ifd_projects_bugs`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_projects_discussion`
+-- Table structure for table `ifd_projects_discussion`
 --
 
-CREATE TABLE `xin_projects_discussion` (
+CREATE TABLE `ifd_projects_discussion` (
   `discussion_id` int(11) NOT NULL,
   `project_id` int(111) NOT NULL,
   `user_id` int(200) NOT NULL,
@@ -3106,17 +3106,17 @@ CREATE TABLE `xin_projects_discussion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_projects_discussion`
+-- Truncate table before insert `ifd_projects_discussion`
 --
 
-TRUNCATE TABLE `xin_projects_discussion`;
+TRUNCATE TABLE `ifd_projects_discussion`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_projects_timelogs`
+-- Table structure for table `ifd_projects_timelogs`
 --
 
-CREATE TABLE `xin_projects_timelogs` (
+CREATE TABLE `ifd_projects_timelogs` (
   `timelogs_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
@@ -3131,17 +3131,17 @@ CREATE TABLE `xin_projects_timelogs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_projects_timelogs`
+-- Truncate table before insert `ifd_projects_timelogs`
 --
 
-TRUNCATE TABLE `xin_projects_timelogs`;
+TRUNCATE TABLE `ifd_projects_timelogs`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_project_variations`
+-- Table structure for table `ifd_project_variations`
 --
 
-CREATE TABLE `xin_project_variations` (
+CREATE TABLE `ifd_project_variations` (
   `variation_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `project_id` int(111) NOT NULL,
@@ -3159,17 +3159,17 @@ CREATE TABLE `xin_project_variations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_project_variations`
+-- Truncate table before insert `ifd_project_variations`
 --
 
-TRUNCATE TABLE `xin_project_variations`;
+TRUNCATE TABLE `ifd_project_variations`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_qualification_education_level`
+-- Table structure for table `ifd_qualification_education_level`
 --
 
-CREATE TABLE `xin_qualification_education_level` (
+CREATE TABLE `ifd_qualification_education_level` (
   `education_level_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -3177,24 +3177,24 @@ CREATE TABLE `xin_qualification_education_level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_qualification_education_level`
+-- Truncate table before insert `ifd_qualification_education_level`
 --
 
-TRUNCATE TABLE `xin_qualification_education_level`;
+TRUNCATE TABLE `ifd_qualification_education_level`;
 --
--- Dumping data for table `xin_qualification_education_level`
+-- Dumping data for table `ifd_qualification_education_level`
 --
 
-INSERT INTO `xin_qualification_education_level` (`education_level_id`, `company_id`, `name`, `created_at`) VALUES
+INSERT INTO `ifd_qualification_education_level` (`education_level_id`, `company_id`, `name`, `created_at`) VALUES
 (1, 1, 'High School Diploma / GED', '09-05-2018 03:11:59');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_qualification_language`
+-- Table structure for table `ifd_qualification_language`
 --
 
-CREATE TABLE `xin_qualification_language` (
+CREATE TABLE `ifd_qualification_language` (
   `language_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -3202,24 +3202,24 @@ CREATE TABLE `xin_qualification_language` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_qualification_language`
+-- Truncate table before insert `ifd_qualification_language`
 --
 
-TRUNCATE TABLE `xin_qualification_language`;
+TRUNCATE TABLE `ifd_qualification_language`;
 --
--- Dumping data for table `xin_qualification_language`
+-- Dumping data for table `ifd_qualification_language`
 --
 
-INSERT INTO `xin_qualification_language` (`language_id`, `company_id`, `name`, `created_at`) VALUES
+INSERT INTO `ifd_qualification_language` (`language_id`, `company_id`, `name`, `created_at`) VALUES
 (1, 1, 'English', '09-05-2018 03:12:03');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_qualification_skill`
+-- Table structure for table `ifd_qualification_skill`
 --
 
-CREATE TABLE `xin_qualification_skill` (
+CREATE TABLE `ifd_qualification_skill` (
   `skill_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -3227,24 +3227,24 @@ CREATE TABLE `xin_qualification_skill` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_qualification_skill`
+-- Truncate table before insert `ifd_qualification_skill`
 --
 
-TRUNCATE TABLE `xin_qualification_skill`;
+TRUNCATE TABLE `ifd_qualification_skill`;
 --
--- Dumping data for table `xin_qualification_skill`
+-- Dumping data for table `ifd_qualification_skill`
 --
 
-INSERT INTO `xin_qualification_skill` (`skill_id`, `company_id`, `name`, `created_at`) VALUES
+INSERT INTO `ifd_qualification_skill` (`skill_id`, `company_id`, `name`, `created_at`) VALUES
 (1, 1, 'jQuery', '09-05-2018 03:12:08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_quoted_projects`
+-- Table structure for table `ifd_quoted_projects`
 --
 
-CREATE TABLE `xin_quoted_projects` (
+CREATE TABLE `ifd_quoted_projects` (
   `project_id` int(111) NOT NULL,
   `title` varchar(255) NOT NULL,
   `client_id` int(100) NOT NULL,
@@ -3266,17 +3266,17 @@ CREATE TABLE `xin_quoted_projects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_quoted_projects`
+-- Truncate table before insert `ifd_quoted_projects`
 --
 
-TRUNCATE TABLE `xin_quoted_projects`;
+TRUNCATE TABLE `ifd_quoted_projects`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_quoted_projects_attachment`
+-- Table structure for table `ifd_quoted_projects_attachment`
 --
 
-CREATE TABLE `xin_quoted_projects_attachment` (
+CREATE TABLE `ifd_quoted_projects_attachment` (
   `project_attachment_id` int(11) NOT NULL,
   `project_id` int(200) NOT NULL,
   `upload_by` int(255) NOT NULL,
@@ -3287,17 +3287,17 @@ CREATE TABLE `xin_quoted_projects_attachment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_quoted_projects_attachment`
+-- Truncate table before insert `ifd_quoted_projects_attachment`
 --
 
-TRUNCATE TABLE `xin_quoted_projects_attachment`;
+TRUNCATE TABLE `ifd_quoted_projects_attachment`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_quoted_projects_discussion`
+-- Table structure for table `ifd_quoted_projects_discussion`
 --
 
-CREATE TABLE `xin_quoted_projects_discussion` (
+CREATE TABLE `ifd_quoted_projects_discussion` (
   `discussion_id` int(11) NOT NULL,
   `project_id` int(111) NOT NULL,
   `user_id` int(200) NOT NULL,
@@ -3308,17 +3308,17 @@ CREATE TABLE `xin_quoted_projects_discussion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_quoted_projects_discussion`
+-- Truncate table before insert `ifd_quoted_projects_discussion`
 --
 
-TRUNCATE TABLE `xin_quoted_projects_discussion`;
+TRUNCATE TABLE `ifd_quoted_projects_discussion`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_quoted_projects_timelogs`
+-- Table structure for table `ifd_quoted_projects_timelogs`
 --
 
-CREATE TABLE `xin_quoted_projects_timelogs` (
+CREATE TABLE `ifd_quoted_projects_timelogs` (
   `timelogs_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
@@ -3333,17 +3333,17 @@ CREATE TABLE `xin_quoted_projects_timelogs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_quoted_projects_timelogs`
+-- Truncate table before insert `ifd_quoted_projects_timelogs`
 --
 
-TRUNCATE TABLE `xin_quoted_projects_timelogs`;
+TRUNCATE TABLE `ifd_quoted_projects_timelogs`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_recruitment_pages`
+-- Table structure for table `ifd_recruitment_pages`
 --
 
-CREATE TABLE `xin_recruitment_pages` (
+CREATE TABLE `ifd_recruitment_pages` (
   `page_id` int(11) NOT NULL,
   `page_title` varchar(255) NOT NULL,
   `page_details` mediumtext NOT NULL,
@@ -3352,15 +3352,15 @@ CREATE TABLE `xin_recruitment_pages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_recruitment_pages`
+-- Truncate table before insert `ifd_recruitment_pages`
 --
 
-TRUNCATE TABLE `xin_recruitment_pages`;
+TRUNCATE TABLE `ifd_recruitment_pages`;
 --
--- Dumping data for table `xin_recruitment_pages`
+-- Dumping data for table `ifd_recruitment_pages`
 --
 
-INSERT INTO `xin_recruitment_pages` (`page_id`, `page_title`, `page_details`, `status`, `created_at`) VALUES
+INSERT INTO `ifd_recruitment_pages` (`page_id`, `page_title`, `page_details`, `status`, `created_at`) VALUES
 (1, 'Pages', 'Nulla dignissim gravida\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies dictum ex, nec ullamcorper orci luctus eget. Integer mauris arcu, pretium eget elit vel, posuere consectetur massa. Etiam non fermentum augue, vel posuere sapien. \n\nVivamus aliquet eros bibendum ipsum euismod, non interdum dui elementum. Morbi facilisis hendrerit nisi, a volutpat velit. Donec sed malesuada felis. Nulla facilisi. Vivamus a velit vel orci euismod maximus. Praesent ut blandit orci, eget suscipit lorem. Aenean dignissim, augue at porta suscipit, est enim euismod mi, a rhoncus mi lacus ac nibh. Ut pharetra ligula sed tortor congue, pellentesque ultricies augue tincidunt.', 1, ''),
 (2, 'About Us', 'Nulla dignissim gravida\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies dictum ex, nec ullamcorper orci luctus eget. Integer mauris arcu, pretium eget elit vel, posuere consectetur massa. Etiam non fermentum augue, vel posuere sapien. \n\nVivamus aliquet eros bibendum ipsum euismod, non interdum dui elementum. Morbi facilisis hendrerit nisi, a volutpat velit. Donec sed malesuada felis. Nulla facilisi. Vivamus a velit vel orci euismod maximus. Praesent ut blandit orci, eget suscipit lorem. Aenean dignissim, augue at porta suscipit, est enim euismod mi, a rhoncus mi lacus ac nibh. Ut pharetra ligula sed tortor congue, pellentesque ultricies augue tincidunt.', 1, ''),
 (3, 'Career Services', 'Career Services', 1, ''),
@@ -3369,10 +3369,10 @@ INSERT INTO `xin_recruitment_pages` (`page_id`, `page_title`, `page_details`, `s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_recruitment_subpages`
+-- Table structure for table `ifd_recruitment_subpages`
 --
 
-CREATE TABLE `xin_recruitment_subpages` (
+CREATE TABLE `ifd_recruitment_subpages` (
   `subpages_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
   `sub_page_title` varchar(255) NOT NULL,
@@ -3382,15 +3382,15 @@ CREATE TABLE `xin_recruitment_subpages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_recruitment_subpages`
+-- Truncate table before insert `ifd_recruitment_subpages`
 --
 
-TRUNCATE TABLE `xin_recruitment_subpages`;
+TRUNCATE TABLE `ifd_recruitment_subpages`;
 --
--- Dumping data for table `xin_recruitment_subpages`
+-- Dumping data for table `ifd_recruitment_subpages`
 --
 
-INSERT INTO `xin_recruitment_subpages` (`subpages_id`, `page_id`, `sub_page_title`, `sub_page_details`, `status`, `created_at`) VALUES
+INSERT INTO `ifd_recruitment_subpages` (`subpages_id`, `page_id`, `sub_page_title`, `sub_page_details`, `status`, `created_at`) VALUES
 (1, 1, 'Sub Menu 1', 'Nulla dignissim gravida\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies dictum ex, nec ullamcorper orci luctus eget. Integer mauris arcu, pretium eget elit vel, posuere consectetur massa. Etiam non fermentum augue, vel posuere sapien. \r\n\r\nVivamus aliquet eros bibendum ipsum euismod, non interdum dui elementum. Morbi facilisis hendrerit nisi, a volutpat velit. Donec sed malesuada felis. Nulla facilisi. Vivamus a velit vel orci euismod maximus. Praesent ut blandit orci, eget suscipit lorem. Aenean dignissim, augue at porta suscipit, est enim euismod mi, a rhoncus mi lacus ac nibh. Ut pharetra ligula sed tortor congue, pellentesque ultricies augue tincidunt.', 1, ''),
 (2, 1, 'Sub Menu 2', 'Nulla dignissim gravida\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies dictum ex, nec ullamcorper orci luctus eget. Integer mauris arcu, pretium eget elit vel, posuere consectetur massa. Etiam non fermentum augue, vel posuere sapien. \r\n\r\nVivamus aliquet eros bibendum ipsum euismod, non interdum dui elementum. Morbi facilisis hendrerit nisi, a volutpat velit. Donec sed malesuada felis. Nulla facilisi. Vivamus a velit vel orci euismod maximus. Praesent ut blandit orci, eget suscipit lorem. Aenean dignissim, augue at porta suscipit, est enim euismod mi, a rhoncus mi lacus ac nibh. Ut pharetra ligula sed tortor congue, pellentesque ultricies augue tincidunt.', 1, ''),
 (3, 1, 'Sub Menu 3', 'Nulla dignissim gravida\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies dictum ex, nec ullamcorper orci luctus eget. Integer mauris arcu, pretium eget elit vel, posuere consectetur massa. Etiam non fermentum augue, vel posuere sapien. \r\n\r\nVivamus aliquet eros bibendum ipsum euismod, non interdum dui elementum. Morbi facilisis hendrerit nisi, a volutpat velit. Donec sed malesuada felis. Nulla facilisi. Vivamus a velit vel orci euismod maximus. Praesent ut blandit orci, eget suscipit lorem. Aenean dignissim, augue at porta suscipit, est enim euismod mi, a rhoncus mi lacus ac nibh. Ut pharetra ligula sed tortor congue, pellentesque ultricies augue tincidunt.', 1, ''),
@@ -3401,10 +3401,10 @@ INSERT INTO `xin_recruitment_subpages` (`subpages_id`, `page_id`, `sub_page_titl
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_allowances`
+-- Table structure for table `ifd_salary_allowances`
 --
 
-CREATE TABLE `xin_salary_allowances` (
+CREATE TABLE `ifd_salary_allowances` (
   `allowance_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `is_allowance_taxable` int(11) NOT NULL,
@@ -3414,15 +3414,15 @@ CREATE TABLE `xin_salary_allowances` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_allowances`
+-- Truncate table before insert `ifd_salary_allowances`
 --
 
-TRUNCATE TABLE `xin_salary_allowances`;
+TRUNCATE TABLE `ifd_salary_allowances`;
 --
--- Dumping data for table `xin_salary_allowances`
+-- Dumping data for table `ifd_salary_allowances`
 --
 
-INSERT INTO `xin_salary_allowances` (`allowance_id`, `employee_id`, `is_allowance_taxable`, `allowance_title`, `allowance_amount`, `created_at`) VALUES
+INSERT INTO `ifd_salary_allowances` (`allowance_id`, `employee_id`, `is_allowance_taxable`, `allowance_title`, `allowance_amount`, `created_at`) VALUES
 (1, 1, 0, 'Cost of Living Allowance', '100', NULL),
 (2, 1, 0, 'Housing Allowance', '200', NULL),
 (3, 1, 0, 'Market Adjustment', '200', NULL),
@@ -3432,10 +3432,10 @@ INSERT INTO `xin_salary_allowances` (`allowance_id`, `employee_id`, `is_allowanc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_bank_allocation`
+-- Table structure for table `ifd_salary_bank_allocation`
 --
 
-CREATE TABLE `xin_salary_bank_allocation` (
+CREATE TABLE `ifd_salary_bank_allocation` (
   `bank_allocation_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `payment_method_id` int(11) NOT NULL,
@@ -3444,17 +3444,17 @@ CREATE TABLE `xin_salary_bank_allocation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_bank_allocation`
+-- Truncate table before insert `ifd_salary_bank_allocation`
 --
 
-TRUNCATE TABLE `xin_salary_bank_allocation`;
+TRUNCATE TABLE `ifd_salary_bank_allocation`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_commissions`
+-- Table structure for table `ifd_salary_commissions`
 --
 
-CREATE TABLE `xin_salary_commissions` (
+CREATE TABLE `ifd_salary_commissions` (
   `salary_commissions_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `commission_title` varchar(200) DEFAULT NULL,
@@ -3463,17 +3463,17 @@ CREATE TABLE `xin_salary_commissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_commissions`
+-- Truncate table before insert `ifd_salary_commissions`
 --
 
-TRUNCATE TABLE `xin_salary_commissions`;
+TRUNCATE TABLE `ifd_salary_commissions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_loan_deductions`
+-- Table structure for table `ifd_salary_loan_deductions`
 --
 
-CREATE TABLE `xin_salary_loan_deductions` (
+CREATE TABLE `ifd_salary_loan_deductions` (
   `loan_deduction_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `loan_options` int(11) NOT NULL,
@@ -3491,17 +3491,17 @@ CREATE TABLE `xin_salary_loan_deductions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_loan_deductions`
+-- Truncate table before insert `ifd_salary_loan_deductions`
 --
 
-TRUNCATE TABLE `xin_salary_loan_deductions`;
+TRUNCATE TABLE `ifd_salary_loan_deductions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_other_payments`
+-- Table structure for table `ifd_salary_other_payments`
 --
 
-CREATE TABLE `xin_salary_other_payments` (
+CREATE TABLE `ifd_salary_other_payments` (
   `other_payments_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `payments_title` varchar(200) DEFAULT NULL,
@@ -3510,17 +3510,17 @@ CREATE TABLE `xin_salary_other_payments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_other_payments`
+-- Truncate table before insert `ifd_salary_other_payments`
 --
 
-TRUNCATE TABLE `xin_salary_other_payments`;
+TRUNCATE TABLE `ifd_salary_other_payments`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_overtime`
+-- Table structure for table `ifd_salary_overtime`
 --
 
-CREATE TABLE `xin_salary_overtime` (
+CREATE TABLE `ifd_salary_overtime` (
   `salary_overtime_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `overtime_type` varchar(200) NOT NULL,
@@ -3530,17 +3530,17 @@ CREATE TABLE `xin_salary_overtime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_overtime`
+-- Truncate table before insert `ifd_salary_overtime`
 --
 
-TRUNCATE TABLE `xin_salary_overtime`;
+TRUNCATE TABLE `ifd_salary_overtime`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslips`
+-- Table structure for table `ifd_salary_payslips`
 --
 
-CREATE TABLE `xin_salary_payslips` (
+CREATE TABLE `ifd_salary_payslips` (
   `payslip_id` int(11) NOT NULL,
   `payslip_key` varchar(200) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3576,17 +3576,17 @@ CREATE TABLE `xin_salary_payslips` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslips`
+-- Truncate table before insert `ifd_salary_payslips`
 --
 
-TRUNCATE TABLE `xin_salary_payslips`;
+TRUNCATE TABLE `ifd_salary_payslips`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslip_allowances`
+-- Table structure for table `ifd_salary_payslip_allowances`
 --
 
-CREATE TABLE `xin_salary_payslip_allowances` (
+CREATE TABLE `ifd_salary_payslip_allowances` (
   `payslip_allowances_id` int(11) NOT NULL,
   `payslip_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3597,17 +3597,17 @@ CREATE TABLE `xin_salary_payslip_allowances` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslip_allowances`
+-- Truncate table before insert `ifd_salary_payslip_allowances`
 --
 
-TRUNCATE TABLE `xin_salary_payslip_allowances`;
+TRUNCATE TABLE `ifd_salary_payslip_allowances`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslip_commissions`
+-- Table structure for table `ifd_salary_payslip_commissions`
 --
 
-CREATE TABLE `xin_salary_payslip_commissions` (
+CREATE TABLE `ifd_salary_payslip_commissions` (
   `payslip_commissions_id` int(11) NOT NULL,
   `payslip_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3618,17 +3618,17 @@ CREATE TABLE `xin_salary_payslip_commissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslip_commissions`
+-- Truncate table before insert `ifd_salary_payslip_commissions`
 --
 
-TRUNCATE TABLE `xin_salary_payslip_commissions`;
+TRUNCATE TABLE `ifd_salary_payslip_commissions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslip_loan`
+-- Table structure for table `ifd_salary_payslip_loan`
 --
 
-CREATE TABLE `xin_salary_payslip_loan` (
+CREATE TABLE `ifd_salary_payslip_loan` (
   `payslip_loan_id` int(11) NOT NULL,
   `payslip_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3639,17 +3639,17 @@ CREATE TABLE `xin_salary_payslip_loan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslip_loan`
+-- Truncate table before insert `ifd_salary_payslip_loan`
 --
 
-TRUNCATE TABLE `xin_salary_payslip_loan`;
+TRUNCATE TABLE `ifd_salary_payslip_loan`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslip_other_payments`
+-- Table structure for table `ifd_salary_payslip_other_payments`
 --
 
-CREATE TABLE `xin_salary_payslip_other_payments` (
+CREATE TABLE `ifd_salary_payslip_other_payments` (
   `payslip_other_payment_id` int(11) NOT NULL,
   `payslip_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3660,17 +3660,17 @@ CREATE TABLE `xin_salary_payslip_other_payments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslip_other_payments`
+-- Truncate table before insert `ifd_salary_payslip_other_payments`
 --
 
-TRUNCATE TABLE `xin_salary_payslip_other_payments`;
+TRUNCATE TABLE `ifd_salary_payslip_other_payments`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslip_overtime`
+-- Table structure for table `ifd_salary_payslip_overtime`
 --
 
-CREATE TABLE `xin_salary_payslip_overtime` (
+CREATE TABLE `ifd_salary_payslip_overtime` (
   `payslip_overtime_id` int(11) NOT NULL,
   `payslip_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3683,17 +3683,17 @@ CREATE TABLE `xin_salary_payslip_overtime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslip_overtime`
+-- Truncate table before insert `ifd_salary_payslip_overtime`
 --
 
-TRUNCATE TABLE `xin_salary_payslip_overtime`;
+TRUNCATE TABLE `ifd_salary_payslip_overtime`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_payslip_statutory_deductions`
+-- Table structure for table `ifd_salary_payslip_statutory_deductions`
 --
 
-CREATE TABLE `xin_salary_payslip_statutory_deductions` (
+CREATE TABLE `ifd_salary_payslip_statutory_deductions` (
   `payslip_deduction_id` int(11) NOT NULL,
   `payslip_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3704,17 +3704,17 @@ CREATE TABLE `xin_salary_payslip_statutory_deductions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_payslip_statutory_deductions`
+-- Truncate table before insert `ifd_salary_payslip_statutory_deductions`
 --
 
-TRUNCATE TABLE `xin_salary_payslip_statutory_deductions`;
+TRUNCATE TABLE `ifd_salary_payslip_statutory_deductions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_statutory_deductions`
+-- Table structure for table `ifd_salary_statutory_deductions`
 --
 
-CREATE TABLE `xin_salary_statutory_deductions` (
+CREATE TABLE `ifd_salary_statutory_deductions` (
   `statutory_deductions_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `statutory_options` int(11) NOT NULL,
@@ -3724,17 +3724,17 @@ CREATE TABLE `xin_salary_statutory_deductions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_statutory_deductions`
+-- Truncate table before insert `ifd_salary_statutory_deductions`
 --
 
-TRUNCATE TABLE `xin_salary_statutory_deductions`;
+TRUNCATE TABLE `ifd_salary_statutory_deductions`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_salary_templates`
+-- Table structure for table `ifd_salary_templates`
 --
 
-CREATE TABLE `xin_salary_templates` (
+CREATE TABLE `ifd_salary_templates` (
   `salary_template_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `salary_grades` varchar(255) NOT NULL,
@@ -3756,41 +3756,41 @@ CREATE TABLE `xin_salary_templates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_salary_templates`
+-- Truncate table before insert `ifd_salary_templates`
 --
 
-TRUNCATE TABLE `xin_salary_templates`;
+TRUNCATE TABLE `ifd_salary_templates`;
 --
--- Dumping data for table `xin_salary_templates`
+-- Dumping data for table `ifd_salary_templates`
 --
 
-INSERT INTO `xin_salary_templates` (`salary_template_id`, `company_id`, `salary_grades`, `basic_salary`, `overtime_rate`, `house_rent_allowance`, `medical_allowance`, `travelling_allowance`, `dearness_allowance`, `security_deposit`, `provident_fund`, `tax_deduction`, `gross_salary`, `total_allowance`, `total_deduction`, `net_salary`, `added_by`, `created_at`) VALUES
+INSERT INTO `ifd_salary_templates` (`salary_template_id`, `company_id`, `salary_grades`, `basic_salary`, `overtime_rate`, `house_rent_allowance`, `medical_allowance`, `travelling_allowance`, `dearness_allowance`, `security_deposit`, `provident_fund`, `tax_deduction`, `gross_salary`, `total_allowance`, `total_deduction`, `net_salary`, `added_by`, `created_at`) VALUES
 (1, 1, 'Monthly', '2500', '', '50', '60', '70', '80', '40', '20', '30', '2760', '260', '90', '2670', 1, '22-03-2018 01:40:06');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_security_level`
+-- Table structure for table `ifd_security_level`
 --
 
-CREATE TABLE `xin_security_level` (
+CREATE TABLE `ifd_security_level` (
   `type_id` int(111) NOT NULL,
   `name` varchar(255) NOT NULL,
   `created_at` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_security_level`
+-- Truncate table before insert `ifd_security_level`
 --
 
-TRUNCATE TABLE `xin_security_level`;
+TRUNCATE TABLE `ifd_security_level`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_sub_departments`
+-- Table structure for table `ifd_sub_departments`
 --
 
-CREATE TABLE `xin_sub_departments` (
+CREATE TABLE `ifd_sub_departments` (
   `sub_department_id` int(11) NOT NULL,
   `department_id` int(11) NOT NULL,
   `department_name` varchar(200) NOT NULL,
@@ -3798,15 +3798,15 @@ CREATE TABLE `xin_sub_departments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_sub_departments`
+-- Truncate table before insert `ifd_sub_departments`
 --
 
-TRUNCATE TABLE `xin_sub_departments`;
+TRUNCATE TABLE `ifd_sub_departments`;
 --
--- Dumping data for table `xin_sub_departments`
+-- Dumping data for table `ifd_sub_departments`
 --
 
-INSERT INTO `xin_sub_departments` (`sub_department_id`, `department_id`, `department_name`, `created_at`) VALUES
+INSERT INTO `ifd_sub_departments` (`sub_department_id`, `department_id`, `department_name`, `created_at`) VALUES
 (8, 1, 'Manager', '2019-02-15 00:22:13'),
 (9, 1, 'Lead Manager', '2019-02-15 00:22:21'),
 (10, 2, 'Accountant', '2019-02-15 00:22:26');
@@ -3814,10 +3814,10 @@ INSERT INTO `xin_sub_departments` (`sub_department_id`, `department_id`, `depart
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_support_tickets`
+-- Table structure for table `ifd_support_tickets`
 --
 
-CREATE TABLE `xin_support_tickets` (
+CREATE TABLE `ifd_support_tickets` (
   `ticket_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `ticket_code` varchar(200) NOT NULL,
@@ -3839,17 +3839,17 @@ CREATE TABLE `xin_support_tickets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_support_tickets`
+-- Truncate table before insert `ifd_support_tickets`
 --
 
-TRUNCATE TABLE `xin_support_tickets`;
+TRUNCATE TABLE `ifd_support_tickets`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_support_tickets_employees`
+-- Table structure for table `ifd_support_tickets_employees`
 --
 
-CREATE TABLE `xin_support_tickets_employees` (
+CREATE TABLE `ifd_support_tickets_employees` (
   `tickets_employees_id` int(11) NOT NULL,
   `ticket_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
@@ -3858,17 +3858,17 @@ CREATE TABLE `xin_support_tickets_employees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_support_tickets_employees`
+-- Truncate table before insert `ifd_support_tickets_employees`
 --
 
-TRUNCATE TABLE `xin_support_tickets_employees`;
+TRUNCATE TABLE `ifd_support_tickets_employees`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_support_ticket_files`
+-- Table structure for table `ifd_support_ticket_files`
 --
 
-CREATE TABLE `xin_support_ticket_files` (
+CREATE TABLE `ifd_support_ticket_files` (
   `ticket_file_id` int(111) NOT NULL,
   `ticket_id` int(111) NOT NULL,
   `employee_id` int(111) NOT NULL,
@@ -3878,17 +3878,17 @@ CREATE TABLE `xin_support_ticket_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_support_ticket_files`
+-- Truncate table before insert `ifd_support_ticket_files`
 --
 
-TRUNCATE TABLE `xin_support_ticket_files`;
+TRUNCATE TABLE `ifd_support_ticket_files`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_system_setting`
+-- Table structure for table `ifd_system_setting`
 --
 
-CREATE TABLE `xin_system_setting` (
+CREATE TABLE `ifd_system_setting` (
   `setting_id` int(111) NOT NULL,
   `application_name` varchar(255) NOT NULL,
   `default_currency` varchar(255) NOT NULL,
@@ -3997,24 +3997,24 @@ CREATE TABLE `xin_system_setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_system_setting`
+-- Truncate table before insert `ifd_system_setting`
 --
 
-TRUNCATE TABLE `xin_system_setting`;
+TRUNCATE TABLE `ifd_system_setting`;
 --
--- Dumping data for table `xin_system_setting`
+-- Dumping data for table `ifd_system_setting`
 --
 
-INSERT INTO `xin_system_setting` (`setting_id`, `application_name`, `default_currency`, `default_currency_id`, `default_currency_symbol`, `show_currency`, `currency_position`, `notification_position`, `notification_close_btn`, `notification_bar`, `enable_registration`, `login_with`, `date_format_xi`, `employee_manage_own_contact`, `employee_manage_own_profile`, `employee_manage_own_qualification`, `employee_manage_own_work_experience`, `employee_manage_own_document`, `employee_manage_own_picture`, `employee_manage_own_social`, `employee_manage_own_bank_account`, `enable_attendance`, `enable_clock_in_btn`, `enable_email_notification`, `payroll_include_day_summary`, `payroll_include_hour_summary`, `payroll_include_leave_summary`, `enable_job_application_candidates`, `job_logo`, `payroll_logo`, `is_payslip_password_generate`, `payslip_password_format`, `enable_profile_background`, `enable_policy_link`, `enable_layout`, `job_application_format`, `technical_competencies`, `organizational_competencies`, `performance_option`, `project_email`, `holiday_email`, `leave_email`, `payslip_email`, `award_email`, `recruitment_email`, `announcement_email`, `training_email`, `task_email`, `compact_sidebar`, `fixed_header`, `fixed_sidebar`, `boxed_wrapper`, `layout_static`, `system_skin`, `animation_effect`, `animation_effect_modal`, `animation_effect_topmenu`, `footer_text`, `is_ssl_available`, `is_active_sub_departments`, `default_language`, `statutory_fixed`, `system_timezone`, `system_ip_address`, `system_ip_restriction`, `google_maps_api_key`, `module_recruitment`, `module_travel`, `module_performance`, `module_payroll`, `module_files`, `module_awards`, `module_training`, `module_inquiry`, `module_language`, `module_orgchart`, `module_accounting`, `module_events`, `module_goal_tracking`, `module_assets`, `module_projects_tasks`, `module_chat_box`, `enable_page_rendered`, `enable_current_year`, `employee_login_id`, `paypal_email`, `paypal_sandbox`, `paypal_active`, `stripe_secret_key`, `stripe_publishable_key`, `stripe_active`, `online_payment_account`, `is_half_monthly`, `half_deduct_month`, `invoice_terms_condition`, `estimate_terms_condition`, `show_projects`, `show_tasks`, `enable_saudi_gosi`, `staff_dashboard`, `project_dashboard`, `enable_auth_background`, `hr_version`, `hr_release_date`, `updated_at`) VALUES
+INSERT INTO `ifd_system_setting` (`setting_id`, `application_name`, `default_currency`, `default_currency_id`, `default_currency_symbol`, `show_currency`, `currency_position`, `notification_position`, `notification_close_btn`, `notification_bar`, `enable_registration`, `login_with`, `date_format_xi`, `employee_manage_own_contact`, `employee_manage_own_profile`, `employee_manage_own_qualification`, `employee_manage_own_work_experience`, `employee_manage_own_document`, `employee_manage_own_picture`, `employee_manage_own_social`, `employee_manage_own_bank_account`, `enable_attendance`, `enable_clock_in_btn`, `enable_email_notification`, `payroll_include_day_summary`, `payroll_include_hour_summary`, `payroll_include_leave_summary`, `enable_job_application_candidates`, `job_logo`, `payroll_logo`, `is_payslip_password_generate`, `payslip_password_format`, `enable_profile_background`, `enable_policy_link`, `enable_layout`, `job_application_format`, `technical_competencies`, `organizational_competencies`, `performance_option`, `project_email`, `holiday_email`, `leave_email`, `payslip_email`, `award_email`, `recruitment_email`, `announcement_email`, `training_email`, `task_email`, `compact_sidebar`, `fixed_header`, `fixed_sidebar`, `boxed_wrapper`, `layout_static`, `system_skin`, `animation_effect`, `animation_effect_modal`, `animation_effect_topmenu`, `footer_text`, `is_ssl_available`, `is_active_sub_departments`, `default_language`, `statutory_fixed`, `system_timezone`, `system_ip_address`, `system_ip_restriction`, `google_maps_api_key`, `module_recruitment`, `module_travel`, `module_performance`, `module_payroll`, `module_files`, `module_awards`, `module_training`, `module_inquiry`, `module_language`, `module_orgchart`, `module_accounting`, `module_events`, `module_goal_tracking`, `module_assets`, `module_projects_tasks`, `module_chat_box`, `enable_page_rendered`, `enable_current_year`, `employee_login_id`, `paypal_email`, `paypal_sandbox`, `paypal_active`, `stripe_secret_key`, `stripe_publishable_key`, `stripe_active`, `online_payment_account`, `is_half_monthly`, `half_deduct_month`, `invoice_terms_condition`, `estimate_terms_condition`, `show_projects`, `show_tasks`, `enable_saudi_gosi`, `staff_dashboard`, `project_dashboard`, `enable_auth_background`, `hr_version`, `hr_release_date`, `updated_at`) VALUES
 (1, 'HRSALE', 'USD - $', 1, 'USD - $', 'symbol', 'Prefix', 'toast-top-center', 'true', 'true', 'no', 'username', 'M-d-Y', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', '', 'yes', 'yes', 'yes', 'yes', '1', 'job_logo_1520612591.png', 'payroll_logo_1534786335.jpg', 0, 'employee_id', 'yes', 'yes', 'yes', 'doc,docx,pdf', 'Customer Experience,Marketing,Administration', 'Professionalism,Integrity,Attendance', 'both', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'sidebar_layout_hrsale', '', 'fixed-sidebar', 'boxed_layout_hrsale', '', 'skin-default', 'fadeInDown', 'tada', 'tada', 'hrsale', '', '', 'english', '', 'Asia/Riyadh', '::1', '', 'AIzaSyB3gP8H3eypotNeoEtezbRiF_f8Zh_p4ck', 'true', 'true', 'yes', 'yes', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', 'true', '', 'yes', 'username', 'hrsalesoft-facilitator@gmail.com', 'yes', 'yes', 'sk_test_2XEyr1hQFGByITfQjSwFqNtm', 'pk_test_zVFISCqeQPnniD0ywHBHikMd', 'yes', 1, 0, 1, NULL, NULL, 0, 0, 0, NULL, NULL, 'yes', '1.0.3', '2018-03-28', '2018-03-28 04:27:32');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_tasks`
+-- Table structure for table `ifd_tasks`
 --
 
-CREATE TABLE `xin_tasks` (
+CREATE TABLE `ifd_tasks` (
   `task_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `project_id` int(111) NOT NULL,
@@ -4033,17 +4033,17 @@ CREATE TABLE `xin_tasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_tasks`
+-- Truncate table before insert `ifd_tasks`
 --
 
-TRUNCATE TABLE `xin_tasks`;
+TRUNCATE TABLE `ifd_tasks`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_tasks_attachment`
+-- Table structure for table `ifd_tasks_attachment`
 --
 
-CREATE TABLE `xin_tasks_attachment` (
+CREATE TABLE `ifd_tasks_attachment` (
   `task_attachment_id` int(11) NOT NULL,
   `task_id` int(200) NOT NULL,
   `upload_by` int(255) NOT NULL,
@@ -4054,17 +4054,17 @@ CREATE TABLE `xin_tasks_attachment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_tasks_attachment`
+-- Truncate table before insert `ifd_tasks_attachment`
 --
 
-TRUNCATE TABLE `xin_tasks_attachment`;
+TRUNCATE TABLE `ifd_tasks_attachment`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_tasks_comments`
+-- Table structure for table `ifd_tasks_comments`
 --
 
-CREATE TABLE `xin_tasks_comments` (
+CREATE TABLE `ifd_tasks_comments` (
   `comment_id` int(11) NOT NULL,
   `task_id` int(200) NOT NULL,
   `user_id` int(200) NOT NULL,
@@ -4073,32 +4073,32 @@ CREATE TABLE `xin_tasks_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_tasks_comments`
+-- Truncate table before insert `ifd_tasks_comments`
 --
 
-TRUNCATE TABLE `xin_tasks_comments`;
+TRUNCATE TABLE `ifd_tasks_comments`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_task_categories`
+-- Table structure for table `ifd_task_categories`
 --
 
-CREATE TABLE `xin_task_categories` (
+CREATE TABLE `ifd_task_categories` (
   `task_category_id` int(11) NOT NULL,
   `category_name` varchar(255) NOT NULL,
   `created_at` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `xin_task_categories`
+-- Truncate table before insert `ifd_task_categories`
 --
 
-TRUNCATE TABLE `xin_task_categories`;
+TRUNCATE TABLE `ifd_task_categories`;
 --
--- Dumping data for table `xin_task_categories`
+-- Dumping data for table `ifd_task_categories`
 --
 
-INSERT INTO `xin_task_categories` (`task_category_id`, `category_name`, `created_at`) VALUES
+INSERT INTO `ifd_task_categories` (`task_category_id`, `category_name`, `created_at`) VALUES
 (5, 'Modelling', '17-12-2019 10:44:48'),
 (6, 'Fabrication drawings', '17-12-2019 10:44:55'),
 (7, 'Erection drawings', '17-12-2019 10:45:01'),
@@ -4109,10 +4109,10 @@ INSERT INTO `xin_task_categories` (`task_category_id`, `category_name`, `created
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_tax_types`
+-- Table structure for table `ifd_tax_types`
 --
 
-CREATE TABLE `xin_tax_types` (
+CREATE TABLE `ifd_tax_types` (
   `tax_id` int(111) NOT NULL,
   `name` varchar(255) NOT NULL,
   `rate` varchar(255) NOT NULL,
@@ -4122,15 +4122,15 @@ CREATE TABLE `xin_tax_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_tax_types`
+-- Truncate table before insert `ifd_tax_types`
 --
 
-TRUNCATE TABLE `xin_tax_types`;
+TRUNCATE TABLE `ifd_tax_types`;
 --
--- Dumping data for table `xin_tax_types`
+-- Dumping data for table `ifd_tax_types`
 --
 
-INSERT INTO `xin_tax_types` (`tax_id`, `name`, `rate`, `type`, `description`, `created_at`) VALUES
+INSERT INTO `ifd_tax_types` (`tax_id`, `name`, `rate`, `type`, `description`, `created_at`) VALUES
 (1, 'No Tax', '0', 'fixed', 'test', '25-05-2018'),
 (2, 'IVU', '2', 'fixed', 'test', '25-05-2018'),
 (3, 'VAT', '5', 'percentage', 'testttt', '25-05-2018');
@@ -4138,10 +4138,10 @@ INSERT INTO `xin_tax_types` (`tax_id`, `name`, `rate`, `type`, `description`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_termination_type`
+-- Table structure for table `ifd_termination_type`
 --
 
-CREATE TABLE `xin_termination_type` (
+CREATE TABLE `ifd_termination_type` (
   `termination_type_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -4149,24 +4149,24 @@ CREATE TABLE `xin_termination_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_termination_type`
+-- Truncate table before insert `ifd_termination_type`
 --
 
-TRUNCATE TABLE `xin_termination_type`;
+TRUNCATE TABLE `ifd_termination_type`;
 --
--- Dumping data for table `xin_termination_type`
+-- Dumping data for table `ifd_termination_type`
 --
 
-INSERT INTO `xin_termination_type` (`termination_type_id`, `company_id`, `type`, `created_at`) VALUES
+INSERT INTO `ifd_termination_type` (`termination_type_id`, `company_id`, `type`, `created_at`) VALUES
 (1, 1, 'Voluntary Termination', '22-03-2018 01:38:41');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_theme_settings`
+-- Table structure for table `ifd_theme_settings`
 --
 
-CREATE TABLE `xin_theme_settings` (
+CREATE TABLE `ifd_theme_settings` (
   `theme_settings_id` int(11) NOT NULL,
   `fixed_layout` varchar(200) NOT NULL,
   `fixed_footer` varchar(200) NOT NULL,
@@ -4201,24 +4201,24 @@ CREATE TABLE `xin_theme_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_theme_settings`
+-- Truncate table before insert `ifd_theme_settings`
 --
 
-TRUNCATE TABLE `xin_theme_settings`;
+TRUNCATE TABLE `ifd_theme_settings`;
 --
--- Dumping data for table `xin_theme_settings`
+-- Dumping data for table `ifd_theme_settings`
 --
 
-INSERT INTO `xin_theme_settings` (`theme_settings_id`, `fixed_layout`, `fixed_footer`, `boxed_layout`, `page_header`, `footer_layout`, `statistics_cards`, `animation_style`, `theme_option`, `dashboard_option`, `dashboard_calendar`, `login_page_options`, `sub_menu_icons`, `statistics_cards_background`, `employee_cards`, `card_border_color`, `compact_menu`, `flipped_menu`, `right_side_icons`, `bordered_menu`, `form_design`, `is_semi_dark`, `semi_dark_color`, `top_nav_dark_color`, `menu_color_option`, `export_orgchart`, `export_file_title`, `org_chart_layout`, `org_chart_zoom`, `org_chart_pan`, `login_page_text`) VALUES
+INSERT INTO `ifd_theme_settings` (`theme_settings_id`, `fixed_layout`, `fixed_footer`, `boxed_layout`, `page_header`, `footer_layout`, `statistics_cards`, `animation_style`, `theme_option`, `dashboard_option`, `dashboard_calendar`, `login_page_options`, `sub_menu_icons`, `statistics_cards_background`, `employee_cards`, `card_border_color`, `compact_menu`, `flipped_menu`, `right_side_icons`, `bordered_menu`, `form_design`, `is_semi_dark`, `semi_dark_color`, `top_nav_dark_color`, `menu_color_option`, `export_orgchart`, `export_file_title`, `org_chart_layout`, `org_chart_zoom`, `org_chart_pan`, `login_page_text`) VALUES
 (1, 'false', 'true', 'false', 'breadcrumb-transparent', 'footer-light', '4', 'fadeInDown', 'template_1', 'dashboard_1', 'true', 'login_page_2', 'fa-check-circle-o', '', '', '', 'true', 'false', 'false', 'false', 'basic_form', 1, 'bg-primary', 'bg-blue-grey', 'menu-dark', 'true', 'HRSALE', 't2b', 'true', 'true', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_tickets_attachment`
+-- Table structure for table `ifd_tickets_attachment`
 --
 
-CREATE TABLE `xin_tickets_attachment` (
+CREATE TABLE `ifd_tickets_attachment` (
   `ticket_attachment_id` int(11) NOT NULL,
   `ticket_id` int(200) NOT NULL,
   `upload_by` int(255) NOT NULL,
@@ -4229,17 +4229,17 @@ CREATE TABLE `xin_tickets_attachment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_tickets_attachment`
+-- Truncate table before insert `ifd_tickets_attachment`
 --
 
-TRUNCATE TABLE `xin_tickets_attachment`;
+TRUNCATE TABLE `ifd_tickets_attachment`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_tickets_comments`
+-- Table structure for table `ifd_tickets_comments`
 --
 
-CREATE TABLE `xin_tickets_comments` (
+CREATE TABLE `ifd_tickets_comments` (
   `comment_id` int(11) NOT NULL,
   `ticket_id` int(200) NOT NULL,
   `user_id` int(200) NOT NULL,
@@ -4248,17 +4248,17 @@ CREATE TABLE `xin_tickets_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_tickets_comments`
+-- Truncate table before insert `ifd_tickets_comments`
 --
 
-TRUNCATE TABLE `xin_tickets_comments`;
+TRUNCATE TABLE `ifd_tickets_comments`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_trainers`
+-- Table structure for table `ifd_trainers`
 --
 
-CREATE TABLE `xin_trainers` (
+CREATE TABLE `ifd_trainers` (
   `trainer_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `first_name` varchar(255) NOT NULL,
@@ -4273,17 +4273,17 @@ CREATE TABLE `xin_trainers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_trainers`
+-- Truncate table before insert `ifd_trainers`
 --
 
-TRUNCATE TABLE `xin_trainers`;
+TRUNCATE TABLE `ifd_trainers`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_training`
+-- Table structure for table `ifd_training`
 --
 
-CREATE TABLE `xin_training` (
+CREATE TABLE `ifd_training` (
   `training_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `employee_id` varchar(200) NOT NULL,
@@ -4301,17 +4301,17 @@ CREATE TABLE `xin_training` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_training`
+-- Truncate table before insert `ifd_training`
 --
 
-TRUNCATE TABLE `xin_training`;
+TRUNCATE TABLE `ifd_training`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_training_types`
+-- Table structure for table `ifd_training_types`
 --
 
-CREATE TABLE `xin_training_types` (
+CREATE TABLE `ifd_training_types` (
   `training_type_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -4320,25 +4320,25 @@ CREATE TABLE `xin_training_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_training_types`
+-- Truncate table before insert `ifd_training_types`
 --
 
-TRUNCATE TABLE `xin_training_types`;
+TRUNCATE TABLE `ifd_training_types`;
 --
--- Dumping data for table `xin_training_types`
+-- Dumping data for table `ifd_training_types`
 --
 
-INSERT INTO `xin_training_types` (`training_type_id`, `company_id`, `type`, `created_at`, `status`) VALUES
+INSERT INTO `ifd_training_types` (`training_type_id`, `company_id`, `type`, `created_at`, `status`) VALUES
 (1, 1, 'Job Training', '19-03-2018 06:45:47', 1),
 (2, 1, 'Workshop', '19-03-2018 06:45:51', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_travel_arrangement_type`
+-- Table structure for table `ifd_travel_arrangement_type`
 --
 
-CREATE TABLE `xin_travel_arrangement_type` (
+CREATE TABLE `ifd_travel_arrangement_type` (
   `arrangement_type_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -4347,25 +4347,25 @@ CREATE TABLE `xin_travel_arrangement_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_travel_arrangement_type`
+-- Truncate table before insert `ifd_travel_arrangement_type`
 --
 
-TRUNCATE TABLE `xin_travel_arrangement_type`;
+TRUNCATE TABLE `ifd_travel_arrangement_type`;
 --
--- Dumping data for table `xin_travel_arrangement_type`
+-- Dumping data for table `ifd_travel_arrangement_type`
 --
 
-INSERT INTO `xin_travel_arrangement_type` (`arrangement_type_id`, `company_id`, `type`, `status`, `created_at`) VALUES
+INSERT INTO `ifd_travel_arrangement_type` (`arrangement_type_id`, `company_id`, `type`, `status`, `created_at`) VALUES
 (1, 1, 'Corporation', 1, '19-03-2018 08:45:17'),
 (2, 1, 'Guest House', 1, '19-03-2018 08:45:27');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_users`
+-- Table structure for table `ifd_users`
 --
 
-CREATE TABLE `xin_users` (
+CREATE TABLE `ifd_users` (
   `user_id` int(11) NOT NULL,
   `user_role` varchar(30) NOT NULL DEFAULT 'administrator',
   `first_name` varchar(255) NOT NULL,
@@ -4394,15 +4394,15 @@ CREATE TABLE `xin_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_users`
+-- Truncate table before insert `ifd_users`
 --
 
-TRUNCATE TABLE `xin_users`;
+TRUNCATE TABLE `ifd_users`;
 --
--- Dumping data for table `xin_users`
+-- Dumping data for table `ifd_users`
 --
 
-INSERT INTO `xin_users` (`user_id`, `user_role`, `first_name`, `last_name`, `company_name`, `company_logo`, `user_type`, `email`, `username`, `password`, `profile_photo`, `profile_background`, `contact_number`, `gender`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `last_login_date`, `last_login_ip`, `is_logged_in`, `is_active`, `created_at`) VALUES
+INSERT INTO `ifd_users` (`user_id`, `user_role`, `first_name`, `last_name`, `company_name`, `company_logo`, `user_type`, `email`, `username`, `password`, `profile_photo`, `profile_background`, `contact_number`, `gender`, `address_1`, `address_2`, `city`, `state`, `zipcode`, `country`, `last_login_date`, `last_login_ip`, `is_logged_in`, `is_active`, `created_at`) VALUES
 (1, 'administrator', 'Thomas', 'Fleming', '', '', 2, 'test1@test.com', 'admin', 'test123', 'user_1520720863.jpg', 'profile_background_1505458640.jpg', '12333332', 'Male', 'Address Line 1', 'Address Line 2', 'City', 'State', '12345', 230, '15-04-2018 07:36:12', '::1', 0, 1, '14-09-2017 10:02:54'),
 (2, 'administrator', 'Main', 'Office', '', '', 2, 'test@test.com', 'test', 'test123', 'user_1523821315.jpg', '', '1234567890', 'Male', 'Address Line 1', 'Address Line 2', 'City', 'State', '11461', 190, '23-04-2018 05:34:47', '::1', 0, 1, '15-04-2018 06:13:08'),
 (4, 'administrator', 'Fiona', 'Grace', 'HRSALE', 'employer_1524025572.jpg', 1, 'employer@test.com', '', 'test123', '', '', '1234567890', 'Male', 'Address Line 1', 'Address Line 2', 'City', 'State', '11461', 190, '23-04-2018 05:34:54', '::1', 0, 1, '18-04-2018 07:26:12');
@@ -4410,10 +4410,10 @@ INSERT INTO `xin_users` (`user_id`, `user_role`, `first_name`, `last_name`, `com
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_user_roles`
+-- Table structure for table `ifd_user_roles`
 --
 
-CREATE TABLE `xin_user_roles` (
+CREATE TABLE `ifd_user_roles` (
   `role_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `role_name` varchar(200) NOT NULL,
@@ -4423,25 +4423,25 @@ CREATE TABLE `xin_user_roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_user_roles`
+-- Truncate table before insert `ifd_user_roles`
 --
 
-TRUNCATE TABLE `xin_user_roles`;
+TRUNCATE TABLE `ifd_user_roles`;
 --
--- Dumping data for table `xin_user_roles`
+-- Dumping data for table `ifd_user_roles`
 --
 
-INSERT INTO `xin_user_roles` (`role_id`, `company_id`, `role_name`, `role_access`, `role_resources`, `created_at`) VALUES
+INSERT INTO `ifd_user_roles` (`role_id`, `company_id`, `role_name`, `role_access`, `role_resources`, `created_at`) VALUES
 (1, 1, 'Super Admin', '1', '0,103,13,13,201,202,203,372,373,393,393,394,395,396,422,351,421,88,23,23,204,205,206,231,400,22,445,465,12,14,14,207,208,209,232,15,15,210,211,212,233,16,16,213,214,215,234,406,407,408,17,17,216,217,218,235,18,18,219,220,221,236,19,19,222,223,224,237,20,20,225,226,227,238,21,21,228,229,230,239,2,3,3,240,241,242,4,4,243,244,245,249,5,5,246,247,248,6,6,250,251,252,11,11,254,255,256,257,9,9,258,259,260,96,442,24,25,25,262,263,264,265,26,26,266,267,268,97,98,98,269,270,271,272,99,99,273,274,275,276,27,28,28,397,423,10,10,253,261,29,29,381,30,30,277,278,279,310,401,401,402,403,31,7,7,280,281,282,2822,311,8,8,283,284,285,46,46,287,288,289,290,48,49,49,291,292,293,50,51,51,294,295,387,52,296,32,36,36,313,314,404,405,40,41,41,298,299,300,301,42,42,302,303,304,305,43,43,306,307,308,309,104,44,44,315,316,317,318,312,90,91,94,424,425,45,45,319,320,321,322,122,122,331,332,333,106,107,107,334,335,336,108,108,338,339,340,47,53,54,54,341,342,343,344,55,55,345,346,347,56,56,348,349,350,57,60,61,62,63,93,118,297,431,432,433,434,435,436,437,438,439,440,441,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,71,286,72,72,352,353,354,73,74,75,75,355,356,357,76,76,358,359,360,77,77,361,362,363,78,37,37,391,79,80,80,364,365,366,81,81,367,368,369,82,83,84,85,86,87,119,119,323,324,325,326,410,411,412,413,414,420,415,416,417,418,419,121,121,120,328,329,330,426,427,428,429,430,89,89,370,371,95,92,443,444,446,110,111,112,113,114,115,116,117,409', '28-02-2018'),
 (2, 1, 'Employee', '2', '0,445,465,14,207,208,15,210,211,16,213,214,17,216,217,19,222,223,224,20,225,226,227,11,254,255,9,258,259,25,262,263,97,98,98,269,270,271,272,99,99,273,274,275,276,28,10,261,29,401,402,8,283,46,46,287,288,289,290,50,43,306,307,44,315,316,317,312,90,91,94,424,425,45,319,320,321,106,107,107,334,335,336,108,108,338,339,340,47,54,341,342,343,55,55,345,346,347,75,355,356,76,358,359,37,95,92,446', '21-03-2018');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `xin_warning_type`
+-- Table structure for table `ifd_warning_type`
 --
 
-CREATE TABLE `xin_warning_type` (
+CREATE TABLE `ifd_warning_type` (
   `warning_type_id` int(111) NOT NULL,
   `company_id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -4449,15 +4449,15 @@ CREATE TABLE `xin_warning_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Truncate table before insert `xin_warning_type`
+-- Truncate table before insert `ifd_warning_type`
 --
 
-TRUNCATE TABLE `xin_warning_type`;
+TRUNCATE TABLE `ifd_warning_type`;
 --
--- Dumping data for table `xin_warning_type`
+-- Dumping data for table `ifd_warning_type`
 --
 
-INSERT INTO `xin_warning_type` (`warning_type_id`, `company_id`, `type`, `created_at`) VALUES
+INSERT INTO `ifd_warning_type` (`warning_type_id`, `company_id`, `type`, `created_at`) VALUES
 (1, 1, 'First Written Warning', '22-03-2018 01:38:02');
 
 --
@@ -4471,897 +4471,897 @@ ALTER TABLE `ci_sessions`
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
--- Indexes for table `xin_advance_salaries`
+-- Indexes for table `ifd_advance_salaries`
 --
-ALTER TABLE `xin_advance_salaries`
+ALTER TABLE `ifd_advance_salaries`
   ADD PRIMARY KEY (`advance_salary_id`);
 
 --
--- Indexes for table `xin_announcements`
+-- Indexes for table `ifd_announcements`
 --
-ALTER TABLE `xin_announcements`
+ALTER TABLE `ifd_announcements`
   ADD PRIMARY KEY (`announcement_id`);
 
 --
--- Indexes for table `xin_assets`
+-- Indexes for table `ifd_assets`
 --
-ALTER TABLE `xin_assets`
+ALTER TABLE `ifd_assets`
   ADD PRIMARY KEY (`assets_id`);
 
 --
--- Indexes for table `xin_assets_categories`
+-- Indexes for table `ifd_assets_categories`
 --
-ALTER TABLE `xin_assets_categories`
+ALTER TABLE `ifd_assets_categories`
   ADD PRIMARY KEY (`assets_category_id`);
 
 --
--- Indexes for table `xin_attendance_time`
+-- Indexes for table `ifd_attendance_time`
 --
-ALTER TABLE `xin_attendance_time`
+ALTER TABLE `ifd_attendance_time`
   ADD PRIMARY KEY (`time_attendance_id`);
 
 --
--- Indexes for table `xin_attendance_time_request`
+-- Indexes for table `ifd_attendance_time_request`
 --
-ALTER TABLE `xin_attendance_time_request`
+ALTER TABLE `ifd_attendance_time_request`
   ADD PRIMARY KEY (`time_request_id`);
 
 --
--- Indexes for table `xin_awards`
+-- Indexes for table `ifd_awards`
 --
-ALTER TABLE `xin_awards`
+ALTER TABLE `ifd_awards`
   ADD PRIMARY KEY (`award_id`);
 
 --
--- Indexes for table `xin_award_type`
+-- Indexes for table `ifd_award_type`
 --
-ALTER TABLE `xin_award_type`
+ALTER TABLE `ifd_award_type`
   ADD PRIMARY KEY (`award_type_id`);
 
 --
--- Indexes for table `xin_chat_messages`
+-- Indexes for table `ifd_chat_messages`
 --
-ALTER TABLE `xin_chat_messages`
+ALTER TABLE `ifd_chat_messages`
   ADD PRIMARY KEY (`message_id`);
 
 --
--- Indexes for table `xin_clients`
+-- Indexes for table `ifd_clients`
 --
-ALTER TABLE `xin_clients`
+ALTER TABLE `ifd_clients`
   ADD PRIMARY KEY (`client_id`);
 
 --
--- Indexes for table `xin_companies`
+-- Indexes for table `ifd_companies`
 --
-ALTER TABLE `xin_companies`
+ALTER TABLE `ifd_companies`
   ADD PRIMARY KEY (`company_id`);
 
 --
--- Indexes for table `xin_company_documents`
+-- Indexes for table `ifd_company_documents`
 --
-ALTER TABLE `xin_company_documents`
+ALTER TABLE `ifd_company_documents`
   ADD PRIMARY KEY (`document_id`);
 
 --
--- Indexes for table `xin_company_info`
+-- Indexes for table `ifd_company_info`
 --
-ALTER TABLE `xin_company_info`
+ALTER TABLE `ifd_company_info`
   ADD PRIMARY KEY (`company_info_id`);
 
 --
--- Indexes for table `xin_company_policy`
+-- Indexes for table `ifd_company_policy`
 --
-ALTER TABLE `xin_company_policy`
+ALTER TABLE `ifd_company_policy`
   ADD PRIMARY KEY (`policy_id`);
 
 --
--- Indexes for table `xin_company_type`
+-- Indexes for table `ifd_company_type`
 --
-ALTER TABLE `xin_company_type`
+ALTER TABLE `ifd_company_type`
   ADD PRIMARY KEY (`type_id`);
 
 --
--- Indexes for table `xin_contract_type`
+-- Indexes for table `ifd_contract_type`
 --
-ALTER TABLE `xin_contract_type`
+ALTER TABLE `ifd_contract_type`
   ADD PRIMARY KEY (`contract_type_id`);
 
 --
--- Indexes for table `xin_countries`
+-- Indexes for table `ifd_countries`
 --
-ALTER TABLE `xin_countries`
+ALTER TABLE `ifd_countries`
   ADD PRIMARY KEY (`country_id`);
 
 --
--- Indexes for table `xin_currencies`
+-- Indexes for table `ifd_currencies`
 --
-ALTER TABLE `xin_currencies`
+ALTER TABLE `ifd_currencies`
   ADD PRIMARY KEY (`currency_id`);
 
 --
--- Indexes for table `xin_currency_converter`
+-- Indexes for table `ifd_currency_converter`
 --
-ALTER TABLE `xin_currency_converter`
+ALTER TABLE `ifd_currency_converter`
   ADD PRIMARY KEY (`currency_converter_id`);
 
 --
--- Indexes for table `xin_database_backup`
+-- Indexes for table `ifd_database_backup`
 --
-ALTER TABLE `xin_database_backup`
+ALTER TABLE `ifd_database_backup`
   ADD PRIMARY KEY (`backup_id`);
 
 --
--- Indexes for table `xin_departments`
+-- Indexes for table `ifd_departments`
 --
-ALTER TABLE `xin_departments`
+ALTER TABLE `ifd_departments`
   ADD PRIMARY KEY (`department_id`);
 
 --
--- Indexes for table `xin_designations`
+-- Indexes for table `ifd_designations`
 --
-ALTER TABLE `xin_designations`
+ALTER TABLE `ifd_designations`
   ADD PRIMARY KEY (`designation_id`);
 
 --
--- Indexes for table `xin_document_type`
+-- Indexes for table `ifd_document_type`
 --
-ALTER TABLE `xin_document_type`
+ALTER TABLE `ifd_document_type`
   ADD PRIMARY KEY (`document_type_id`);
 
 --
--- Indexes for table `xin_email_configuration`
+-- Indexes for table `ifd_email_configuration`
 --
-ALTER TABLE `xin_email_configuration`
+ALTER TABLE `ifd_email_configuration`
   ADD PRIMARY KEY (`email_config_id`);
 
 --
--- Indexes for table `xin_email_template`
+-- Indexes for table `ifd_email_template`
 --
-ALTER TABLE `xin_email_template`
+ALTER TABLE `ifd_email_template`
   ADD PRIMARY KEY (`template_id`);
 
 --
--- Indexes for table `xin_employees`
+-- Indexes for table `ifd_employees`
 --
-ALTER TABLE `xin_employees`
+ALTER TABLE `ifd_employees`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexes for table `xin_employee_bankaccount`
+-- Indexes for table `ifd_employee_bankaccount`
 --
-ALTER TABLE `xin_employee_bankaccount`
+ALTER TABLE `ifd_employee_bankaccount`
   ADD PRIMARY KEY (`bankaccount_id`);
 
 --
--- Indexes for table `xin_employee_complaints`
+-- Indexes for table `ifd_employee_complaints`
 --
-ALTER TABLE `xin_employee_complaints`
+ALTER TABLE `ifd_employee_complaints`
   ADD PRIMARY KEY (`complaint_id`);
 
 --
--- Indexes for table `xin_employee_contacts`
+-- Indexes for table `ifd_employee_contacts`
 --
-ALTER TABLE `xin_employee_contacts`
+ALTER TABLE `ifd_employee_contacts`
   ADD PRIMARY KEY (`contact_id`);
 
 --
--- Indexes for table `xin_employee_contract`
+-- Indexes for table `ifd_employee_contract`
 --
-ALTER TABLE `xin_employee_contract`
+ALTER TABLE `ifd_employee_contract`
   ADD PRIMARY KEY (`contract_id`);
 
 --
--- Indexes for table `xin_employee_documents`
+-- Indexes for table `ifd_employee_documents`
 --
-ALTER TABLE `xin_employee_documents`
+ALTER TABLE `ifd_employee_documents`
   ADD PRIMARY KEY (`document_id`);
 
 --
--- Indexes for table `xin_employee_exit`
+-- Indexes for table `ifd_employee_exit`
 --
-ALTER TABLE `xin_employee_exit`
+ALTER TABLE `ifd_employee_exit`
   ADD PRIMARY KEY (`exit_id`);
 
 --
--- Indexes for table `xin_employee_exit_type`
+-- Indexes for table `ifd_employee_exit_type`
 --
-ALTER TABLE `xin_employee_exit_type`
+ALTER TABLE `ifd_employee_exit_type`
   ADD PRIMARY KEY (`exit_type_id`);
 
 --
--- Indexes for table `xin_employee_immigration`
+-- Indexes for table `ifd_employee_immigration`
 --
-ALTER TABLE `xin_employee_immigration`
+ALTER TABLE `ifd_employee_immigration`
   ADD PRIMARY KEY (`immigration_id`);
 
 --
--- Indexes for table `xin_employee_leave`
+-- Indexes for table `ifd_employee_leave`
 --
-ALTER TABLE `xin_employee_leave`
+ALTER TABLE `ifd_employee_leave`
   ADD PRIMARY KEY (`leave_id`);
 
 --
--- Indexes for table `xin_employee_location`
+-- Indexes for table `ifd_employee_location`
 --
-ALTER TABLE `xin_employee_location`
+ALTER TABLE `ifd_employee_location`
   ADD PRIMARY KEY (`office_location_id`);
 
 --
--- Indexes for table `xin_employee_promotions`
+-- Indexes for table `ifd_employee_promotions`
 --
-ALTER TABLE `xin_employee_promotions`
+ALTER TABLE `ifd_employee_promotions`
   ADD PRIMARY KEY (`promotion_id`);
 
 --
--- Indexes for table `xin_employee_qualification`
+-- Indexes for table `ifd_employee_qualification`
 --
-ALTER TABLE `xin_employee_qualification`
+ALTER TABLE `ifd_employee_qualification`
   ADD PRIMARY KEY (`qualification_id`);
 
 --
--- Indexes for table `xin_employee_resignations`
+-- Indexes for table `ifd_employee_resignations`
 --
-ALTER TABLE `xin_employee_resignations`
+ALTER TABLE `ifd_employee_resignations`
   ADD PRIMARY KEY (`resignation_id`);
 
 --
--- Indexes for table `xin_employee_security_level`
+-- Indexes for table `ifd_employee_security_level`
 --
-ALTER TABLE `xin_employee_security_level`
+ALTER TABLE `ifd_employee_security_level`
   ADD PRIMARY KEY (`security_level_id`);
 
 --
--- Indexes for table `xin_employee_shift`
+-- Indexes for table `ifd_employee_shift`
 --
-ALTER TABLE `xin_employee_shift`
+ALTER TABLE `ifd_employee_shift`
   ADD PRIMARY KEY (`emp_shift_id`);
 
 --
--- Indexes for table `xin_employee_terminations`
+-- Indexes for table `ifd_employee_terminations`
 --
-ALTER TABLE `xin_employee_terminations`
+ALTER TABLE `ifd_employee_terminations`
   ADD PRIMARY KEY (`termination_id`);
 
 --
--- Indexes for table `xin_employee_transfer`
+-- Indexes for table `ifd_employee_transfer`
 --
-ALTER TABLE `xin_employee_transfer`
+ALTER TABLE `ifd_employee_transfer`
   ADD PRIMARY KEY (`transfer_id`);
 
 --
--- Indexes for table `xin_employee_travels`
+-- Indexes for table `ifd_employee_travels`
 --
-ALTER TABLE `xin_employee_travels`
+ALTER TABLE `ifd_employee_travels`
   ADD PRIMARY KEY (`travel_id`);
 
 --
--- Indexes for table `xin_employee_warnings`
+-- Indexes for table `ifd_employee_warnings`
 --
-ALTER TABLE `xin_employee_warnings`
+ALTER TABLE `ifd_employee_warnings`
   ADD PRIMARY KEY (`warning_id`);
 
 --
--- Indexes for table `xin_employee_work_experience`
+-- Indexes for table `ifd_employee_work_experience`
 --
-ALTER TABLE `xin_employee_work_experience`
+ALTER TABLE `ifd_employee_work_experience`
   ADD PRIMARY KEY (`work_experience_id`);
 
 --
--- Indexes for table `xin_ethnicity_type`
+-- Indexes for table `ifd_ethnicity_type`
 --
-ALTER TABLE `xin_ethnicity_type`
+ALTER TABLE `ifd_ethnicity_type`
   ADD PRIMARY KEY (`ethnicity_type_id`);
 
 --
--- Indexes for table `xin_events`
+-- Indexes for table `ifd_events`
 --
-ALTER TABLE `xin_events`
+ALTER TABLE `ifd_events`
   ADD PRIMARY KEY (`event_id`);
 
 --
--- Indexes for table `xin_expenses`
+-- Indexes for table `ifd_expenses`
 --
-ALTER TABLE `xin_expenses`
+ALTER TABLE `ifd_expenses`
   ADD PRIMARY KEY (`expense_id`);
 
 --
--- Indexes for table `xin_expense_type`
+-- Indexes for table `ifd_expense_type`
 --
-ALTER TABLE `xin_expense_type`
+ALTER TABLE `ifd_expense_type`
   ADD PRIMARY KEY (`expense_type_id`);
 
 --
--- Indexes for table `xin_file_manager`
+-- Indexes for table `ifd_file_manager`
 --
-ALTER TABLE `xin_file_manager`
+ALTER TABLE `ifd_file_manager`
   ADD PRIMARY KEY (`file_id`);
 
 --
--- Indexes for table `xin_file_manager_settings`
+-- Indexes for table `ifd_file_manager_settings`
 --
-ALTER TABLE `xin_file_manager_settings`
+ALTER TABLE `ifd_file_manager_settings`
   ADD PRIMARY KEY (`setting_id`);
 
 --
--- Indexes for table `xin_finance_bankcash`
+-- Indexes for table `ifd_finance_bankcash`
 --
-ALTER TABLE `xin_finance_bankcash`
+ALTER TABLE `ifd_finance_bankcash`
   ADD PRIMARY KEY (`bankcash_id`);
 
 --
--- Indexes for table `xin_finance_deposit`
+-- Indexes for table `ifd_finance_deposit`
 --
-ALTER TABLE `xin_finance_deposit`
+ALTER TABLE `ifd_finance_deposit`
   ADD PRIMARY KEY (`deposit_id`);
 
 --
--- Indexes for table `xin_finance_expense`
+-- Indexes for table `ifd_finance_expense`
 --
-ALTER TABLE `xin_finance_expense`
+ALTER TABLE `ifd_finance_expense`
   ADD PRIMARY KEY (`expense_id`);
 
 --
--- Indexes for table `xin_finance_payees`
+-- Indexes for table `ifd_finance_payees`
 --
-ALTER TABLE `xin_finance_payees`
+ALTER TABLE `ifd_finance_payees`
   ADD PRIMARY KEY (`payee_id`);
 
 --
--- Indexes for table `xin_finance_payers`
+-- Indexes for table `ifd_finance_payers`
 --
-ALTER TABLE `xin_finance_payers`
+ALTER TABLE `ifd_finance_payers`
   ADD PRIMARY KEY (`payer_id`);
 
 --
--- Indexes for table `xin_finance_transaction`
+-- Indexes for table `ifd_finance_transaction`
 --
-ALTER TABLE `xin_finance_transaction`
+ALTER TABLE `ifd_finance_transaction`
   ADD PRIMARY KEY (`transaction_id`);
 
 --
--- Indexes for table `xin_finance_transactions`
+-- Indexes for table `ifd_finance_transactions`
 --
-ALTER TABLE `xin_finance_transactions`
+ALTER TABLE `ifd_finance_transactions`
   ADD PRIMARY KEY (`transaction_id`);
 
 --
--- Indexes for table `xin_finance_transfer`
+-- Indexes for table `ifd_finance_transfer`
 --
-ALTER TABLE `xin_finance_transfer`
+ALTER TABLE `ifd_finance_transfer`
   ADD PRIMARY KEY (`transfer_id`);
 
 --
--- Indexes for table `xin_goal_tracking`
+-- Indexes for table `ifd_goal_tracking`
 --
-ALTER TABLE `xin_goal_tracking`
+ALTER TABLE `ifd_goal_tracking`
   ADD PRIMARY KEY (`tracking_id`);
 
 --
--- Indexes for table `xin_goal_tracking_type`
+-- Indexes for table `ifd_goal_tracking_type`
 --
-ALTER TABLE `xin_goal_tracking_type`
+ALTER TABLE `ifd_goal_tracking_type`
   ADD PRIMARY KEY (`tracking_type_id`);
 
 --
--- Indexes for table `xin_holidays`
+-- Indexes for table `ifd_holidays`
 --
-ALTER TABLE `xin_holidays`
+ALTER TABLE `ifd_holidays`
   ADD PRIMARY KEY (`holiday_id`);
 
 --
--- Indexes for table `xin_hourly_templates`
+-- Indexes for table `ifd_hourly_templates`
 --
-ALTER TABLE `xin_hourly_templates`
+ALTER TABLE `ifd_hourly_templates`
   ADD PRIMARY KEY (`hourly_rate_id`);
 
 --
--- Indexes for table `xin_hrsale_invoices`
+-- Indexes for table `ifd_hrsale_invoices`
 --
-ALTER TABLE `xin_hrsale_invoices`
+ALTER TABLE `ifd_hrsale_invoices`
   ADD PRIMARY KEY (`invoice_id`);
 
 --
--- Indexes for table `xin_hrsale_invoices_items`
+-- Indexes for table `ifd_hrsale_invoices_items`
 --
-ALTER TABLE `xin_hrsale_invoices_items`
+ALTER TABLE `ifd_hrsale_invoices_items`
   ADD PRIMARY KEY (`invoice_item_id`);
 
 --
--- Indexes for table `xin_hrsale_module_attributes`
+-- Indexes for table `ifd_hrsale_module_attributes`
 --
-ALTER TABLE `xin_hrsale_module_attributes`
+ALTER TABLE `ifd_hrsale_module_attributes`
   ADD PRIMARY KEY (`custom_field_id`);
 
 --
--- Indexes for table `xin_hrsale_module_attributes_select_value`
+-- Indexes for table `ifd_hrsale_module_attributes_select_value`
 --
-ALTER TABLE `xin_hrsale_module_attributes_select_value`
+ALTER TABLE `ifd_hrsale_module_attributes_select_value`
   ADD PRIMARY KEY (`attributes_select_value_id`);
 
 --
--- Indexes for table `xin_hrsale_module_attributes_values`
+-- Indexes for table `ifd_hrsale_module_attributes_values`
 --
-ALTER TABLE `xin_hrsale_module_attributes_values`
+ALTER TABLE `ifd_hrsale_module_attributes_values`
   ADD PRIMARY KEY (`attributes_value_id`);
 
 --
--- Indexes for table `xin_hrsale_notificaions`
+-- Indexes for table `ifd_hrsale_notificaions`
 --
-ALTER TABLE `xin_hrsale_notificaions`
+ALTER TABLE `ifd_hrsale_notificaions`
   ADD PRIMARY KEY (`notificaion_id`);
 
 --
--- Indexes for table `xin_hrsale_quotes`
+-- Indexes for table `ifd_hrsale_quotes`
 --
-ALTER TABLE `xin_hrsale_quotes`
+ALTER TABLE `ifd_hrsale_quotes`
   ADD PRIMARY KEY (`quote_id`);
 
 --
--- Indexes for table `xin_hrsale_quotes_items`
+-- Indexes for table `ifd_hrsale_quotes_items`
 --
-ALTER TABLE `xin_hrsale_quotes_items`
+ALTER TABLE `ifd_hrsale_quotes_items`
   ADD PRIMARY KEY (`quote_item_id`);
 
 --
--- Indexes for table `xin_income_categories`
+-- Indexes for table `ifd_income_categories`
 --
-ALTER TABLE `xin_income_categories`
+ALTER TABLE `ifd_income_categories`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indexes for table `xin_jobs`
+-- Indexes for table `ifd_jobs`
 --
-ALTER TABLE `xin_jobs`
+ALTER TABLE `ifd_jobs`
   ADD PRIMARY KEY (`job_id`);
 
 --
--- Indexes for table `xin_job_applications`
+-- Indexes for table `ifd_job_applications`
 --
-ALTER TABLE `xin_job_applications`
+ALTER TABLE `ifd_job_applications`
   ADD PRIMARY KEY (`application_id`);
 
 --
--- Indexes for table `xin_job_categories`
+-- Indexes for table `ifd_job_categories`
 --
-ALTER TABLE `xin_job_categories`
+ALTER TABLE `ifd_job_categories`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indexes for table `xin_job_interviews`
+-- Indexes for table `ifd_job_interviews`
 --
-ALTER TABLE `xin_job_interviews`
+ALTER TABLE `ifd_job_interviews`
   ADD PRIMARY KEY (`job_interview_id`);
 
 --
--- Indexes for table `xin_job_pages`
+-- Indexes for table `ifd_job_pages`
 --
-ALTER TABLE `xin_job_pages`
+ALTER TABLE `ifd_job_pages`
   ADD PRIMARY KEY (`page_id`);
 
 --
--- Indexes for table `xin_job_type`
+-- Indexes for table `ifd_job_type`
 --
-ALTER TABLE `xin_job_type`
+ALTER TABLE `ifd_job_type`
   ADD PRIMARY KEY (`job_type_id`);
 
 --
--- Indexes for table `xin_kpi_incidental`
+-- Indexes for table `ifd_kpi_incidental`
 --
-ALTER TABLE `xin_kpi_incidental`
+ALTER TABLE `ifd_kpi_incidental`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `xin_kpi_maingoals`
+-- Indexes for table `ifd_kpi_maingoals`
 --
-ALTER TABLE `xin_kpi_maingoals`
+ALTER TABLE `ifd_kpi_maingoals`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `xin_kpi_variable`
+-- Indexes for table `ifd_kpi_variable`
 --
-ALTER TABLE `xin_kpi_variable`
+ALTER TABLE `ifd_kpi_variable`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `xin_languages`
+-- Indexes for table `ifd_languages`
 --
-ALTER TABLE `xin_languages`
+ALTER TABLE `ifd_languages`
   ADD PRIMARY KEY (`language_id`);
 
 --
--- Indexes for table `xin_leads`
+-- Indexes for table `ifd_leads`
 --
-ALTER TABLE `xin_leads`
+ALTER TABLE `ifd_leads`
   ADD PRIMARY KEY (`client_id`);
 
 --
--- Indexes for table `xin_leads_followup`
+-- Indexes for table `ifd_leads_followup`
 --
-ALTER TABLE `xin_leads_followup`
+ALTER TABLE `ifd_leads_followup`
   ADD PRIMARY KEY (`leads_followup_id`);
 
 --
--- Indexes for table `xin_leave_applications`
+-- Indexes for table `ifd_leave_applications`
 --
-ALTER TABLE `xin_leave_applications`
+ALTER TABLE `ifd_leave_applications`
   ADD PRIMARY KEY (`leave_id`);
 
 --
--- Indexes for table `xin_leave_type`
+-- Indexes for table `ifd_leave_type`
 --
-ALTER TABLE `xin_leave_type`
+ALTER TABLE `ifd_leave_type`
   ADD PRIMARY KEY (`leave_type_id`);
 
 --
--- Indexes for table `xin_make_payment`
+-- Indexes for table `ifd_make_payment`
 --
-ALTER TABLE `xin_make_payment`
+ALTER TABLE `ifd_make_payment`
   ADD PRIMARY KEY (`make_payment_id`);
 
 --
--- Indexes for table `xin_meetings`
+-- Indexes for table `ifd_meetings`
 --
-ALTER TABLE `xin_meetings`
+ALTER TABLE `ifd_meetings`
   ADD PRIMARY KEY (`meeting_id`);
 
 --
--- Indexes for table `xin_office_location`
+-- Indexes for table `ifd_office_location`
 --
-ALTER TABLE `xin_office_location`
+ALTER TABLE `ifd_office_location`
   ADD PRIMARY KEY (`location_id`);
 
 --
--- Indexes for table `xin_office_shift`
+-- Indexes for table `ifd_office_shift`
 --
-ALTER TABLE `xin_office_shift`
+ALTER TABLE `ifd_office_shift`
   ADD PRIMARY KEY (`office_shift_id`);
 
 --
--- Indexes for table `xin_payment_method`
+-- Indexes for table `ifd_payment_method`
 --
-ALTER TABLE `xin_payment_method`
+ALTER TABLE `ifd_payment_method`
   ADD PRIMARY KEY (`payment_method_id`);
 
 --
--- Indexes for table `xin_payroll_custom_fields`
+-- Indexes for table `ifd_payroll_custom_fields`
 --
-ALTER TABLE `xin_payroll_custom_fields`
+ALTER TABLE `ifd_payroll_custom_fields`
   ADD PRIMARY KEY (`payroll_custom_id`);
 
 --
--- Indexes for table `xin_performance_appraisal`
+-- Indexes for table `ifd_performance_appraisal`
 --
-ALTER TABLE `xin_performance_appraisal`
+ALTER TABLE `ifd_performance_appraisal`
   ADD PRIMARY KEY (`performance_appraisal_id`);
 
 --
--- Indexes for table `xin_performance_appraisal_options`
+-- Indexes for table `ifd_performance_appraisal_options`
 --
-ALTER TABLE `xin_performance_appraisal_options`
+ALTER TABLE `ifd_performance_appraisal_options`
   ADD PRIMARY KEY (`performance_appraisal_options_id`);
 
 --
--- Indexes for table `xin_performance_indicator`
+-- Indexes for table `ifd_performance_indicator`
 --
-ALTER TABLE `xin_performance_indicator`
+ALTER TABLE `ifd_performance_indicator`
   ADD PRIMARY KEY (`performance_indicator_id`);
 
 --
--- Indexes for table `xin_performance_indicator_options`
+-- Indexes for table `ifd_performance_indicator_options`
 --
-ALTER TABLE `xin_performance_indicator_options`
+ALTER TABLE `ifd_performance_indicator_options`
   ADD PRIMARY KEY (`performance_indicator_options_id`);
 
 --
--- Indexes for table `xin_projects`
+-- Indexes for table `ifd_projects`
 --
-ALTER TABLE `xin_projects`
+ALTER TABLE `ifd_projects`
   ADD PRIMARY KEY (`project_id`);
 
 --
--- Indexes for table `xin_projects_attachment`
+-- Indexes for table `ifd_projects_attachment`
 --
-ALTER TABLE `xin_projects_attachment`
+ALTER TABLE `ifd_projects_attachment`
   ADD PRIMARY KEY (`project_attachment_id`);
 
 --
--- Indexes for table `xin_projects_bugs`
+-- Indexes for table `ifd_projects_bugs`
 --
-ALTER TABLE `xin_projects_bugs`
+ALTER TABLE `ifd_projects_bugs`
   ADD PRIMARY KEY (`bug_id`);
 
 --
--- Indexes for table `xin_projects_discussion`
+-- Indexes for table `ifd_projects_discussion`
 --
-ALTER TABLE `xin_projects_discussion`
+ALTER TABLE `ifd_projects_discussion`
   ADD PRIMARY KEY (`discussion_id`);
 
 --
--- Indexes for table `xin_projects_timelogs`
+-- Indexes for table `ifd_projects_timelogs`
 --
-ALTER TABLE `xin_projects_timelogs`
+ALTER TABLE `ifd_projects_timelogs`
   ADD PRIMARY KEY (`timelogs_id`);
 
 --
--- Indexes for table `xin_project_variations`
+-- Indexes for table `ifd_project_variations`
 --
-ALTER TABLE `xin_project_variations`
+ALTER TABLE `ifd_project_variations`
   ADD PRIMARY KEY (`variation_id`) USING BTREE;
 
 --
--- Indexes for table `xin_qualification_education_level`
+-- Indexes for table `ifd_qualification_education_level`
 --
-ALTER TABLE `xin_qualification_education_level`
+ALTER TABLE `ifd_qualification_education_level`
   ADD PRIMARY KEY (`education_level_id`);
 
 --
--- Indexes for table `xin_qualification_language`
+-- Indexes for table `ifd_qualification_language`
 --
-ALTER TABLE `xin_qualification_language`
+ALTER TABLE `ifd_qualification_language`
   ADD PRIMARY KEY (`language_id`);
 
 --
--- Indexes for table `xin_qualification_skill`
+-- Indexes for table `ifd_qualification_skill`
 --
-ALTER TABLE `xin_qualification_skill`
+ALTER TABLE `ifd_qualification_skill`
   ADD PRIMARY KEY (`skill_id`);
 
 --
--- Indexes for table `xin_quoted_projects`
+-- Indexes for table `ifd_quoted_projects`
 --
-ALTER TABLE `xin_quoted_projects`
+ALTER TABLE `ifd_quoted_projects`
   ADD PRIMARY KEY (`project_id`);
 
 --
--- Indexes for table `xin_quoted_projects_attachment`
+-- Indexes for table `ifd_quoted_projects_attachment`
 --
-ALTER TABLE `xin_quoted_projects_attachment`
+ALTER TABLE `ifd_quoted_projects_attachment`
   ADD PRIMARY KEY (`project_attachment_id`);
 
 --
--- Indexes for table `xin_quoted_projects_discussion`
+-- Indexes for table `ifd_quoted_projects_discussion`
 --
-ALTER TABLE `xin_quoted_projects_discussion`
+ALTER TABLE `ifd_quoted_projects_discussion`
   ADD PRIMARY KEY (`discussion_id`);
 
 --
--- Indexes for table `xin_quoted_projects_timelogs`
+-- Indexes for table `ifd_quoted_projects_timelogs`
 --
-ALTER TABLE `xin_quoted_projects_timelogs`
+ALTER TABLE `ifd_quoted_projects_timelogs`
   ADD PRIMARY KEY (`timelogs_id`);
 
 --
--- Indexes for table `xin_recruitment_pages`
+-- Indexes for table `ifd_recruitment_pages`
 --
-ALTER TABLE `xin_recruitment_pages`
+ALTER TABLE `ifd_recruitment_pages`
   ADD PRIMARY KEY (`page_id`);
 
 --
--- Indexes for table `xin_recruitment_subpages`
+-- Indexes for table `ifd_recruitment_subpages`
 --
-ALTER TABLE `xin_recruitment_subpages`
+ALTER TABLE `ifd_recruitment_subpages`
   ADD PRIMARY KEY (`subpages_id`);
 
 --
--- Indexes for table `xin_salary_allowances`
+-- Indexes for table `ifd_salary_allowances`
 --
-ALTER TABLE `xin_salary_allowances`
+ALTER TABLE `ifd_salary_allowances`
   ADD PRIMARY KEY (`allowance_id`);
 
 --
--- Indexes for table `xin_salary_bank_allocation`
+-- Indexes for table `ifd_salary_bank_allocation`
 --
-ALTER TABLE `xin_salary_bank_allocation`
+ALTER TABLE `ifd_salary_bank_allocation`
   ADD PRIMARY KEY (`bank_allocation_id`);
 
 --
--- Indexes for table `xin_salary_commissions`
+-- Indexes for table `ifd_salary_commissions`
 --
-ALTER TABLE `xin_salary_commissions`
+ALTER TABLE `ifd_salary_commissions`
   ADD PRIMARY KEY (`salary_commissions_id`);
 
 --
--- Indexes for table `xin_salary_loan_deductions`
+-- Indexes for table `ifd_salary_loan_deductions`
 --
-ALTER TABLE `xin_salary_loan_deductions`
+ALTER TABLE `ifd_salary_loan_deductions`
   ADD PRIMARY KEY (`loan_deduction_id`);
 
 --
--- Indexes for table `xin_salary_other_payments`
+-- Indexes for table `ifd_salary_other_payments`
 --
-ALTER TABLE `xin_salary_other_payments`
+ALTER TABLE `ifd_salary_other_payments`
   ADD PRIMARY KEY (`other_payments_id`);
 
 --
--- Indexes for table `xin_salary_overtime`
+-- Indexes for table `ifd_salary_overtime`
 --
-ALTER TABLE `xin_salary_overtime`
+ALTER TABLE `ifd_salary_overtime`
   ADD PRIMARY KEY (`salary_overtime_id`);
 
 --
--- Indexes for table `xin_salary_payslips`
+-- Indexes for table `ifd_salary_payslips`
 --
-ALTER TABLE `xin_salary_payslips`
+ALTER TABLE `ifd_salary_payslips`
   ADD PRIMARY KEY (`payslip_id`);
 
 --
--- Indexes for table `xin_salary_payslip_allowances`
+-- Indexes for table `ifd_salary_payslip_allowances`
 --
-ALTER TABLE `xin_salary_payslip_allowances`
+ALTER TABLE `ifd_salary_payslip_allowances`
   ADD PRIMARY KEY (`payslip_allowances_id`);
 
 --
--- Indexes for table `xin_salary_payslip_commissions`
+-- Indexes for table `ifd_salary_payslip_commissions`
 --
-ALTER TABLE `xin_salary_payslip_commissions`
+ALTER TABLE `ifd_salary_payslip_commissions`
   ADD PRIMARY KEY (`payslip_commissions_id`);
 
 --
--- Indexes for table `xin_salary_payslip_loan`
+-- Indexes for table `ifd_salary_payslip_loan`
 --
-ALTER TABLE `xin_salary_payslip_loan`
+ALTER TABLE `ifd_salary_payslip_loan`
   ADD PRIMARY KEY (`payslip_loan_id`);
 
 --
--- Indexes for table `xin_salary_payslip_other_payments`
+-- Indexes for table `ifd_salary_payslip_other_payments`
 --
-ALTER TABLE `xin_salary_payslip_other_payments`
+ALTER TABLE `ifd_salary_payslip_other_payments`
   ADD PRIMARY KEY (`payslip_other_payment_id`);
 
 --
--- Indexes for table `xin_salary_payslip_overtime`
+-- Indexes for table `ifd_salary_payslip_overtime`
 --
-ALTER TABLE `xin_salary_payslip_overtime`
+ALTER TABLE `ifd_salary_payslip_overtime`
   ADD PRIMARY KEY (`payslip_overtime_id`);
 
 --
--- Indexes for table `xin_salary_payslip_statutory_deductions`
+-- Indexes for table `ifd_salary_payslip_statutory_deductions`
 --
-ALTER TABLE `xin_salary_payslip_statutory_deductions`
+ALTER TABLE `ifd_salary_payslip_statutory_deductions`
   ADD PRIMARY KEY (`payslip_deduction_id`);
 
 --
--- Indexes for table `xin_salary_statutory_deductions`
+-- Indexes for table `ifd_salary_statutory_deductions`
 --
-ALTER TABLE `xin_salary_statutory_deductions`
+ALTER TABLE `ifd_salary_statutory_deductions`
   ADD PRIMARY KEY (`statutory_deductions_id`);
 
 --
--- Indexes for table `xin_salary_templates`
+-- Indexes for table `ifd_salary_templates`
 --
-ALTER TABLE `xin_salary_templates`
+ALTER TABLE `ifd_salary_templates`
   ADD PRIMARY KEY (`salary_template_id`);
 
 --
--- Indexes for table `xin_security_level`
+-- Indexes for table `ifd_security_level`
 --
-ALTER TABLE `xin_security_level`
+ALTER TABLE `ifd_security_level`
   ADD PRIMARY KEY (`type_id`);
 
 --
--- Indexes for table `xin_sub_departments`
+-- Indexes for table `ifd_sub_departments`
 --
-ALTER TABLE `xin_sub_departments`
+ALTER TABLE `ifd_sub_departments`
   ADD PRIMARY KEY (`sub_department_id`);
 
 --
--- Indexes for table `xin_support_tickets`
+-- Indexes for table `ifd_support_tickets`
 --
-ALTER TABLE `xin_support_tickets`
+ALTER TABLE `ifd_support_tickets`
   ADD PRIMARY KEY (`ticket_id`);
 
 --
--- Indexes for table `xin_support_tickets_employees`
+-- Indexes for table `ifd_support_tickets_employees`
 --
-ALTER TABLE `xin_support_tickets_employees`
+ALTER TABLE `ifd_support_tickets_employees`
   ADD PRIMARY KEY (`tickets_employees_id`);
 
 --
--- Indexes for table `xin_support_ticket_files`
+-- Indexes for table `ifd_support_ticket_files`
 --
-ALTER TABLE `xin_support_ticket_files`
+ALTER TABLE `ifd_support_ticket_files`
   ADD PRIMARY KEY (`ticket_file_id`);
 
 --
--- Indexes for table `xin_system_setting`
+-- Indexes for table `ifd_system_setting`
 --
-ALTER TABLE `xin_system_setting`
+ALTER TABLE `ifd_system_setting`
   ADD PRIMARY KEY (`setting_id`);
 
 --
--- Indexes for table `xin_tasks`
+-- Indexes for table `ifd_tasks`
 --
-ALTER TABLE `xin_tasks`
+ALTER TABLE `ifd_tasks`
   ADD PRIMARY KEY (`task_id`);
 
 --
--- Indexes for table `xin_tasks_attachment`
+-- Indexes for table `ifd_tasks_attachment`
 --
-ALTER TABLE `xin_tasks_attachment`
+ALTER TABLE `ifd_tasks_attachment`
   ADD PRIMARY KEY (`task_attachment_id`);
 
 --
--- Indexes for table `xin_tasks_comments`
+-- Indexes for table `ifd_tasks_comments`
 --
-ALTER TABLE `xin_tasks_comments`
+ALTER TABLE `ifd_tasks_comments`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Indexes for table `xin_task_categories`
+-- Indexes for table `ifd_task_categories`
 --
-ALTER TABLE `xin_task_categories`
+ALTER TABLE `ifd_task_categories`
   ADD PRIMARY KEY (`task_category_id`);
 
 --
--- Indexes for table `xin_tax_types`
+-- Indexes for table `ifd_tax_types`
 --
-ALTER TABLE `xin_tax_types`
+ALTER TABLE `ifd_tax_types`
   ADD PRIMARY KEY (`tax_id`);
 
 --
--- Indexes for table `xin_termination_type`
+-- Indexes for table `ifd_termination_type`
 --
-ALTER TABLE `xin_termination_type`
+ALTER TABLE `ifd_termination_type`
   ADD PRIMARY KEY (`termination_type_id`);
 
 --
--- Indexes for table `xin_theme_settings`
+-- Indexes for table `ifd_theme_settings`
 --
-ALTER TABLE `xin_theme_settings`
+ALTER TABLE `ifd_theme_settings`
   ADD PRIMARY KEY (`theme_settings_id`);
 
 --
--- Indexes for table `xin_tickets_attachment`
+-- Indexes for table `ifd_tickets_attachment`
 --
-ALTER TABLE `xin_tickets_attachment`
+ALTER TABLE `ifd_tickets_attachment`
   ADD PRIMARY KEY (`ticket_attachment_id`);
 
 --
--- Indexes for table `xin_tickets_comments`
+-- Indexes for table `ifd_tickets_comments`
 --
-ALTER TABLE `xin_tickets_comments`
+ALTER TABLE `ifd_tickets_comments`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Indexes for table `xin_trainers`
+-- Indexes for table `ifd_trainers`
 --
-ALTER TABLE `xin_trainers`
+ALTER TABLE `ifd_trainers`
   ADD PRIMARY KEY (`trainer_id`);
 
 --
--- Indexes for table `xin_training`
+-- Indexes for table `ifd_training`
 --
-ALTER TABLE `xin_training`
+ALTER TABLE `ifd_training`
   ADD PRIMARY KEY (`training_id`);
 
 --
--- Indexes for table `xin_training_types`
+-- Indexes for table `ifd_training_types`
 --
-ALTER TABLE `xin_training_types`
+ALTER TABLE `ifd_training_types`
   ADD PRIMARY KEY (`training_type_id`);
 
 --
--- Indexes for table `xin_travel_arrangement_type`
+-- Indexes for table `ifd_travel_arrangement_type`
 --
-ALTER TABLE `xin_travel_arrangement_type`
+ALTER TABLE `ifd_travel_arrangement_type`
   ADD PRIMARY KEY (`arrangement_type_id`);
 
 --
--- Indexes for table `xin_users`
+-- Indexes for table `ifd_users`
 --
-ALTER TABLE `xin_users`
+ALTER TABLE `ifd_users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexes for table `xin_user_roles`
+-- Indexes for table `ifd_user_roles`
 --
-ALTER TABLE `xin_user_roles`
+ALTER TABLE `ifd_user_roles`
   ADD PRIMARY KEY (`role_id`);
 
 --
--- Indexes for table `xin_warning_type`
+-- Indexes for table `ifd_warning_type`
 --
-ALTER TABLE `xin_warning_type`
+ALTER TABLE `ifd_warning_type`
   ADD PRIMARY KEY (`warning_type_id`);
 
 --
@@ -5369,897 +5369,897 @@ ALTER TABLE `xin_warning_type`
 --
 
 --
--- AUTO_INCREMENT for table `xin_advance_salaries`
+-- AUTO_INCREMENT for table `ifd_advance_salaries`
 --
-ALTER TABLE `xin_advance_salaries`
+ALTER TABLE `ifd_advance_salaries`
   MODIFY `advance_salary_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_announcements`
+-- AUTO_INCREMENT for table `ifd_announcements`
 --
-ALTER TABLE `xin_announcements`
+ALTER TABLE `ifd_announcements`
   MODIFY `announcement_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_assets`
+-- AUTO_INCREMENT for table `ifd_assets`
 --
-ALTER TABLE `xin_assets`
+ALTER TABLE `ifd_assets`
   MODIFY `assets_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_assets_categories`
+-- AUTO_INCREMENT for table `ifd_assets_categories`
 --
-ALTER TABLE `xin_assets_categories`
+ALTER TABLE `ifd_assets_categories`
   MODIFY `assets_category_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_attendance_time`
+-- AUTO_INCREMENT for table `ifd_attendance_time`
 --
-ALTER TABLE `xin_attendance_time`
+ALTER TABLE `ifd_attendance_time`
   MODIFY `time_attendance_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_attendance_time_request`
+-- AUTO_INCREMENT for table `ifd_attendance_time_request`
 --
-ALTER TABLE `xin_attendance_time_request`
+ALTER TABLE `ifd_attendance_time_request`
   MODIFY `time_request_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_awards`
+-- AUTO_INCREMENT for table `ifd_awards`
 --
-ALTER TABLE `xin_awards`
+ALTER TABLE `ifd_awards`
   MODIFY `award_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_award_type`
+-- AUTO_INCREMENT for table `ifd_award_type`
 --
-ALTER TABLE `xin_award_type`
+ALTER TABLE `ifd_award_type`
   MODIFY `award_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_chat_messages`
+-- AUTO_INCREMENT for table `ifd_chat_messages`
 --
-ALTER TABLE `xin_chat_messages`
+ALTER TABLE `ifd_chat_messages`
   MODIFY `message_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_clients`
+-- AUTO_INCREMENT for table `ifd_clients`
 --
-ALTER TABLE `xin_clients`
+ALTER TABLE `ifd_clients`
   MODIFY `client_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_companies`
+-- AUTO_INCREMENT for table `ifd_companies`
 --
-ALTER TABLE `xin_companies`
+ALTER TABLE `ifd_companies`
   MODIFY `company_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_company_documents`
+-- AUTO_INCREMENT for table `ifd_company_documents`
 --
-ALTER TABLE `xin_company_documents`
+ALTER TABLE `ifd_company_documents`
   MODIFY `document_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_company_info`
+-- AUTO_INCREMENT for table `ifd_company_info`
 --
-ALTER TABLE `xin_company_info`
+ALTER TABLE `ifd_company_info`
   MODIFY `company_info_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_company_policy`
+-- AUTO_INCREMENT for table `ifd_company_policy`
 --
-ALTER TABLE `xin_company_policy`
+ALTER TABLE `ifd_company_policy`
   MODIFY `policy_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_company_type`
+-- AUTO_INCREMENT for table `ifd_company_type`
 --
-ALTER TABLE `xin_company_type`
+ALTER TABLE `ifd_company_type`
   MODIFY `type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `xin_contract_type`
+-- AUTO_INCREMENT for table `ifd_contract_type`
 --
-ALTER TABLE `xin_contract_type`
+ALTER TABLE `ifd_contract_type`
   MODIFY `contract_type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_countries`
+-- AUTO_INCREMENT for table `ifd_countries`
 --
-ALTER TABLE `xin_countries`
+ALTER TABLE `ifd_countries`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=246;
 
 --
--- AUTO_INCREMENT for table `xin_currencies`
+-- AUTO_INCREMENT for table `ifd_currencies`
 --
-ALTER TABLE `xin_currencies`
+ALTER TABLE `ifd_currencies`
   MODIFY `currency_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_currency_converter`
+-- AUTO_INCREMENT for table `ifd_currency_converter`
 --
-ALTER TABLE `xin_currency_converter`
+ALTER TABLE `ifd_currency_converter`
   MODIFY `currency_converter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_database_backup`
+-- AUTO_INCREMENT for table `ifd_database_backup`
 --
-ALTER TABLE `xin_database_backup`
+ALTER TABLE `ifd_database_backup`
   MODIFY `backup_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_departments`
+-- AUTO_INCREMENT for table `ifd_departments`
 --
-ALTER TABLE `xin_departments`
+ALTER TABLE `ifd_departments`
   MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `xin_designations`
+-- AUTO_INCREMENT for table `ifd_designations`
 --
-ALTER TABLE `xin_designations`
+ALTER TABLE `ifd_designations`
   MODIFY `designation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `xin_document_type`
+-- AUTO_INCREMENT for table `ifd_document_type`
 --
-ALTER TABLE `xin_document_type`
+ALTER TABLE `ifd_document_type`
   MODIFY `document_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_email_configuration`
+-- AUTO_INCREMENT for table `ifd_email_configuration`
 --
-ALTER TABLE `xin_email_configuration`
+ALTER TABLE `ifd_email_configuration`
   MODIFY `email_config_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_email_template`
+-- AUTO_INCREMENT for table `ifd_email_template`
 --
-ALTER TABLE `xin_email_template`
+ALTER TABLE `ifd_email_template`
   MODIFY `template_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `xin_employees`
+-- AUTO_INCREMENT for table `ifd_employees`
 --
-ALTER TABLE `xin_employees`
+ALTER TABLE `ifd_employees`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `xin_employee_bankaccount`
+-- AUTO_INCREMENT for table `ifd_employee_bankaccount`
 --
-ALTER TABLE `xin_employee_bankaccount`
+ALTER TABLE `ifd_employee_bankaccount`
   MODIFY `bankaccount_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_complaints`
+-- AUTO_INCREMENT for table `ifd_employee_complaints`
 --
-ALTER TABLE `xin_employee_complaints`
+ALTER TABLE `ifd_employee_complaints`
   MODIFY `complaint_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_contacts`
+-- AUTO_INCREMENT for table `ifd_employee_contacts`
 --
-ALTER TABLE `xin_employee_contacts`
+ALTER TABLE `ifd_employee_contacts`
   MODIFY `contact_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_contract`
+-- AUTO_INCREMENT for table `ifd_employee_contract`
 --
-ALTER TABLE `xin_employee_contract`
+ALTER TABLE `ifd_employee_contract`
   MODIFY `contract_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_documents`
+-- AUTO_INCREMENT for table `ifd_employee_documents`
 --
-ALTER TABLE `xin_employee_documents`
+ALTER TABLE `ifd_employee_documents`
   MODIFY `document_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_exit`
+-- AUTO_INCREMENT for table `ifd_employee_exit`
 --
-ALTER TABLE `xin_employee_exit`
+ALTER TABLE `ifd_employee_exit`
   MODIFY `exit_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_exit_type`
+-- AUTO_INCREMENT for table `ifd_employee_exit_type`
 --
-ALTER TABLE `xin_employee_exit_type`
+ALTER TABLE `ifd_employee_exit_type`
   MODIFY `exit_type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_employee_immigration`
+-- AUTO_INCREMENT for table `ifd_employee_immigration`
 --
-ALTER TABLE `xin_employee_immigration`
+ALTER TABLE `ifd_employee_immigration`
   MODIFY `immigration_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_leave`
+-- AUTO_INCREMENT for table `ifd_employee_leave`
 --
-ALTER TABLE `xin_employee_leave`
+ALTER TABLE `ifd_employee_leave`
   MODIFY `leave_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_location`
+-- AUTO_INCREMENT for table `ifd_employee_location`
 --
-ALTER TABLE `xin_employee_location`
+ALTER TABLE `ifd_employee_location`
   MODIFY `office_location_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_promotions`
+-- AUTO_INCREMENT for table `ifd_employee_promotions`
 --
-ALTER TABLE `xin_employee_promotions`
+ALTER TABLE `ifd_employee_promotions`
   MODIFY `promotion_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_qualification`
+-- AUTO_INCREMENT for table `ifd_employee_qualification`
 --
-ALTER TABLE `xin_employee_qualification`
+ALTER TABLE `ifd_employee_qualification`
   MODIFY `qualification_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_resignations`
+-- AUTO_INCREMENT for table `ifd_employee_resignations`
 --
-ALTER TABLE `xin_employee_resignations`
+ALTER TABLE `ifd_employee_resignations`
   MODIFY `resignation_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_security_level`
+-- AUTO_INCREMENT for table `ifd_employee_security_level`
 --
-ALTER TABLE `xin_employee_security_level`
+ALTER TABLE `ifd_employee_security_level`
   MODIFY `security_level_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_shift`
+-- AUTO_INCREMENT for table `ifd_employee_shift`
 --
-ALTER TABLE `xin_employee_shift`
+ALTER TABLE `ifd_employee_shift`
   MODIFY `emp_shift_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_terminations`
+-- AUTO_INCREMENT for table `ifd_employee_terminations`
 --
-ALTER TABLE `xin_employee_terminations`
+ALTER TABLE `ifd_employee_terminations`
   MODIFY `termination_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_transfer`
+-- AUTO_INCREMENT for table `ifd_employee_transfer`
 --
-ALTER TABLE `xin_employee_transfer`
+ALTER TABLE `ifd_employee_transfer`
   MODIFY `transfer_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_travels`
+-- AUTO_INCREMENT for table `ifd_employee_travels`
 --
-ALTER TABLE `xin_employee_travels`
+ALTER TABLE `ifd_employee_travels`
   MODIFY `travel_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_warnings`
+-- AUTO_INCREMENT for table `ifd_employee_warnings`
 --
-ALTER TABLE `xin_employee_warnings`
+ALTER TABLE `ifd_employee_warnings`
   MODIFY `warning_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_employee_work_experience`
+-- AUTO_INCREMENT for table `ifd_employee_work_experience`
 --
-ALTER TABLE `xin_employee_work_experience`
+ALTER TABLE `ifd_employee_work_experience`
   MODIFY `work_experience_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_ethnicity_type`
+-- AUTO_INCREMENT for table `ifd_ethnicity_type`
 --
-ALTER TABLE `xin_ethnicity_type`
+ALTER TABLE `ifd_ethnicity_type`
   MODIFY `ethnicity_type_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_events`
+-- AUTO_INCREMENT for table `ifd_events`
 --
-ALTER TABLE `xin_events`
+ALTER TABLE `ifd_events`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_expenses`
+-- AUTO_INCREMENT for table `ifd_expenses`
 --
-ALTER TABLE `xin_expenses`
+ALTER TABLE `ifd_expenses`
   MODIFY `expense_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_expense_type`
+-- AUTO_INCREMENT for table `ifd_expense_type`
 --
-ALTER TABLE `xin_expense_type`
+ALTER TABLE `ifd_expense_type`
   MODIFY `expense_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `xin_file_manager`
+-- AUTO_INCREMENT for table `ifd_file_manager`
 --
-ALTER TABLE `xin_file_manager`
+ALTER TABLE `ifd_file_manager`
   MODIFY `file_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_file_manager_settings`
+-- AUTO_INCREMENT for table `ifd_file_manager_settings`
 --
-ALTER TABLE `xin_file_manager_settings`
+ALTER TABLE `ifd_file_manager_settings`
   MODIFY `setting_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_finance_bankcash`
+-- AUTO_INCREMENT for table `ifd_finance_bankcash`
 --
-ALTER TABLE `xin_finance_bankcash`
+ALTER TABLE `ifd_finance_bankcash`
   MODIFY `bankcash_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_finance_deposit`
+-- AUTO_INCREMENT for table `ifd_finance_deposit`
 --
-ALTER TABLE `xin_finance_deposit`
+ALTER TABLE `ifd_finance_deposit`
   MODIFY `deposit_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_finance_expense`
+-- AUTO_INCREMENT for table `ifd_finance_expense`
 --
-ALTER TABLE `xin_finance_expense`
+ALTER TABLE `ifd_finance_expense`
   MODIFY `expense_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_finance_payees`
+-- AUTO_INCREMENT for table `ifd_finance_payees`
 --
-ALTER TABLE `xin_finance_payees`
+ALTER TABLE `ifd_finance_payees`
   MODIFY `payee_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_finance_payers`
+-- AUTO_INCREMENT for table `ifd_finance_payers`
 --
-ALTER TABLE `xin_finance_payers`
+ALTER TABLE `ifd_finance_payers`
   MODIFY `payer_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_finance_transaction`
+-- AUTO_INCREMENT for table `ifd_finance_transaction`
 --
-ALTER TABLE `xin_finance_transaction`
+ALTER TABLE `ifd_finance_transaction`
   MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_finance_transactions`
+-- AUTO_INCREMENT for table `ifd_finance_transactions`
 --
-ALTER TABLE `xin_finance_transactions`
+ALTER TABLE `ifd_finance_transactions`
   MODIFY `transaction_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_finance_transfer`
+-- AUTO_INCREMENT for table `ifd_finance_transfer`
 --
-ALTER TABLE `xin_finance_transfer`
+ALTER TABLE `ifd_finance_transfer`
   MODIFY `transfer_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_goal_tracking`
+-- AUTO_INCREMENT for table `ifd_goal_tracking`
 --
-ALTER TABLE `xin_goal_tracking`
+ALTER TABLE `ifd_goal_tracking`
   MODIFY `tracking_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_goal_tracking_type`
+-- AUTO_INCREMENT for table `ifd_goal_tracking_type`
 --
-ALTER TABLE `xin_goal_tracking_type`
+ALTER TABLE `ifd_goal_tracking_type`
   MODIFY `tracking_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `xin_holidays`
+-- AUTO_INCREMENT for table `ifd_holidays`
 --
-ALTER TABLE `xin_holidays`
+ALTER TABLE `ifd_holidays`
   MODIFY `holiday_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hourly_templates`
+-- AUTO_INCREMENT for table `ifd_hourly_templates`
 --
-ALTER TABLE `xin_hourly_templates`
+ALTER TABLE `ifd_hourly_templates`
   MODIFY `hourly_rate_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_invoices`
+-- AUTO_INCREMENT for table `ifd_hrsale_invoices`
 --
-ALTER TABLE `xin_hrsale_invoices`
+ALTER TABLE `ifd_hrsale_invoices`
   MODIFY `invoice_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_invoices_items`
+-- AUTO_INCREMENT for table `ifd_hrsale_invoices_items`
 --
-ALTER TABLE `xin_hrsale_invoices_items`
+ALTER TABLE `ifd_hrsale_invoices_items`
   MODIFY `invoice_item_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_module_attributes`
+-- AUTO_INCREMENT for table `ifd_hrsale_module_attributes`
 --
-ALTER TABLE `xin_hrsale_module_attributes`
+ALTER TABLE `ifd_hrsale_module_attributes`
   MODIFY `custom_field_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_module_attributes_select_value`
+-- AUTO_INCREMENT for table `ifd_hrsale_module_attributes_select_value`
 --
-ALTER TABLE `xin_hrsale_module_attributes_select_value`
+ALTER TABLE `ifd_hrsale_module_attributes_select_value`
   MODIFY `attributes_select_value_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_module_attributes_values`
+-- AUTO_INCREMENT for table `ifd_hrsale_module_attributes_values`
 --
-ALTER TABLE `xin_hrsale_module_attributes_values`
+ALTER TABLE `ifd_hrsale_module_attributes_values`
   MODIFY `attributes_value_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_notificaions`
+-- AUTO_INCREMENT for table `ifd_hrsale_notificaions`
 --
-ALTER TABLE `xin_hrsale_notificaions`
+ALTER TABLE `ifd_hrsale_notificaions`
   MODIFY `notificaion_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_quotes`
+-- AUTO_INCREMENT for table `ifd_hrsale_quotes`
 --
-ALTER TABLE `xin_hrsale_quotes`
+ALTER TABLE `ifd_hrsale_quotes`
   MODIFY `quote_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_hrsale_quotes_items`
+-- AUTO_INCREMENT for table `ifd_hrsale_quotes_items`
 --
-ALTER TABLE `xin_hrsale_quotes_items`
+ALTER TABLE `ifd_hrsale_quotes_items`
   MODIFY `quote_item_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_income_categories`
+-- AUTO_INCREMENT for table `ifd_income_categories`
 --
-ALTER TABLE `xin_income_categories`
+ALTER TABLE `ifd_income_categories`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `xin_jobs`
+-- AUTO_INCREMENT for table `ifd_jobs`
 --
-ALTER TABLE `xin_jobs`
+ALTER TABLE `ifd_jobs`
   MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_job_applications`
+-- AUTO_INCREMENT for table `ifd_job_applications`
 --
-ALTER TABLE `xin_job_applications`
+ALTER TABLE `ifd_job_applications`
   MODIFY `application_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_job_categories`
+-- AUTO_INCREMENT for table `ifd_job_categories`
 --
-ALTER TABLE `xin_job_categories`
+ALTER TABLE `ifd_job_categories`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
--- AUTO_INCREMENT for table `xin_job_interviews`
+-- AUTO_INCREMENT for table `ifd_job_interviews`
 --
-ALTER TABLE `xin_job_interviews`
+ALTER TABLE `ifd_job_interviews`
   MODIFY `job_interview_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_job_pages`
+-- AUTO_INCREMENT for table `ifd_job_pages`
 --
-ALTER TABLE `xin_job_pages`
+ALTER TABLE `ifd_job_pages`
   MODIFY `page_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `xin_job_type`
+-- AUTO_INCREMENT for table `ifd_job_type`
 --
-ALTER TABLE `xin_job_type`
+ALTER TABLE `ifd_job_type`
   MODIFY `job_type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `xin_kpi_incidental`
+-- AUTO_INCREMENT for table `ifd_kpi_incidental`
 --
-ALTER TABLE `xin_kpi_incidental`
+ALTER TABLE `ifd_kpi_incidental`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_kpi_maingoals`
+-- AUTO_INCREMENT for table `ifd_kpi_maingoals`
 --
-ALTER TABLE `xin_kpi_maingoals`
+ALTER TABLE `ifd_kpi_maingoals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_kpi_variable`
+-- AUTO_INCREMENT for table `ifd_kpi_variable`
 --
-ALTER TABLE `xin_kpi_variable`
+ALTER TABLE `ifd_kpi_variable`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_languages`
+-- AUTO_INCREMENT for table `ifd_languages`
 --
-ALTER TABLE `xin_languages`
+ALTER TABLE `ifd_languages`
   MODIFY `language_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `xin_leads`
+-- AUTO_INCREMENT for table `ifd_leads`
 --
-ALTER TABLE `xin_leads`
+ALTER TABLE `ifd_leads`
   MODIFY `client_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_leads_followup`
+-- AUTO_INCREMENT for table `ifd_leads_followup`
 --
-ALTER TABLE `xin_leads_followup`
+ALTER TABLE `ifd_leads_followup`
   MODIFY `leads_followup_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_leave_applications`
+-- AUTO_INCREMENT for table `ifd_leave_applications`
 --
-ALTER TABLE `xin_leave_applications`
+ALTER TABLE `ifd_leave_applications`
   MODIFY `leave_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_leave_type`
+-- AUTO_INCREMENT for table `ifd_leave_type`
 --
-ALTER TABLE `xin_leave_type`
+ALTER TABLE `ifd_leave_type`
   MODIFY `leave_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `xin_make_payment`
+-- AUTO_INCREMENT for table `ifd_make_payment`
 --
-ALTER TABLE `xin_make_payment`
+ALTER TABLE `ifd_make_payment`
   MODIFY `make_payment_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_meetings`
+-- AUTO_INCREMENT for table `ifd_meetings`
 --
-ALTER TABLE `xin_meetings`
+ALTER TABLE `ifd_meetings`
   MODIFY `meeting_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_office_location`
+-- AUTO_INCREMENT for table `ifd_office_location`
 --
-ALTER TABLE `xin_office_location`
+ALTER TABLE `ifd_office_location`
   MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_office_shift`
+-- AUTO_INCREMENT for table `ifd_office_shift`
 --
-ALTER TABLE `xin_office_shift`
+ALTER TABLE `ifd_office_shift`
   MODIFY `office_shift_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_payment_method`
+-- AUTO_INCREMENT for table `ifd_payment_method`
 --
-ALTER TABLE `xin_payment_method`
+ALTER TABLE `ifd_payment_method`
   MODIFY `payment_method_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `xin_payroll_custom_fields`
+-- AUTO_INCREMENT for table `ifd_payroll_custom_fields`
 --
-ALTER TABLE `xin_payroll_custom_fields`
+ALTER TABLE `ifd_payroll_custom_fields`
   MODIFY `payroll_custom_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_performance_appraisal`
+-- AUTO_INCREMENT for table `ifd_performance_appraisal`
 --
-ALTER TABLE `xin_performance_appraisal`
+ALTER TABLE `ifd_performance_appraisal`
   MODIFY `performance_appraisal_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_performance_appraisal_options`
+-- AUTO_INCREMENT for table `ifd_performance_appraisal_options`
 --
-ALTER TABLE `xin_performance_appraisal_options`
+ALTER TABLE `ifd_performance_appraisal_options`
   MODIFY `performance_appraisal_options_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_performance_indicator`
+-- AUTO_INCREMENT for table `ifd_performance_indicator`
 --
-ALTER TABLE `xin_performance_indicator`
+ALTER TABLE `ifd_performance_indicator`
   MODIFY `performance_indicator_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_performance_indicator_options`
+-- AUTO_INCREMENT for table `ifd_performance_indicator_options`
 --
-ALTER TABLE `xin_performance_indicator_options`
+ALTER TABLE `ifd_performance_indicator_options`
   MODIFY `performance_indicator_options_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_projects`
+-- AUTO_INCREMENT for table `ifd_projects`
 --
-ALTER TABLE `xin_projects`
+ALTER TABLE `ifd_projects`
   MODIFY `project_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_projects_attachment`
+-- AUTO_INCREMENT for table `ifd_projects_attachment`
 --
-ALTER TABLE `xin_projects_attachment`
+ALTER TABLE `ifd_projects_attachment`
   MODIFY `project_attachment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_projects_bugs`
+-- AUTO_INCREMENT for table `ifd_projects_bugs`
 --
-ALTER TABLE `xin_projects_bugs`
+ALTER TABLE `ifd_projects_bugs`
   MODIFY `bug_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_projects_discussion`
+-- AUTO_INCREMENT for table `ifd_projects_discussion`
 --
-ALTER TABLE `xin_projects_discussion`
+ALTER TABLE `ifd_projects_discussion`
   MODIFY `discussion_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_projects_timelogs`
+-- AUTO_INCREMENT for table `ifd_projects_timelogs`
 --
-ALTER TABLE `xin_projects_timelogs`
+ALTER TABLE `ifd_projects_timelogs`
   MODIFY `timelogs_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_project_variations`
+-- AUTO_INCREMENT for table `ifd_project_variations`
 --
-ALTER TABLE `xin_project_variations`
+ALTER TABLE `ifd_project_variations`
   MODIFY `variation_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_qualification_education_level`
+-- AUTO_INCREMENT for table `ifd_qualification_education_level`
 --
-ALTER TABLE `xin_qualification_education_level`
+ALTER TABLE `ifd_qualification_education_level`
   MODIFY `education_level_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_qualification_language`
+-- AUTO_INCREMENT for table `ifd_qualification_language`
 --
-ALTER TABLE `xin_qualification_language`
+ALTER TABLE `ifd_qualification_language`
   MODIFY `language_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_qualification_skill`
+-- AUTO_INCREMENT for table `ifd_qualification_skill`
 --
-ALTER TABLE `xin_qualification_skill`
+ALTER TABLE `ifd_qualification_skill`
   MODIFY `skill_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_quoted_projects`
+-- AUTO_INCREMENT for table `ifd_quoted_projects`
 --
-ALTER TABLE `xin_quoted_projects`
+ALTER TABLE `ifd_quoted_projects`
   MODIFY `project_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_quoted_projects_attachment`
+-- AUTO_INCREMENT for table `ifd_quoted_projects_attachment`
 --
-ALTER TABLE `xin_quoted_projects_attachment`
+ALTER TABLE `ifd_quoted_projects_attachment`
   MODIFY `project_attachment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_quoted_projects_discussion`
+-- AUTO_INCREMENT for table `ifd_quoted_projects_discussion`
 --
-ALTER TABLE `xin_quoted_projects_discussion`
+ALTER TABLE `ifd_quoted_projects_discussion`
   MODIFY `discussion_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_quoted_projects_timelogs`
+-- AUTO_INCREMENT for table `ifd_quoted_projects_timelogs`
 --
-ALTER TABLE `xin_quoted_projects_timelogs`
+ALTER TABLE `ifd_quoted_projects_timelogs`
   MODIFY `timelogs_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_recruitment_pages`
+-- AUTO_INCREMENT for table `ifd_recruitment_pages`
 --
-ALTER TABLE `xin_recruitment_pages`
+ALTER TABLE `ifd_recruitment_pages`
   MODIFY `page_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `xin_recruitment_subpages`
+-- AUTO_INCREMENT for table `ifd_recruitment_subpages`
 --
-ALTER TABLE `xin_recruitment_subpages`
+ALTER TABLE `ifd_recruitment_subpages`
   MODIFY `subpages_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `xin_salary_allowances`
+-- AUTO_INCREMENT for table `ifd_salary_allowances`
 --
-ALTER TABLE `xin_salary_allowances`
+ALTER TABLE `ifd_salary_allowances`
   MODIFY `allowance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `xin_salary_bank_allocation`
+-- AUTO_INCREMENT for table `ifd_salary_bank_allocation`
 --
-ALTER TABLE `xin_salary_bank_allocation`
+ALTER TABLE `ifd_salary_bank_allocation`
   MODIFY `bank_allocation_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_commissions`
+-- AUTO_INCREMENT for table `ifd_salary_commissions`
 --
-ALTER TABLE `xin_salary_commissions`
+ALTER TABLE `ifd_salary_commissions`
   MODIFY `salary_commissions_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_loan_deductions`
+-- AUTO_INCREMENT for table `ifd_salary_loan_deductions`
 --
-ALTER TABLE `xin_salary_loan_deductions`
+ALTER TABLE `ifd_salary_loan_deductions`
   MODIFY `loan_deduction_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_other_payments`
+-- AUTO_INCREMENT for table `ifd_salary_other_payments`
 --
-ALTER TABLE `xin_salary_other_payments`
+ALTER TABLE `ifd_salary_other_payments`
   MODIFY `other_payments_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_overtime`
+-- AUTO_INCREMENT for table `ifd_salary_overtime`
 --
-ALTER TABLE `xin_salary_overtime`
+ALTER TABLE `ifd_salary_overtime`
   MODIFY `salary_overtime_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslips`
+-- AUTO_INCREMENT for table `ifd_salary_payslips`
 --
-ALTER TABLE `xin_salary_payslips`
+ALTER TABLE `ifd_salary_payslips`
   MODIFY `payslip_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslip_allowances`
+-- AUTO_INCREMENT for table `ifd_salary_payslip_allowances`
 --
-ALTER TABLE `xin_salary_payslip_allowances`
+ALTER TABLE `ifd_salary_payslip_allowances`
   MODIFY `payslip_allowances_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslip_commissions`
+-- AUTO_INCREMENT for table `ifd_salary_payslip_commissions`
 --
-ALTER TABLE `xin_salary_payslip_commissions`
+ALTER TABLE `ifd_salary_payslip_commissions`
   MODIFY `payslip_commissions_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslip_loan`
+-- AUTO_INCREMENT for table `ifd_salary_payslip_loan`
 --
-ALTER TABLE `xin_salary_payslip_loan`
+ALTER TABLE `ifd_salary_payslip_loan`
   MODIFY `payslip_loan_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslip_other_payments`
+-- AUTO_INCREMENT for table `ifd_salary_payslip_other_payments`
 --
-ALTER TABLE `xin_salary_payslip_other_payments`
+ALTER TABLE `ifd_salary_payslip_other_payments`
   MODIFY `payslip_other_payment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslip_overtime`
+-- AUTO_INCREMENT for table `ifd_salary_payslip_overtime`
 --
-ALTER TABLE `xin_salary_payslip_overtime`
+ALTER TABLE `ifd_salary_payslip_overtime`
   MODIFY `payslip_overtime_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_payslip_statutory_deductions`
+-- AUTO_INCREMENT for table `ifd_salary_payslip_statutory_deductions`
 --
-ALTER TABLE `xin_salary_payslip_statutory_deductions`
+ALTER TABLE `ifd_salary_payslip_statutory_deductions`
   MODIFY `payslip_deduction_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_statutory_deductions`
+-- AUTO_INCREMENT for table `ifd_salary_statutory_deductions`
 --
-ALTER TABLE `xin_salary_statutory_deductions`
+ALTER TABLE `ifd_salary_statutory_deductions`
   MODIFY `statutory_deductions_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_salary_templates`
+-- AUTO_INCREMENT for table `ifd_salary_templates`
 --
-ALTER TABLE `xin_salary_templates`
+ALTER TABLE `ifd_salary_templates`
   MODIFY `salary_template_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_security_level`
+-- AUTO_INCREMENT for table `ifd_security_level`
 --
-ALTER TABLE `xin_security_level`
+ALTER TABLE `ifd_security_level`
   MODIFY `type_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_sub_departments`
+-- AUTO_INCREMENT for table `ifd_sub_departments`
 --
-ALTER TABLE `xin_sub_departments`
+ALTER TABLE `ifd_sub_departments`
   MODIFY `sub_department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `xin_support_tickets`
+-- AUTO_INCREMENT for table `ifd_support_tickets`
 --
-ALTER TABLE `xin_support_tickets`
+ALTER TABLE `ifd_support_tickets`
   MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_support_tickets_employees`
+-- AUTO_INCREMENT for table `ifd_support_tickets_employees`
 --
-ALTER TABLE `xin_support_tickets_employees`
+ALTER TABLE `ifd_support_tickets_employees`
   MODIFY `tickets_employees_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_support_ticket_files`
+-- AUTO_INCREMENT for table `ifd_support_ticket_files`
 --
-ALTER TABLE `xin_support_ticket_files`
+ALTER TABLE `ifd_support_ticket_files`
   MODIFY `ticket_file_id` int(111) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_system_setting`
+-- AUTO_INCREMENT for table `ifd_system_setting`
 --
-ALTER TABLE `xin_system_setting`
+ALTER TABLE `ifd_system_setting`
   MODIFY `setting_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_tasks`
+-- AUTO_INCREMENT for table `ifd_tasks`
 --
-ALTER TABLE `xin_tasks`
+ALTER TABLE `ifd_tasks`
   MODIFY `task_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_tasks_attachment`
+-- AUTO_INCREMENT for table `ifd_tasks_attachment`
 --
-ALTER TABLE `xin_tasks_attachment`
+ALTER TABLE `ifd_tasks_attachment`
   MODIFY `task_attachment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_tasks_comments`
+-- AUTO_INCREMENT for table `ifd_tasks_comments`
 --
-ALTER TABLE `xin_tasks_comments`
+ALTER TABLE `ifd_tasks_comments`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_task_categories`
+-- AUTO_INCREMENT for table `ifd_task_categories`
 --
-ALTER TABLE `xin_task_categories`
+ALTER TABLE `ifd_task_categories`
   MODIFY `task_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `xin_tax_types`
+-- AUTO_INCREMENT for table `ifd_tax_types`
 --
-ALTER TABLE `xin_tax_types`
+ALTER TABLE `ifd_tax_types`
   MODIFY `tax_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `xin_termination_type`
+-- AUTO_INCREMENT for table `ifd_termination_type`
 --
-ALTER TABLE `xin_termination_type`
+ALTER TABLE `ifd_termination_type`
   MODIFY `termination_type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_theme_settings`
+-- AUTO_INCREMENT for table `ifd_theme_settings`
 --
-ALTER TABLE `xin_theme_settings`
+ALTER TABLE `ifd_theme_settings`
   MODIFY `theme_settings_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `xin_tickets_attachment`
+-- AUTO_INCREMENT for table `ifd_tickets_attachment`
 --
-ALTER TABLE `xin_tickets_attachment`
+ALTER TABLE `ifd_tickets_attachment`
   MODIFY `ticket_attachment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_tickets_comments`
+-- AUTO_INCREMENT for table `ifd_tickets_comments`
 --
-ALTER TABLE `xin_tickets_comments`
+ALTER TABLE `ifd_tickets_comments`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_trainers`
+-- AUTO_INCREMENT for table `ifd_trainers`
 --
-ALTER TABLE `xin_trainers`
+ALTER TABLE `ifd_trainers`
   MODIFY `trainer_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_training`
+-- AUTO_INCREMENT for table `ifd_training`
 --
-ALTER TABLE `xin_training`
+ALTER TABLE `ifd_training`
   MODIFY `training_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `xin_training_types`
+-- AUTO_INCREMENT for table `ifd_training_types`
 --
-ALTER TABLE `xin_training_types`
+ALTER TABLE `ifd_training_types`
   MODIFY `training_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `xin_travel_arrangement_type`
+-- AUTO_INCREMENT for table `ifd_travel_arrangement_type`
 --
-ALTER TABLE `xin_travel_arrangement_type`
+ALTER TABLE `ifd_travel_arrangement_type`
   MODIFY `arrangement_type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `xin_users`
+-- AUTO_INCREMENT for table `ifd_users`
 --
-ALTER TABLE `xin_users`
+ALTER TABLE `ifd_users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `xin_user_roles`
+-- AUTO_INCREMENT for table `ifd_user_roles`
 --
-ALTER TABLE `xin_user_roles`
+ALTER TABLE `ifd_user_roles`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `xin_warning_type`
+-- AUTO_INCREMENT for table `ifd_warning_type`
 --
-ALTER TABLE `xin_warning_type`
+ALTER TABLE `ifd_warning_type`
   MODIFY `warning_type_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
