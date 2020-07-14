@@ -19,6 +19,8 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 	
 // Dashboard
 $lang['dashboard_title'] = 'Dashboard';
+$lang['product_title'] = 'Product';
+$lang['product_add'] = 'Product Add';
 $lang['dashboard_main'] = 'Main';
 $lang['dashboard_total_employees'] = 'Total Employees';
 $lang['dashboard_total_expenses'] = 'Total Expenses';

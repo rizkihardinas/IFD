@@ -36,6 +36,71 @@ class Roles extends MY_Controller {
 	
 	 public function index()
      {
+     	$a = $this->db->query("SELECT * FROM xin_menu WHERE idParent=0")->result_array();
+		$max = $this->db->query("SELECT MAX(level) FROM xin_menu")->row_array();
+		$array = array();
+		foreach ($a as $a) {
+			$menu = array();
+			$b = $this->db->query("SELECT * FROM xin_menu WHERE idParent=".$a['id']);
+			if ($b->num_rows() > 0 ) {
+				foreach ($b->result_array() as $b) {
+					
+						$submenu = array();
+						$c = $this->db->query("SELECT * FROM xin_menu WHERE idParent=".$b['id']);
+						if ($c->num_rows() > 0 ) {
+							foreach ($c->result_array() as $c) {
+								$submenu[] = array(
+									'id' => "",
+									'class' => "role-checkbox custom-control-input custom-control-input",
+									'text' => $c['name'],
+									'add_info' => "",
+									'value' => $c['value']
+								);
+								
+							}
+							$menu[] = array(
+								'id' => "",
+								'class' => "role-checkbox custom-control-input custom-control-input",
+								'text' => $b['name'],
+								'add_info' => "",
+								'value' => $b['value'],
+								'items' => $submenu
+							);
+						}else{
+							$menu[] = array(
+								'id' => "",
+								'class' => "role-checkbox custom-control-input custom-control-input",
+								'text' => $b['name'],
+								'add_info' => "",
+								'value' => $b['value']
+							);
+						}
+				}
+				$array[] = array(
+					'id' => "",
+					'class' => "role-checkbox custom-control-input custom-control-input",
+					'text' => $a['name'],
+					'add_info' => "",
+					'value' => $a['value'],
+					'items' => $menu
+				);
+			}else{
+				$array[] = array(
+					'id' => "",
+					'class' => "role-checkbox custom-control-input custom-control-input",
+					'text' => $a['name'],
+					'add_info' => "",
+					'value' => $a['value']
+				);
+			}
+
+			
+		}
+		// echo "<pre>";
+		// print_r($array);
+		// echo "</pre>";
+
+		$data['menu'] =  json_encode($array);
 		$data['title'] = $this->lang->line('xin_role_urole').' | '.$this->Xin_model->site_title();
 		$session = $this->session->userdata('username');
 		if(empty($session)){ 
