@@ -37,13 +37,12 @@ class Roles extends MY_Controller {
 	 public function index()
      {
      	$array = [];
-          $parent_key = '0';
-          $row = $this->db->query('SELECT id,name FROM xin_menu');
+        $parent_key = '0';
+        $row = $this->db->query('SELECT id,name FROM xin_menu');
             
-          if($row->num_rows() > 0)
-          {
+        if($row->num_rows() > 0){
               $array = $this->membersTree($parent_key);
-          }
+        }
    
 
 		$data['menu'] =  json_encode(array_values($array));
@@ -85,39 +84,6 @@ class Roles extends MY_Controller {
   
         return $row1;
     }
- 	function cek(){
- 		$a = $this->db->query("SELECT * FROM xin_menu")->result_array();
- 		$array = array();
-		foreach ($a as $row) {
-			$sub_data["id"] = $row["id"];
-			$sub_data["class"] = 'role-checkbox custom-control-input custom-control-input';
-			$sub_data["text"] = $row["name"];
-			$sub_data["add_info"] = $row['name'];
-			$sub_data["value"] = $row["value"];
-			$sub_data["idParent"] = $row["idParent"];
-			$array[] = $sub_data;
-		}
-		foreach($array as $key => &$value){
-			 $output[$value["id"]] = &$value;
-		}
-
-		foreach($array as $key => &$value){
-			if($value["idParent"] && isset($output[$value["idParent"]])){
-				$output[$value["idParent"]]["items"][] = &$value;
-			}
-
-		}
-
-		foreach($array as $key => &$value){
-			 if($value["idParent"] && isset($output[$value["idParent"]])){
-			  unset($array[$key]);
-			 }
-		}
-		echo "<pre>";
-		print_r($array);
-	echo "</pre>";
-		// echo json_encode($array);
- 	}
     public function role_list()
      {
 
