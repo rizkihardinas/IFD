@@ -87,7 +87,52 @@ class Menu extends CI_Controller
 	echo "<pre>";
 	print_r($array);
 	echo "</pre>";
+		// echo json_encode($array);
 		
 	}
+	public function getItem()
+    {
+          $array = [];
+          $parent_key = '0';
+          $row = $this->db->query('SELECT id,name FROM xin_menu');
+            
+          if($row->num_rows() > 0)
+          {
+              $array = $this->membersTree($parent_key);
+          }else{
+              $array=["id"=>"0","name"=>"No Members presnt in list","text"=>"No Members is presnt in list","items"=>[]];
+          }
+          echo "<pre>";
+	print_r($array);
+	
+   			print_r(array_values($array));echo "</pre>";
+          // echo json_encode();
+    }
+   
+    /**
+     * Get All Data from this method.
+     *
+     * @return Response
+    */
+    public function membersTree($parent_key)
+    {
+        $row1 = [];
+        $row = $this->db->query('SELECT id, name,value from xin_menu WHERE idParent="'.$parent_key.'"')->result_array();
+    
+        foreach($row as $key => $value)
+        {
+           $id = $value['id'];
+           $row1[$key]['id'] = $value['id'];
+           $row1[$key]['class'] = 'role-checkbox custom-control-input custom-control-input';
+           $row1[$key]['text'] = $value['name'];
+           $row1[$key]['add_info'] = $value['name'];
+           $row1[$key]['value'] = $value['value'];
+           
+           $row1[$key]['items'] = array_values($this->membersTree($value['id']));
+        }
+  
+        return $row1;
+    }
+      
 }
  ?>
