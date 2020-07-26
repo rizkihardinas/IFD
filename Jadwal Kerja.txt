@@ -1,0 +1,20 @@
+1. Database
+
+	a. xin_shift
+		- id int
+		- name (varchar)
+		- in_time (time)
+		- out_time (time)
+		- created_at datetime default current_timestamp
+		- user_id int
+		- company_id int
+	b. xin_shift_employee
+		- id (int)
+		- employee_id (int)
+		- shift_id (int)
+		- created_at (datetime default current_timestamp)
+		- user_id (int)
+		- month (char)
+		- year (char)
+
+
